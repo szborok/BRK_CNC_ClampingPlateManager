@@ -1,0 +1,30 @@
+{
+  "application": {
+    "name": "Clamping Plate Manager",
+    "version": "1.0.0",
+    "environment": "development"
+  },
+  "dataSource": {
+    "type": "excel",
+    "filename": "Készülékek.xlsx",
+    "sheetName": "Sheet1",
+    "headerRow": 1
+  },
+  "plateSettings": {
+    "defaultHealth": "new",
+    "defaultOccupancy": "free",
+    "autoGenerateIds": true,
+    "idPrefix": "PL-"
+  },
+  "fileTypes": {
+    "supportedModels": [".x_t", ".step", ".stp", ".iges", ".igs"],
+    "supportedImages": [".jpg", ".jpeg", ".png", ".bmp"],
+    "maxFileSize": "50MB"
+  },
+  "ui": {
+    "defaultView": "dashboard",
+    "showPreviewImages": true,
+    "enableHistoryTracking": true,
+    "autoRefreshInterval": 30000
+  }
+}

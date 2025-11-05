@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1",
+    "name": "Template Plate Name",
+    "shelf": "A-01",
+    "previewImage": "path/to/preview/image.jpg",
+    "xtFile": "path/to/model/file.x_t",
+    "health": "new",
+    "occupancy": "free",
+    "notes": "Optional notes about the plate",
+    "lastWorkName": "W5270NS01001A",
+    "lastModifiedBy": "Username",
+    "lastModifiedDate": "2024-11-05T10:00:00.000Z",
+    "history": [
+      {
+        "id": "1",
+        "action": "Plate created",
+        "user": "System",
+        "date": "2024-11-05T10:00:00.000Z",
+        "details": "Initial plate registration"
+      }
+    ]
+  }
+]

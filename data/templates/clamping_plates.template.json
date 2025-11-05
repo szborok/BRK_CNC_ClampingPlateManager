@@ -1,0 +1,237 @@
+[
+  {
+    "plateId": "PL-001",
+    "plateName": "DMU 100P Standard Fixture",
+    "plateType": "standard",
+    "machine": "DMU 100P duoblock Minus",
+    "dimensions": {
+      "length": 400.0,
+      "width": 300.0,
+      "height": 50.0,
+      "units": "mm"
+    },
+    "clampingInfo": {
+      "pallet": "PAL-100P-01",
+      "fixture": "FIX-STD-001",
+      "clampingForce": 15000,
+      "clampingPoints": 6,
+      "workholding": "hydraulic"
+    },
+    "materials": ["aluminum", "steel", "stainless-steel"],
+    "workpieceEnvelope": {
+      "maxX": 350.0,
+      "maxY": 250.0,
+      "maxZ": 100.0,
+      "units": "mm"
+    },
+    "status": "active",
+    "location": "Production Floor - Station 1",
+    "lastMaintenance": "2024-10-15",
+    "nextMaintenance": "2025-01-15",
+    "viewerFiles": [
+      "DMU100P_Standard_Setup.pdf",
+      "DMU100P_Workholding_Diagram.pdf"
+    ],
+    "createdAt": "2024-01-10T10:00:00.000Z",
+    "updatedAt": "2024-10-15T14:30:00.000Z"
+  },
+  {
+    "plateId": "PL-002",
+    "plateName": "DMC 105 V Linear Custom Fixture",
+    "plateType": "custom",
+    "machine": "DMC 105 V Linear",
+    "dimensions": {
+      "length": 500.0,
+      "width": 350.0,
+      "height": 75.0,
+      "units": "mm"
+    },
+    "clampingInfo": {
+      "pallet": "PAL-105V-02",
+      "fixture": "FIX-CUST-002",
+      "clampingForce": 20000,
+      "clampingPoints": 8,
+      "workholding": "pneumatic"
+    },
+    "materials": ["aluminum", "titanium"],
+    "workpieceEnvelope": {
+      "maxX": 450.0,
+      "maxY": 300.0,
+      "maxZ": 150.0,
+      "units": "mm"
+    },
+    "status": "active",
+    "location": "Production Floor - Station 2",
+    "lastMaintenance": "2024-09-20",
+    "nextMaintenance": "2024-12-20",
+    "viewerFiles": [
+      "DMC105V_Custom_Setup.pdf",
+      "DMC105V_Aerospace_Fixture.pdf"
+    ],
+    "createdAt": "2024-02-05T09:15:00.000Z",
+    "updatedAt": "2024-09-20T11:45:00.000Z"
+  },
+  {
+    "plateId": "PL-003",
+    "plateName": "DMU 85 monoblock Universal Plate",
+    "plateType": "universal",
+    "machine": "DMU 85 monoblock MINUS",
+    "dimensions": {
+      "length": 320.0,
+      "width": 250.0,
+      "height": 40.0,
+      "units": "mm"
+    },
+    "clampingInfo": {
+      "pallet": "PAL-85M-01",
+      "fixture": "FIX-UNI-003",
+      "clampingForce": 12000,
+      "clampingPoints": 4,
+      "workholding": "mechanical"
+    },
+    "materials": ["steel", "cast-iron", "aluminum"],
+    "workpieceEnvelope": {
+      "maxX": 280.0,
+      "maxY": 200.0,
+      "maxZ": 80.0,
+      "units": "mm"
+    },
+    "status": "active",
+    "location": "Production Floor - Station 3",
+    "lastMaintenance": "2024-11-01",
+    "nextMaintenance": "2025-02-01",
+    "viewerFiles": [
+      "DMU85_Universal_Setup.pdf",
+      "DMU85_Workholding_Guide.pdf"
+    ],
+    "createdAt": "2024-03-12T13:20:00.000Z",
+    "updatedAt": "2024-11-01T16:10:00.000Z"
+  },
+  {
+    "plateId": "PL-004",
+    "plateName": "Heavy Duty Rotary Fixture",
+    "plateType": "rotary",
+    "machine": "DMU 100P duoblock Minus",
+    "dimensions": {
+      "length": 600.0,
+      "width": 600.0,
+      "height": 120.0,
+      "units": "mm"
+    },
+    "clampingInfo": {
+      "pallet": "PAL-100P-ROT",
+      "fixture": "FIX-ROT-004",
+      "clampingForce": 35000,
+      "clampingPoints": 12,
+      "workholding": "hydraulic-rotary"
+    },
+    "materials": ["steel", "stainless-steel", "titanium"],
+    "workpieceEnvelope": {
+      "maxX": 550.0,
+      "maxY": 550.0,
+      "maxZ": 200.0,
+      "units": "mm"
+    },
+    "rotaryCapabilities": {
+      "maxRotationSpeed": 100,
+      "positionAccuracy": 0.001,
+      "indexingPositions": 360,
+      "units": "rpm/degrees"
+    },
+    "status": "maintenance",
+    "location": "Maintenance Bay",
+    "lastMaintenance": "2024-10-28",
+    "nextMaintenance": "2025-01-28",
+    "maintenanceNotes": "Bearing replacement scheduled",
+    "viewerFiles": [
+      "Heavy_Duty_Rotary_Setup.pdf",
+      "Rotary_Maintenance_Manual.pdf"
+    ],
+    "createdAt": "2024-01-20T11:30:00.000Z",
+    "updatedAt": "2024-10-28T08:15:00.000Z"
+  },
+  {
+    "plateId": "PL-005",
+    "plateName": "Precision Vise Plate",
+    "plateType": "vise",
+    "machine": "DMC 105 V Linear",
+    "dimensions": {
+      "length": 250.0,
+      "width": 200.0,
+      "height": 60.0,
+      "units": "mm"
+    },
+    "clampingInfo": {
+      "pallet": "PAL-105V-VISE",
+      "fixture": "FIX-VISE-005",
+      "clampingForce": 8000,
+      "clampingPoints": 2,
+      "workholding": "manual-vise"
+    },
+    "materials": ["aluminum", "brass", "plastic"],
+    "workpieceEnvelope": {
+      "maxX": 150.0,
+      "maxY": 100.0,
+      "maxZ": 50.0,
+      "units": "mm"
+    },
+    "viseSpecs": {
+      "jawWidth": 150.0,
+      "jawOpening": 120.0,
+      "repeatability": 0.005,
+      "units": "mm"
+    },
+    "status": "active",
+    "location": "Production Floor - Station 4",
+    "lastMaintenance": "2024-10-10",
+    "nextMaintenance": "2025-01-10",
+    "viewerFiles": [
+      "Precision_Vise_Setup.pdf",
+      "Vise_Calibration_Report.pdf"
+    ],
+    "createdAt": "2024-04-08T14:45:00.000Z",
+    "updatedAt": "2024-10-10T12:20:00.000Z"
+  },
+  {
+    "plateId": "PL-006",
+    "plateName": "Modular T-Slot Plate",
+    "plateType": "modular",
+    "machine": "DMU 85 monoblock MINUS",
+    "dimensions": {
+      "length": 400.0,
+      "width": 300.0,
+      "height": 50.0,
+      "units": "mm"
+    },
+    "clampingInfo": {
+      "pallet": "PAL-85M-MOD",
+      "fixture": "FIX-MOD-006",
+      "clampingForce": 18000,
+      "clampingPoints": 16,
+      "workholding": "t-slot-modular"
+    },
+    "materials": ["steel", "aluminum", "cast-iron"],
+    "workpieceEnvelope": {
+      "maxX": 350.0,
+      "maxY": 250.0,
+      "maxZ": 120.0,
+      "units": "mm"
+    },
+    "modularSpecs": {
+      "tSlotSize": "M12",
+      "gridSpacing": 25.0,
+      "clampKitIncluded": true,
+      "units": "mm"
+    },
+    "status": "active",
+    "location": "Production Floor - Station 5",
+    "lastMaintenance": "2024-09-15",
+    "nextMaintenance": "2024-12-15",
+    "viewerFiles": [
+      "Modular_TSlot_Setup.pdf",
+      "TSlot_Component_Guide.pdf"
+    ],
+    "createdAt": "2024-05-22T16:00:00.000Z",
+    "updatedAt": "2024-09-15T09:30:00.000Z"
+  }
+]
