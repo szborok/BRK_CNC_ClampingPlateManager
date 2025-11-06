@@ -1,7 +1,19 @@
 {
   "name": "clamping-plates-manager",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Enterprise CNC Clamping Plate Management System - React/TypeScript web application for comprehensive plate inventory tracking, work order management, and manufacturing workflow optimization.",
   "private": true,
+  "author": "CNC Manufacturing Team",
+  "license": "Private",
+  "keywords": [
+    "cnc",
+    "manufacturing",
+    "inventory",
+    "plates",
+    "react",
+    "typescript",
+    "vite"
+  ],
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-alert-dialog": "^1.1.6",
@@ -53,8 +65,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "dev:plates": "vite",
-    "start:plates": "vite",
-    "build": "vite build"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 10",
+    "clean": "rimraf dist build .vite"
   }
 }
