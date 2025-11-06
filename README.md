@@ -1,12 +1,11 @@
 # ClampingPlateManager 🔧
 
-> **Enterprise CNC Clamping Plate Management System**  
-> React/TypeScript web application for comprehensive plate inventory tracking, work order management, and manufacturing workflow optimization.
+> **CNC Clamping Plate Management Backend Service**  
+> Node.js API for comprehensive plate inventory tracking, work order management, and manufacturing workflow integration.
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.x-purple)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-cyan)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-16.x+-green)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-6.x-green)](https://www.mongodb.com/)
+[![API](https://img.shields.io/badge/API-REST-blue)](http://localhost:3002/api/health)
 
 ## 🚀 Quick Start
 
@@ -14,324 +13,383 @@
 # Install dependencies
 npm install
 
-# Start development server
-npm run dev
+# Setup and initialize
+npm run setup
 
-# Build for production
-npm run build
+# Start web service (default)
+npm start
+
+# Or start in different modes
+npm run serve         # Web service only
+npm run auto          # Continuous background service
+npm run manual        # One-time operations
+
+# Test the service
+npm test
 ```
 
-**Access:** http://localhost:5173
-**Login:** Use any username/password (Demo mode)
-**Admin Access:** Username: `admin` + any password
+**API Access:** http://localhost:3002  
+**Health Check:** http://localhost:3002/api/health
 
 ## 📋 Overview
 
-ClampingPlateManager is a comprehensive React/TypeScript web application designed for CNC manufacturing environments. It provides real-time inventory tracking, work order management, and complete plate lifecycle monitoring with enterprise-grade user interfaces.
+ClampingPlateManager is a **Node.js backend service** that provides comprehensive API endpoints for CNC clamping plate management. It handles inventory tracking, work order coordination, and maintains complete audit trails for manufacturing operations.
 
 ### 🎯 Key Features
 
-- **Real-Time Inventory Tracking** - Monitor plate status, health, and occupancy
-- **Work Order Management** - Track ongoing work with W5270NS01001A format integration
-- **Role-Based Access Control** - Admin/user permissions with secure authentication
-- **Comprehensive History Tracking** - Complete audit trail for all plate modifications
-- **Modern UI/UX** - Radix UI components with Tailwind CSS styling
-- **Accessibility Support** - Theme system, font scaling, high contrast mode
-- **Mobile Responsive** - Optimized for desktop and mobile manufacturing environments
+- **RESTful API** - Complete HTTP API for plate management operations
+- **Real-Time Inventory** - Track plate health, occupancy, and location status
+- **Work Order Integration** - Coordinate with manufacturing workflows (W5270NS01001A format)
+- **Comprehensive History** - Complete audit trail for all plate modifications
+- **Dual Storage Support** - Local JSON files + MongoDB for scalability
+- **Read-Only Safety** - Organized temp processing like JSONScanner/ToolManager
+- **Auto/Manual Modes** - Continuous service or one-time operations
 
 ## 🏗️ Architecture
+
+### Backend Service Stack
+- **Node.js** - Runtime environment
+- **HTTP Server** - Built-in Node.js HTTP server for API endpoints
+- **MongoDB** - Optional database for scalable storage
+- **JSON Files** - Local storage and backup system
 
 ### Component Hierarchy
 
 ```
-App.tsx (Main orchestrator)
-├── LoginPage (Authentication)
-├── Dashboard (Overview & summary)
-├── PlatesTable (Main inventory interface)
-├── Sidebar (Navigation & filtering)
-└── Modal Components
-    ├── PlateDetailModal (Full plate information)
-    ├── FinishWorkModal (Complete work orders)
-    ├── StopWorkModal (Pause/cancel work)
-    └── AdminEditModal (Administrative modifications)
+main.js (Entry point)
+├── config.js (Configuration management)
+├── src/
+│   ├── Executor.js (Main orchestrator)
+│   ├── WebService.js (HTTP API server)
+│   ├── PlateService.js (Core plate operations)
+│   ├── WorkOrderService.js (Work order management)
+│   └── DataManager.js (Storage abstraction)
+└── utils/
+    ├── Logger.js (Structured logging)
+    ├── StorageAdapter.js (MongoDB/JSON storage)
+    ├── SetupService.js (Initialization)
+    └── CleanupService.js (Maintenance)
 ```
-
-### State Management Pattern
-
-Global state managed in `App.tsx` with prop drilling:
-- **User State**: Authentication and role-based permissions
-- **View Navigation**: AppView enum for sidebar filtering
-- **Accessibility**: Theme, font size, high contrast settings
-- **Persistence**: localStorage for user preferences
 
 ### Data Models
 
-```typescript
-interface Plate {
-  id: string;
-  shelf: string;           // Physical location (e.g., "A-01")
-  health: 'new' | 'used' | 'locked';
-  occupancy: 'free' | 'in-use';
-  lastWorkName?: string;   // Work order format: "W5270NS01001A"
-  lastModifiedBy?: string;
-  lastModifiedDate: Date;
-  history: PlateHistoryEntry[];
-}
-
-interface User {
-  id: string;
-  name: string;
-  username: string;
-  isAdmin: boolean;
-  avatar?: string;
-}
-```
-
-## 🗂️ Project Structure
-
-```
-ClampingPlateManager/
-├── src/
-│   ├── App.tsx              # Main application with routing & state
-│   ├── main.tsx             # React 18 entry point
-│   ├── components/
-│   │   ├── Dashboard.tsx    # Overview with summary cards
-│   │   ├── LoginPage.tsx    # Authentication interface
-│   │   ├── PlatesTable.tsx  # Main inventory interface
-│   │   ├── Sidebar.tsx      # Navigation & view filtering
-│   │   ├── Settings.tsx     # User preferences
-│   │   ├── *Modal.tsx       # Modal components for workflows
-│   │   └── ui/              # Radix UI component library
-│   └── styles/
-│       └── globals.css      # Tailwind base & custom styles
-├── data/
-│   ├── plates.json          # Current inventory state
-│   ├── config.json          # Application settings
-│   ├── Készülékek.xlsx      # Official production structure
-│   └── templates/           # JSON structure templates
-├── index.html               # Vite HTML template
-├── vite.config.ts           # Vite configuration
-└── package.json             # Dependencies & scripts
-```
-
-## 💻 Development
-
-### Available Scripts
-
-```bash
-npm run dev          # Start development server
-npm run dev:plates   # Alternative dev command
-npm run start:plates # Production-like start
-npm run build        # Create production build
-```
-
-### View Navigation System
-
-The application uses an `AppView` enum for navigation:
-
-**Status-Based Views:**
-- `free-plates` - Available plates
-- `in-use-plates` - Plates currently in use
-- `locked-plates` - Locked/restricted plates
-
-**Health-Based Views:**
-- `new-plates` - New condition plates
-- `used-plates` - Used condition plates
-
-**Workflow Views:**
-- `ongoing-work` - Active work orders
-- `history` - Historical data and audit trail
-
-### Modal Workflows
-
-**PlateDetailModal** - Complete plate information with history timeline
-```typescript
-// Shows comprehensive plate data, modification history, work tracking
-// Available to all users for viewing
-```
-
-**FinishWorkModal** - Complete work orders with automatic status updates
-```typescript
-// Handles work completion, status transitions, history tracking
-// Updates plate occupancy from 'in-use' to 'free'
-```
-
-**StopWorkModal** - Pause/cancel work with reason tracking
-```typescript
-// Manages work interruption, reason documentation
-// Maintains audit trail for work stoppages
-```
-
-**AdminEditModal** - Administrative plate modifications (admin-only)
-```typescript
-// Full administrative control over plate properties
-// Restricted to users with isAdmin: true
-```
-
-## 🎨 UI/UX System
-
-### Technology Stack
-
-- **UI Framework**: React 18 + TypeScript
-- **Component Library**: Radix UI primitives with shadcn/ui styling
-- **Styling**: Tailwind CSS with class-variance-authority
-- **Icons**: Lucide React icon system
-- **Forms**: React Hook Form for complex input handling
-- **Notifications**: Sonner toast system
-
-### Accessibility Features
-
-**Theme System**: Auto/light/dark themes with system preference detection
-```typescript
-// Automatic theme switching based on system preference
-// Manual override with localStorage persistence
-```
-
-**Font Scaling**: Small/normal/large font sizes
-```typescript
-// CSS custom properties for consistent scaling
-// Accessibility compliance for various user needs
-```
-
-**High Contrast Mode**: Enhanced contrast for visual accessibility
-```typescript
-// CSS custom properties for improved visibility
-// Toggle-based activation with localStorage persistence
-```
-
-## 📊 Data Integration
-
-### Excel Integration
-
-`data/Készülékek.xlsx` defines the official production structure:
-- Column compatibility maintained for production systems
-- Template-based JSON structure generation
-- Import/export workflows for manufacturing data
-
-### JSON Data Structure
-
-```typescript
-// Current inventory state in plates.json
+```javascript
+// Plate Object
 {
-  "plates": [
+  id: "plate-001",
+  shelf: "A-01",                    // Physical location
+  health: "new|used|locked",        // Condition state
+  occupancy: "free|in-use",         // Usage state
+  lastWorkName: "W5270NS01001A",    // Work order reference
+  lastModifiedBy: "user@system",
+  lastModifiedDate: "2024-11-06T...",
+  history: [                        // Complete audit trail
     {
-      "id": "plate-001",
-      "shelf": "A-01",
-      "health": "new",
-      "occupancy": "free",
-      "lastModifiedDate": "2024-11-06T00:00:00.000Z",
-      "history": []
+      id: "hist-001",
+      action: "work_started",
+      user: "operator",
+      date: "2024-11-06T...",
+      details: "Work started: W5270NS01001A"
     }
+  ]
+}
+
+// Work Order Object
+{
+  id: "W5270NS01001A",
+  plateId: "plate-001",
+  status: "pending|active|completed",
+  startDate: "2024-11-06T...",
+  endDate: null,
+  createdBy: "system"
+}
+```
+
+## 🌐 API Endpoints
+
+### Core Endpoints
+
+```http
+GET  /api/health              # Health check and status
+GET  /api/plates              # Get all plates
+GET  /api/plates/:id          # Get specific plate
+POST /api/plates/:id          # Update plate
+GET  /api/work-orders         # Get all work orders
+POST /api/work-orders         # Create work order
+GET  /api/stats               # Operational statistics
+```
+
+### Example API Usage
+
+**Health Check:**
+```bash
+curl http://localhost:3002/api/health
+```
+
+**Get All Plates:**
+```bash
+curl http://localhost:3002/api/plates
+```
+
+**Update Plate:**
+```bash
+curl -X POST http://localhost:3002/api/plates/plate-001 \
+  -H "Content-Type: application/json" \
+  -d '{"health": "used", "modifiedBy": "operator"}'
+```
+
+**Start Work on Plate:**
+```bash
+curl -X POST http://localhost:3002/api/plates/plate-001 \
+  -H "Content-Type: application/json" \
+  -d '{"occupancy": "in-use", "lastWorkName": "W5270NS01001A", "modifiedBy": "operator"}'
+```
+
+## ⚙️ Configuration
+
+### Environment Modes
+
+```javascript
+// Test Mode (default)
+testMode: true                    // Uses local data directories
+platesData: "./data/plates.json" // Local JSON storage
+
+// Production Mode
+testMode: false                   // Uses production paths
+platesData: "C:\\Production\\PlateData\\plates.json"
+```
+
+### Storage Options
+
+```javascript
+// Auto Mode (default)
+storage.type: "auto"              // Try MongoDB, fallback to local
+
+// MongoDB Mode
+storage.type: "mongodb"           // MongoDB required
+mongodb.uri: "mongodb://localhost:27017"
+mongodb.database: "cnc_plates"
+
+// Local Mode
+storage.type: "local"             // JSON files only
+```
+
+### Web Service Settings
+
+```javascript
+webService: {
+  port: 3002,                     // API server port
+  enableCors: true,               // CORS for frontend integration
+  allowedOrigins: [               // CNCManagementDashboard
+    "http://localhost:3000",
+    "http://localhost:5173"
   ]
 }
 ```
 
-### Work Order Integration
+## 💻 Development
 
-Work names follow the pattern: `W5270NS01001A`
-- Integrated with manufacturing workflow systems
-- Automatic status tracking and history management
-- Real-time occupancy updates based on work status
+### Available Commands
 
-## 🔒 Security & Authentication
+```bash
+# Service Management
+npm start                # Start web service (default)
+npm run serve            # Web service only
+npm run auto             # Continuous background service
+npm run manual           # One-time operations
 
-### Mock Authentication System
+# Setup & Maintenance
+npm run setup            # Initialize system and create sample data
+npm run cleanup          # Clean temp files and old backups
 
-```typescript
-// Demo mode authentication - replace with real auth in production
-const handleLogin = (username: string, password: string) => {
-  // Admin access: username === 'admin'
-  // Regular user: any other username
-  // Password: any value (demo mode)
-};
+# Testing & Development
+npm test                 # Run quick functionality test
+npm run test-readonly    # Test read-only operations
 ```
 
-### Role-Based Access Control
+### Operation Modes
 
-**Admin Users** (`isAdmin: true`):
-- Full access to AdminEditModal
-- Administrative plate modifications
-- System configuration access
+**Web Service Mode (Default):**
+```bash
+node main.js --serve     # HTTP API server only
+# Ideal for: Frontend integration, API development
+```
 
-**Regular Users** (`isAdmin: false`):
-- Read-only access to plate information
-- Work order completion workflows
-- Personal preference settings
+**Auto Mode:**
+```bash
+node main.js --auto      # Continuous background service
+# Ideal for: Production monitoring, automated workflows
+```
+
+**Manual Mode:**
+```bash
+node main.js --manual    # One-time operations
+# Ideal for: Batch updates, maintenance tasks
+```
+
+**Custom Working Folder:**
+```bash
+node main.js --working-folder "D:/CNC_Processing"
+# Uses custom temp location instead of system temp
+```
+
+## 📊 Data Integration
+
+### Work Order Format
+
+Work orders follow manufacturing standard: `W5270NS01001A`
+- Validated via regex pattern: `/^W\d{4}[A-Z]{2}\d{2}\d{3}[A-Z]?$/`
+- Integrated with manufacturing workflow systems
+- Automatic status tracking and history management
+
+### Storage Strategy
+
+**Dual Storage Approach:**
+1. **Primary**: MongoDB (scalable, queryable)
+2. **Backup**: Local JSON files (reliability, portability)
+
+**Read-Only Processing:**
+- Organized temp structure: `%TEMP%\BRK CNC Management Dashboard\ClampingPlateManager\`
+- No modification of original data sources
+- Safe concurrent operations
+
+### History Tracking
+
+Complete audit trail for all operations:
+- Plate creation, updates, deletions
+- Work start/stop/completion events
+- Status changes with user attribution
+- Automatic timestamp and change description
+
+## � Security & Integration
+
+### API Security
+
+- **CORS enabled** for frontend integration
+- **Input validation** for all API endpoints
+- **Error handling** with proper HTTP status codes
+- **Request logging** for audit and debugging
+
+### Frontend Integration
+
+Designed to work with **CNCManagementDashboard** frontend:
+- RESTful API endpoints for React/TypeScript integration
+- JSON response format for easy consumption
+- Real-time status updates via polling
+- Error responses with detailed information
 
 ## 🚀 Production Deployment
 
-### Build Process
+### System Requirements
+
+- **Node.js 16.0+**
+- **MongoDB 6.x** (optional, auto-fallback to local)
+- **Windows/Linux/macOS** compatible
+- **Minimum 512MB RAM** (depends on data volume)
+
+### Deployment Steps
 
 ```bash
-# Create optimized production build
-npm run build
+# 1. Clone and install
+git clone <repository>
+npm install
 
-# Generated files in dist/ directory
-# Static assets ready for web server deployment
+# 2. Configure for production
+# Edit config.js: testMode: false
+# Set production paths and MongoDB connection
+
+# 3. Initialize system
+npm run setup
+
+# 4. Start service
+npm start
+
+# 5. Verify deployment
+curl http://localhost:3002/api/health
 ```
 
-### Environment Configuration
+### Service Integration
 
-```typescript
-// Update authentication system for production
-// Configure real backend API endpoints
-// Set up proper user management system
-// Configure production data sources
+**With CNCManagementDashboard:**
+- Frontend calls ClampingPlateManager API endpoints
+- Real-time data synchronization
+- Unified user interface for all CNC tools
+
+**With Manufacturing Systems:**
+- Work order integration via API endpoints
+- Status updates from production floor
+- Automated workflow triggers
+
+## � Monitoring & Maintenance
+
+### Health Monitoring
+
+```bash
+# Check service health
+curl http://localhost:3002/api/health
+
+# Get operational statistics
+curl http://localhost:3002/api/stats
+
+# View recent logs
+node -e "require('./utils/Logger').getRecentLogs(50).then(console.log)"
 ```
 
-## 🛠️ Development Guidelines
+### Maintenance Operations
 
-### Component Creation Pattern
+```bash
+# Cleanup temporary files
+npm run cleanup
 
-```typescript
-// Use TypeScript interfaces for type safety
-// Functional components with React hooks
-// Radix UI primitives for accessibility
-// Tailwind CSS for consistent styling
+# Create data backup
+node -e "require('./src/DataManager').createBackup().then(console.log)"
 
-interface ComponentProps {
-  user: User;
-  onAction: (data: ActionData) => void;
-}
-
-const Component: React.FC<ComponentProps> = ({ user, onAction }) => {
-  // Component implementation
-};
+# Clear old logs (7+ days)
+node -e "require('./utils/Logger').clearOldLogs(7)"
 ```
 
-### State Management
+## 🔧 Troubleshooting
 
-```typescript
-// Immutable updates with proper type safety
-// localStorage persistence for user preferences
-// Prop drilling for component communication
-// Context for complex shared state (if needed)
+### Common Issues
+
+**Port Already in Use:**
+```bash
+# Change port in config.js
+webService.port: 3003
 ```
 
-### Form Handling
-
-```typescript
-// React Hook Form for complex inputs
-// TypeScript validation schemas
-// Proper error handling and user feedback
-// Accessibility compliance for form elements
+**MongoDB Connection Failed:**
+```bash
+# Service automatically falls back to local storage
+# Check config.mongodb.uri setting
 ```
 
-## 📈 Performance Considerations
+**Missing Data Directory:**
+```bash
+# Run setup to create directories
+npm run setup
+```
 
-- **React 18** - Concurrent features and improved rendering
-- **Vite** - Fast development server and optimized builds
-- **Code Splitting** - Automatic chunking for optimal loading
-- **Lazy Loading** - Component-level lazy loading where appropriate
+### Debug Information
+
+```bash
+# Test all components
+npm test
+
+# Check configuration
+node -e "console.log(require('./config'))"
+
+# Verify storage
+node -e "require('./src/DataManager').getStorageStats().then(console.log)"
+```
 
 ## 🤝 Contributing
 
-1. Follow TypeScript best practices
-2. Use Radix UI components for accessibility
-3. Maintain Tailwind CSS consistency
-4. Add proper TypeScript interfaces
-5. Test modal workflows thoroughly
-6. Ensure responsive design compliance
+1. Follow Node.js best practices
+2. Maintain API compatibility
+3. Add comprehensive error handling
+4. Update documentation for new endpoints
+5. Test both MongoDB and local storage modes
 
 ## 📄 License
 
@@ -339,4 +397,4 @@ Private/Internal use - CNC Manufacturing System
 
 ---
 
-**Built with enterprise-grade React/TypeScript architecture for modern CNC manufacturing environments.**
+**Backend service for modern CNC manufacturing environments - now serving ClampingPlateManager data via REST API for CNCManagementDashboard frontend integration.**
