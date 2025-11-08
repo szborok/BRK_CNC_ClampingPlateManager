@@ -2,22 +2,19 @@
 
 /**
  * ClampingPlateManager - CNC Plate Management Backend Service
- * 
- * Backend service for managing CNC clamping plates with inventory tracking,
+ *
+ * Production-ready backend service for managing CNC clamping plates with inventory tracking,
  * work order management, and comprehensive audit trails.
- * 
+ *
  * Usage:
- *   node main.js --auto          # Auto mode (continuous service)
- *   node main.js --manual        # Manual mode (one-time operations)
- *   node main.js --setup         # Setup and configuration
- *   node main.js --cleanup       # Cleanup operations
- *   node main.js --serve         # Start web service only
- *   node main.js --working-folder <path>  # Use custom working folder
+ *   node main.js --init-excel <excel_path> --models <models_path>  # Initialize from Excel + models
+ *   node main.js --init-test                                       # Test initialization
+ *   node main.js --serve                                           # Start web service
  */
 
 const path = require("path");
 const config = require("./config");
-const { logInfo, logError, logWarn } = require("./utils/Logger");
+const { logInfo, logError } = require("./utils/Logger");
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -41,28 +38,21 @@ async function main() {
     // Display banner
     console.log("🔧 ClampingPlateManager - Backend Service");
     console.log("========================================");
-    console.log(`Mode: ${config.app.testMode ? 'Test' : 'Production'}`);
+    console.log(`Mode: ${config.app.testMode ? "Test" : "Production"}`);
     console.log(`Port: ${config.webService.port}`);
     console.log("");
 
     // Handle different command modes
-    if (hasFlag("--setup")) {
-      await runSetup();
-    } else if (hasFlag("--cleanup")) {
-      await runCleanup();
-    } else if (hasFlag("--auto")) {
-      await runAutoMode();
-    } else if (hasFlag("--manual")) {
-      await runManualMode();
+    if (hasFlag("--init-excel")) {
+      await runExcelInitialization();
+    } else if (hasFlag("--init-test")) {
+      await runTestInitialization();
     } else if (hasFlag("--serve")) {
       await runWebService();
-    } else if (hasFlag("--test-readonly")) {
-      await runTestReadOnly();
     } else {
-      // Default to web service mode
-      await runWebService();
+      // Default: show usage and exit
+      showUsage();
     }
-
   } catch (error) {
     logError("Application failed", { error: error.message });
     console.error("❌ Application failed:", error.message);
@@ -70,85 +60,188 @@ async function main() {
   }
 }
 
-async function runSetup() {
-  console.log("🔧 Setting up ClampingPlateManager...");
-  
-  const SetupService = require("./utils/SetupService");
-  const setup = new SetupService();
-  
-  await setup.initialize();
-  console.log("✅ Setup completed successfully");
+function showUsage() {
+  console.log("📖 ClampingPlateManager Usage");
+  console.log("=============================\n");
+
+  console.log("Production Commands:");
+  console.log(
+    "  node main.js --init-excel <excel_path> --models <models_path>"
+  );
+  console.log("    Initialize from Excel file and model folders\n");
+
+  console.log("  node main.js --serve");
+  console.log("    Start web service\n");
+
+  console.log("Development Commands:");
+  console.log("  node main.js --init-test");
+  console.log("    Test initialization using test_source_data folders\n");
+
+  console.log("Examples:");
+  console.log(
+    "  node main.js --init-excel './inventory.xlsx' --models './models'"
+  );
+  console.log("  node main.js --serve");
+
   process.exit(0);
 }
 
-async function runCleanup() {
-  console.log("🧹 Running cleanup operations...");
-  
-  const CleanupService = require("./utils/CleanupService");
-  const cleanup = new CleanupService();
-  
-  await cleanup.cleanupTempFiles();
-  await cleanup.cleanupOldBackups();
-  
-  console.log("✅ Cleanup completed successfully");
-  process.exit(0);
+async function runExcelInitialization() {
+  const excelPath = getFlagValue("--init-excel");
+  const modelsPath = getFlagValue("--models");
+
+  if (!excelPath) {
+    console.error("❌ Error: --init-excel requires an Excel file path");
+    console.log(
+      "Usage: node main.js --init-excel <excel_path> --models <models_path>"
+    );
+    process.exit(1);
+  }
+
+  if (!modelsPath) {
+    console.error("❌ Error: --models requires a models folder path");
+    console.log(
+      "Usage: node main.js --init-excel <excel_path> --models <models_path>"
+    );
+    process.exit(1);
+  }
+
+  console.log("🔧 Production Initialization - Processing Excel and Models...");
+  console.log(`📊 Excel file: ${excelPath}`);
+  console.log(`📂 Models folder: ${modelsPath}`);
+
+  // Use our proven convert_excel_to_json logic
+  const convertExcelToJson = require("./src/convert_excel_to_json");
+  const result = await convertExcelToJson(excelPath, modelsPath);
+
+  console.log("\n✅ Production initialization completed!");
+  console.log(`📦 Plates processed: ${result.platesProcessed}`);
+  console.log(`🔗 Models linked: ${result.modelsLinked}`);
+  console.log(`💾 Output file: ${result.outputPath}`);
+  console.log("\nNext steps:");
+  console.log("- Run 'node main.js --serve' to start the web service");
+  console.log(`- Visit http://localhost:${config.webService.port}/api/plates`);
 }
 
-async function runAutoMode() {
-  console.log("🔄 Starting auto mode (continuous service)...");
-  
-  const Executor = require("./src/Executor");
-  const executor = new Executor();
-  
-  await executor.runAutoMode();
-}
+async function runTestInitialization() {
+  const fs = require("fs");
+  const fsp = require("fs").promises;
 
-async function runManualMode() {
-  console.log("🖱️ Running in manual mode...");
-  
-  const Executor = require("./src/Executor");
-  const executor = new Executor();
-  
-  await executor.runManualMode();
-  process.exit(0);
+  console.log(
+    "🔧 Test Initialization - Setting up test_processed_data workspace..."
+  );
+
+  // Define source paths
+  const sourceExcelPath = path.join(
+    __dirname,
+    "data",
+    "test_source_data",
+    "info",
+    "Készülékek.xlsx"
+  );
+  const sourceModelsPath = path.join(
+    __dirname,
+    "data",
+    "test_source_data",
+    "models"
+  );
+
+  // Define test_processed_data paths
+  const testProcessedDataBase = path.join(
+    __dirname,
+    "data",
+    "test_processed_data"
+  );
+  const testProcessedDataInfo = path.join(testProcessedDataBase, "info");
+  const testProcessedDataModels = path.join(testProcessedDataBase, "models");
+  const testExcelPath = path.join(testProcessedDataInfo, "Készülékek.xlsx");
+
+  try {
+    // Clean test_processed_data workspace first
+    console.log("🧹 Cleaning test_processed_data workspace...");
+    if (fs.existsSync(testProcessedDataBase)) {
+      await fsp.rm(testProcessedDataBase, { recursive: true, force: true });
+      console.log("✅ Cleaned existing test_processed_data folder");
+    }
+
+    // Create fresh test_processed_data directory structure
+    await fsp.mkdir(testProcessedDataInfo, { recursive: true });
+    await fsp.mkdir(testProcessedDataModels, { recursive: true });
+
+    // Copy Excel file to test_processed_data/info
+    console.log("📋 Copying Excel file to test_processed_data workspace...");
+    await fsp.copyFile(sourceExcelPath, testExcelPath);
+
+    // Copy model folders to test_processed_data/models
+    console.log("📁 Copying model folders to test_processed_data workspace...");
+    if (fs.existsSync(sourceModelsPath)) {
+      const modelFolders = await fsp.readdir(sourceModelsPath);
+      for (const folder of modelFolders) {
+        const sourceFolderPath = path.join(sourceModelsPath, folder);
+        const destFolderPath = path.join(testProcessedDataModels, folder);
+
+        try {
+          const stat = await fsp.stat(sourceFolderPath);
+          if (stat.isDirectory()) {
+            await fsp.mkdir(destFolderPath, { recursive: true });
+            const files = await fsp.readdir(sourceFolderPath);
+            for (const file of files) {
+              const sourceFile = path.join(sourceFolderPath, file);
+              const destFile = path.join(destFolderPath, file);
+
+              try {
+                const fileStat = await fsp.stat(sourceFile);
+                if (fileStat.isFile()) {
+                  await fsp.copyFile(sourceFile, destFile);
+                }
+              } catch (fileError) {
+                console.log(`⚠️  Skipped ${file} (not a regular file)`);
+              }
+            }
+          }
+        } catch (folderError) {
+          console.log(`⚠️  Skipped folder ${folder} (${folderError.message})`);
+        }
+      }
+    }
+
+    console.log("📊 Test Excel: " + testExcelPath);
+    console.log("📂 Test Models: " + testProcessedDataModels);
+
+    // Use our proven convert_excel_to_json logic with test_processed_data paths
+    const convertExcelToJson = require("./src/convert_excel_to_json");
+    const result = await convertExcelToJson(
+      testExcelPath,
+      testProcessedDataModels
+    );
+
+    console.log("\n✅ Test initialization completed!");
+    console.log(`📦 Plates processed: ${result.platesProcessed}`);
+    console.log(`🔗 Models linked: ${result.modelsLinked}`);
+    console.log(`💾 Output file: ${result.outputPath}`);
+  } catch (error) {
+    logError("Test initialization failed", { error: error.message });
+    throw error;
+  }
 }
 
 async function runWebService() {
   console.log("🌐 Starting web service...");
-  
+
   const WebService = require("./src/WebService");
   const service = new WebService();
-  
+
   await service.start();
 }
 
-async function runTestReadOnly() {
-  console.log("🧪 Running read-only test...");
-  
-  const TestRunner = require("./utils/TestRunner");
-  const test = new TestRunner();
-  
-  await test.runReadOnlyTest();
-  process.exit(0);
-}
-
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('\n🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Run the application
+// Start the application
 if (require.main === module) {
-  main().catch(error => {
-    console.error("💥 Fatal error:", error);
-    process.exit(1);
-  });
+  main();
 }
 
-module.exports = { main };
+module.exports = {
+  main,
+  runExcelInitialization,
+  runTestInitialization,
+  runWebService,
+};

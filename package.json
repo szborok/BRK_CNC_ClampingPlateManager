@@ -16,18 +16,15 @@
   ],
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
-    "dev": "node main.js --serve",
-    "auto": "node main.js --auto",
-    "manual": "node main.js --manual",
+    "start": "node main.js --serve",
     "serve": "node main.js --serve",
-    "setup": "node main.js --setup",
-    "cleanup": "node main.js --cleanup",
-    "test": "node quick_test.js",
-    "test-readonly": "node main.js --test-readonly"
+    "init-excel": "node main.js --init-excel",
+    "init-test": "node main.js --init-test"
   },
   "dependencies": {
-    "mongodb": "^6.3.0"
+    "exceljs": "^4.4.0",
+    "mongodb": "^6.3.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "eslint": "^8.57.0"
