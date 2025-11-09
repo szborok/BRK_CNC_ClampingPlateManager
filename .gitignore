@@ -98,6 +98,10 @@ test-results/
 temp/
 tmp/
 
+# Test data (now in centralized CNC_TestData repository)
+data/test_source_data/
+data/test_processed_data/
+
 # Editor files
 *.sublime-project
 *.sublime-workspace

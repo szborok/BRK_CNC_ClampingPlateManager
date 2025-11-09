@@ -65,30 +65,62 @@ const config = {
 
   paths: {
     test: {
-      // Test/demo mode - use app folder for convenience
-      permanentDataDir: path.join(__dirname, "data", "test_processed_data"),
+      // Test/demo mode - use centralized CNC_TestData
+      permanentDataDir: path.join(
+        __dirname,
+        "..",
+        "CNC_TestData",
+        "working_data",
+        "clampingplatemanager"
+      ),
       platesData: path.join(
         __dirname,
-        "data",
-        "test_processed_data",
+        "..",
+        "CNC_TestData",
+        "working_data",
+        "clampingplatemanager",
         "plates.json"
       ),
       configData: path.join(
         __dirname,
-        "data",
-        "test_processed_data",
+        "..",
+        "CNC_TestData",
+        "working_data",
+        "clampingplatemanager",
         "config.json"
       ),
-      modelsDir: path.join(__dirname, "data", "test_processed_data", "models"),
+      modelsDir: path.join(
+        __dirname,
+        "..",
+        "CNC_TestData",
+        "source_data",
+        "clamping_plates",
+        "models"
+      ),
       previewsDir: path.join(
         __dirname,
-        "data",
-        "test_processed_data",
+        "..",
+        "CNC_TestData",
+        "working_data",
+        "clampingplatemanager",
         "previews"
       ),
       templatesDir: path.join(__dirname, "data", "templates"),
-      testSourceDataDir: path.join(__dirname, "data", "test_source_data"),
-      backupDir: path.join(__dirname, "data", "test_processed_data", "backups"),
+      testSourceDataDir: path.join(
+        __dirname,
+        "..",
+        "CNC_TestData",
+        "source_data",
+        "clamping_plates"
+      ),
+      backupDir: path.join(
+        __dirname,
+        "..",
+        "CNC_TestData",
+        "working_data",
+        "clampingplatemanager",
+        "backups"
+      ),
     },
     production: {
       // Production mode - USER MUST SPECIFY permanent location

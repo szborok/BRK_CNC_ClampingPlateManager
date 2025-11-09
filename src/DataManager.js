@@ -1,18 +1,16 @@
 // src/DataManager.js
 /**
  * Data management service for ClampingPlateManager
- * Handles data persistence, backup, and storage operations
+ * Handles data persistence, backup, and storage operations using local JSON files
  */
 
 const fs = require("fs").promises;
 const path = require("path");
 const config = require("../config");
 const { logInfo, logError, logWarn } = require("../utils/Logger");
-const StorageAdapter = require("../utils/StorageAdapter");
 
 class DataManager {
   constructor() {
-    this.storageAdapter = new StorageAdapter();
     this.initialized = false;
   }
 
@@ -27,9 +25,6 @@ class DataManager {
     logInfo("Initializing DataManager");
 
     try {
-      // Initialize storage adapter
-      await this.storageAdapter.initialize();
-
       // Ensure data directories exist
       await this.ensureDataDirectories();
 
@@ -48,12 +43,7 @@ class DataManager {
     try {
       const filePath = config.getPlatesDataPath();
 
-      // Try storage adapter first
-      if (this.storageAdapter.isConnected()) {
-        return await this.storageAdapter.getPlates();
-      }
-
-      // Fallback to local file
+      // Load from local file
       const data = await fs.readFile(filePath, "utf8");
       const parsed = JSON.parse(data);
 
@@ -72,12 +62,7 @@ class DataManager {
    */
   async savePlates(plates) {
     try {
-      // Save to storage adapter
-      if (this.storageAdapter.isConnected()) {
-        await this.storageAdapter.savePlates(plates);
-      }
-
-      // Save to local file as backup
+      // Save to local file
       const filePath = config.getPlatesDataPath();
       await fs.writeFile(filePath, JSON.stringify(plates, null, 2));
 
@@ -95,11 +80,6 @@ class DataManager {
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
       const filename = `${reportType}_${timestamp}.json`;
-
-      // Save to storage adapter
-      if (this.storageAdapter.isConnected()) {
-        await this.storageAdapter.saveReport(reportType, reportData);
-      }
 
       // Save to local file
       const reportsDir = path.join(
@@ -206,8 +186,8 @@ class DataManager {
     try {
       const stats = {
         storage: {
-          type: config.storage.type,
-          connected: this.storageAdapter.isConnected(),
+          type: "local",
+          connected: true,
         },
         local: {
           platesFile: await this.getFileStats(config.getPlatesDataPath()),
