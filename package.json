@@ -19,7 +19,7 @@
     "start": "node main.js --serve",
     "serve": "node main.js --serve",
     "init-excel": "node main.js --init-excel",
-    "init-test": "node main.js --init-test"
+    "test": "node main.js --test"
   },
   "dependencies": {
     "exceljs": "^4.4.0",
