@@ -26,11 +26,11 @@
   },
   "dependencies": {
     "exceljs": "^4.4.0",
-    "mongodb": "^6.3.0",
+    "mongodb": "^6.20.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.1"
   },
   "engines": {
     "node": ">=16.0.0"
