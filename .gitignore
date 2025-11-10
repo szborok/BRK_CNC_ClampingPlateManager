@@ -28,6 +28,15 @@ coverage/
 *.lcov
 .nyc_output/
 
+# Test data (use centralized CNC_TestData repository instead)
+data/test_data/
+test_data/
+**/test_data/
+
+# Working data and temp files
+working_data/
+BRK*CNC*Management*Dashboard/
+
 # Logs
 logs/
 *.log
