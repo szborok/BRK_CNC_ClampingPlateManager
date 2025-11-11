@@ -7,6 +7,7 @@ ClampingPlateManager is a Node.js-based CNC clamping plate management system wit
 ## Architecture & Core Components
 
 ### Component Hierarchy
+
 - **WebService** (`src/WebService.js`) - Express REST API server and web interface
 - **PlateService** (`src/PlateService.js`) - Core plate management logic
 - **WorkOrderService** (`src/WorkOrderService.js`) - Work order tracking
@@ -15,16 +16,18 @@ ClampingPlateManager is a Node.js-based CNC clamping plate management system wit
 - **InteractiveService** (`src/InteractiveService.js`) - CLI interactive mode
 
 ### Data Flow Pattern
+
 1. Excel file → 2. InitializationService converts → 3. DataManager stores → 4. PlateService manages → 5. WebService serves via API
 
 ### Data Models
+
 ```javascript
 interface Plate {
   id: string;
-  shelf: string;           // Physical location (e.g., "A-01")
-  health: 'new' | 'used' | 'locked';
-  occupancy: 'free' | 'in-use';
-  lastWorkName?: string;   // Work order format: "W5270NS01001A"
+  shelf: string; // Physical location (e.g., "A-01")
+  health: "new" | "used" | "locked";
+  occupancy: "free" | "in-use";
+  lastWorkName?: string; // Work order format: "W5270NS01001A"
   lastModifiedBy?: string;
   lastModifiedDate: Date;
   history: PlateHistoryEntry[];
@@ -34,24 +37,28 @@ interface Plate {
 ## Critical Configuration
 
 **PRODUCTION MODE (Default)**:
+
 - `config.js` has `app.testMode: false` - Use production CNC data paths
 - `app.autoMode: true` - Continuous operation
 - `webService.port: 3003` - REST API port (fixed from 3002)
 - `app.permanentStoragePath: path.join(__dirname, "data")` - Local data directory
 - **Test mode only via**: `node main.js --test` flag
 
-**Data Structure**: 
+**Data Structure**:
+
 - `data/plates.json` - Current inventory state (permanent storage)
 - `data/config.json` - App settings
 - `data/Készülékek.xlsx` - Official production Excel structure
 
 **API Server**:
+
 - Port: 3003 (fixed from 3002 to avoid conflict)
 - Endpoints: `/api/health`, `/api/plates`, `/api/plates/:id`, `/api/work-orders`, `/api/plates/:id/status`
 - CORS enabled for localhost:5173 (Dashboard) and localhost:3000
 - Uses DataManager reading from permanent storage (data/plates.json)
 
 **Execution Modes**:
+
 - Auto mode: `npm run serve` (web service on port 3003)
 - Manual mode: `npm run manual` (CLI interactive mode)
 - Initialize: `npm run init` (Excel to JSON conversion)
@@ -59,6 +66,7 @@ interface Plate {
 ## REST API Integration (Nov 11, 2025)
 
 **Express Server** (`src/WebService.js`):
+
 ```javascript
 GET /api/health - Server health check (different from /api/status)
 GET /api/plates - All clamping plates
@@ -68,6 +76,7 @@ GET /api/work-orders - Work order tracking
 ```
 
 **DataManager Permanent Storage**:
+
 - Uses `permanentStoragePath` from config (data/plates.json)
 - Reads/writes directly to permanent file
 - No temp structure - all data in local data/ directory
@@ -80,6 +89,7 @@ GET /api/work-orders - Work order tracking
 **Web Service**: `npm run serve` - Starts web server on port 3003 (production ready)
 
 **CLI Commands**:
+
 - `npm run serve` - **Production mode**: Web service + REST API (port 3003)
 - `npm run manual` - Interactive CLI for plate management
 - `npm run init` - Convert Excel file to JSON format
@@ -88,12 +98,15 @@ GET /api/work-orders - Work order tracking
 ## Plate Operations
 
 ### Work Order Tracking
+
 Work names follow pattern: "W5270NS01001A" - integrated with manufacturing workflow systems
 
 ### History Management
+
 All plate modifications create PlateHistoryEntry objects with user attribution and timestamp tracking.
 
 ### Status Management
+
 - Health: new → used → locked (lifecycle tracking)
 - Occupancy: free ↔ in-use (availability tracking)
 
@@ -104,6 +117,7 @@ All data stored in local JSON files in `data/` directory (permanent storage). No
 ## Logging Conventions
 
 Use structured logging with context:
+
 ```javascript
 const { logInfo, logError } = require("../utils/Logger");
 logInfo("Plate updated", {
@@ -150,6 +164,7 @@ logInfo("Plate updated", {
 ## Architecture & Core Components
 
 ### Component Hierarchy
+
 - **App.tsx** - Main application orchestrator with routing, authentication, and global state
 - **LoginPage** - User authentication with role-based access (admin/user)
 - **Dashboard** - Overview with summary cards, recent activity, and quick actions
@@ -158,19 +173,22 @@ logInfo("Plate updated", {
 - **Modal Components** - PlateDetailModal, FinishWorkModal, StopWorkModal, AdminEditModal
 
 ### State Management Pattern
+
 Global state managed in App.tsx with prop drilling:
+
 - `user`: Authentication and permissions
 - `currentView`: AppView type for navigation ('dashboard' | 'all-plates' | 'new-plates' | etc.)
 - `theme`, `fontSize`, `highContrast`: Accessibility settings persisted to localStorage
 
 ### Data Models
+
 ```typescript
 interface Plate {
   id: string;
-  shelf: string;           // Physical location (e.g., "A-01")
-  health: 'new' | 'used' | 'locked';
-  occupancy: 'free' | 'in-use';
-  lastWorkName?: string;   // Work order format: "W5270NS01001A"
+  shelf: string; // Physical location (e.g., "A-01")
+  health: "new" | "used" | "locked";
+  occupancy: "free" | "in-use";
+  lastWorkName?: string; // Work order format: "W5270NS01001A"
   lastModifiedBy?: string;
   lastModifiedDate: Date;
   history: PlateHistoryEntry[];
@@ -197,29 +215,36 @@ interface Plate {
 ## UI/UX Patterns
 
 ### View Navigation
+
 AppView enum drives sidebar filtering:
-- Status-based: 'free-plates', 'in-use-plates', 'locked-plates'  
+
+- Status-based: 'free-plates', 'in-use-plates', 'locked-plates'
 - Health-based: 'new-plates', 'used-plates'
 - Workflow: 'ongoing-work', 'history'
 
 ### Modal Workflows
+
 - **PlateDetailModal**: Full plate information with history timeline
 - **FinishWorkModal**: Complete work orders with automatic status updates
 - **StopWorkModal**: Pause/cancel work with reason tracking
 - **AdminEditModal**: Administrative plate modifications (admin-only)
 
 ### Accessibility Features
+
 Built-in theme system (auto/light/dark), font scaling (small/normal/large), and high contrast mode with localStorage persistence.
 
 ## Data Flow Patterns
 
 ### Plate Operations
+
 1. User selects plate → 2. Modal opens with current state → 3. User makes changes → 4. State updates → 5. History entry added → 6. localStorage/backend sync
 
 ### Work Order Tracking
+
 Work names follow pattern: "W5270NS01001A" - integrated with manufacturing workflow systems
 
 ### History Management
+
 All plate modifications create PlateHistoryEntry objects with user attribution and timestamp tracking.
 
 ## Key Dependencies
