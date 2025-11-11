@@ -3,7 +3,7 @@ const path = require("path");
 
 const config = {
   app: {
-    testMode: true, // true = use test data paths, false = use production paths
+    testMode: false, // true = use test data paths, false = use production paths
     autoMode: true, // Same as JSONScanner's autorun
     scanIntervalMs: 60000, // 60 seconds
     logLevel: "info",
@@ -15,13 +15,13 @@ const config = {
     userDefinedWorkingFolder: null, // User can override temp location
 
     // Permanent storage settings - USER MUST SPECIFY
-    permanentStoragePath: null, // User-specified permanent storage location
-    requirePermanentPath: true, // Require user to specify permanent storage
+    permanentStoragePath: path.join(__dirname, "data"), // Default to local data directory for API mode
+    requirePermanentPath: false, // Allow running without permanent path for API mode
   },
 
   // Web service settings
   webService: {
-    port: 3002, // Different port from other services
+    port: 3003, // ClampingPlateManager port (JSONScanner:3001, ToolManager:3002)
     enableAuth: false, // Disable auth for backend service
     enableCors: true,
     allowedOrigins: ["http://localhost:3000", "http://localhost:5173"], // CNCManagementDashboard
@@ -175,12 +175,21 @@ config.setPermanentStoragePath = function (userPath) {
   }
 };
 
+// Initialize permanent storage path if one is set in config
+if (config.app.permanentStoragePath) {
+  config.setPermanentStoragePath(config.app.permanentStoragePath);
+}
+
 config.getPermanentDataDir = function () {
   if (this.app.testMode) {
     return this.paths.test.permanentDataDir;
   }
 
   if (!this.app.permanentStoragePath) {
+    // For API mode without permanent storage, use local data directory
+    if (!this.app.requirePermanentPath) {
+      return this.storage.local.dataDirectory;
+    }
     throw new Error(
       "Permanent storage path not set. Use setPermanentStoragePath() first."
     );
