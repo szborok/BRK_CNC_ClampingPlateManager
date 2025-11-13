@@ -3,8 +3,8 @@ const path = require("path");
 
 const config = {
   app: {
-    testMode: false, // true = use test data paths, false = use production paths
-    autoMode: true, // Same as JSONScanner's autorun
+    testMode: false, // true = use test data paths, false = use production paths (set by Dashboard config)
+    autoMode: false, // Same as JSONScanner's autorun (activated by Dashboard config)
     scanIntervalMs: 60000, // 60 seconds
     logLevel: "info",
     enableDetailedLogging: true,
@@ -73,7 +73,7 @@ const config = {
         "test-data",
         "working_data",
         "BRK CNC Management Dashboard",
-        "clampingplatemanager"
+        "ClampingPlateManager"
       ),
       platesData: path.join(
         __dirname,
@@ -82,7 +82,7 @@ const config = {
         "test-data",
         "working_data",
         "BRK CNC Management Dashboard",
-        "clampingplatemanager",
+        "ClampingPlateManager",
         "plates.json"
       ),
       configData: path.join(
@@ -92,7 +92,7 @@ const config = {
         "test-data",
         "working_data",
         "BRK CNC Management Dashboard",
-        "clampingplatemanager",
+        "ClampingPlateManager",
         "config.json"
       ),
       modelsDir: path.join(
@@ -111,7 +111,7 @@ const config = {
         "test-data",
         "working_data",
         "BRK CNC Management Dashboard",
-        "clampingplatemanager",
+        "ClampingPlateManager",
         "previews"
       ),
       templatesDir: path.join(__dirname, "data", "templates"),
@@ -130,7 +130,7 @@ const config = {
         "test-data",
         "working_data",
         "BRK CNC Management Dashboard",
-        "clampingplatemanager",
+        "ClampingPlateManager",
         "backups"
       ),
     },

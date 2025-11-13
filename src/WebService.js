@@ -82,6 +82,8 @@ class WebService {
       // Route requests
       if (path === '/api/health') {
         await this.handleHealth(req, res);
+      } else if (path === '/api/config' && method === 'POST') {
+        await this.handleConfig(req, res);
       } else if (path === '/api/plates') {
         await this.handlePlates(req, res);
       } else if (path.startsWith('/api/plates/')) {
@@ -116,6 +118,53 @@ class WebService {
     };
     
     this.sendJson(res, health);
+  }
+
+  /**
+   * Handle config endpoint - receive configuration from Dashboard
+   */
+  async handleConfig(req, res) {
+    try {
+      const body = await this.readRequestBody(req);
+      const { testMode, platesPath, workingFolder } = body;
+
+      if (typeof testMode !== 'boolean') {
+        this.sendError(res, 400, 'testMode (boolean) is required');
+        return;
+      }
+
+      // Update configuration
+      config.app.testMode = testMode;
+      config.app.autoMode = true; // Activate if needed
+
+      if (workingFolder) {
+        config.app.userDefinedWorkingFolder = workingFolder;
+      }
+
+      if (platesPath) {
+        config.app.permanentStoragePath = platesPath;
+      }
+
+      logInfo('Configuration updated from Dashboard', {
+        testMode,
+        autoMode: config.app.autoMode,
+        workingFolder,
+        platesPath,
+      });
+
+      this.sendJson(res, {
+        success: true,
+        message: 'Configuration applied successfully',
+        config: {
+          testMode: config.app.testMode,
+          autoMode: config.app.autoMode,
+        },
+        timestamp: new Date().toISOString(),
+      });
+    } catch (error) {
+      logError('Failed to apply configuration', { error: error.message });
+      this.sendError(res, 500, 'Failed to apply configuration');
+    }
   }
 
   /**
