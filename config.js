@@ -65,34 +65,41 @@ const config = {
 
   paths: {
     test: {
-      // Test/demo mode - use centralized CNC_TestData
+      // Test/demo mode - use centralized BRK_CNC_CORE test-data
       permanentDataDir: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "working_data",
+        "BRK CNC Management Dashboard",
         "clampingplatemanager"
       ),
       platesData: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "working_data",
+        "BRK CNC Management Dashboard",
         "clampingplatemanager",
         "plates.json"
       ),
       configData: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "working_data",
+        "BRK CNC Management Dashboard",
         "clampingplatemanager",
         "config.json"
       ),
       modelsDir: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "source_data",
         "clamping_plates",
         "models"
@@ -100,8 +107,10 @@ const config = {
       previewsDir: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "working_data",
+        "BRK CNC Management Dashboard",
         "clampingplatemanager",
         "previews"
       ),
@@ -109,15 +118,18 @@ const config = {
       testSourceDataDir: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "source_data",
         "clamping_plates"
       ),
       backupDir: path.join(
         __dirname,
         "..",
-        "CNC_TestData",
+        "BRK_CNC_CORE",
+        "test-data",
         "working_data",
+        "BRK CNC Management Dashboard",
         "clampingplatemanager",
         "backups"
       ),

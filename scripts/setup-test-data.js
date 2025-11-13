@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Setup script to clone CNC_TestData repository
+ * Setup script to clone BRK_CNC_CORE test-data repository
  * This script ensures the centralized test data repository is available
  * before running tests or development.
  */
@@ -9,8 +9,8 @@ const { execSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 
-const REPO_URL = "https://github.com/szborok/CNC_TestData.git";
-const TARGET_DIR = path.join(__dirname, "..", "..", "CNC_TestData");
+const REPO_URL = "https://github.com/szborok/BRK_CNC_CORE.git";
+const TARGET_DIR = path.join(__dirname, "..", "..", "BRK_CNC_CORE", "test-data");
 
 function log(message, type = "info") {
   const colors = {
@@ -35,7 +35,7 @@ function checkGitInstalled() {
 
 function setupTestData() {
   log("═══════════════════════════════════════════════════", "info");
-  log("  CNC Test Data Setup", "info");
+  log("  BRK CNC Test Data Setup", "info");
   log("═══════════════════════════════════════════════════", "info");
   log("");
 
@@ -46,9 +46,9 @@ function setupTestData() {
     process.exit(1);
   }
 
-  // Check if CNC_TestData already exists
+  // Check if BRK_CNC_CORE/test-data already exists
   if (fs.existsSync(TARGET_DIR)) {
-    log("✓ CNC_TestData repository already exists", "success");
+    log("✓ BRK_CNC_CORE/test-data repository already exists", "success");
 
     // Check if it's a git repository
     const gitDir = path.join(TARGET_DIR, ".git");
@@ -70,7 +70,7 @@ function setupTestData() {
     }
   } else {
     // Clone the repository
-    log("Cloning CNC_TestData repository...", "info");
+    log("Cloning BRK_CNC_CORE repository...", "info");
     log(`  Source: ${REPO_URL}`, "info");
     log(`  Target: ${TARGET_DIR}`, "info");
     log("");
@@ -80,10 +80,10 @@ function setupTestData() {
         stdio: "inherit",
       });
       log("", "info");
-      log("✓ CNC_TestData cloned successfully", "success");
+      log("✓ BRK_CNC_CORE/test-data cloned successfully", "success");
     } catch (error) {
       log("", "error");
-      log("✗ Failed to clone CNC_TestData repository", "error");
+      log("✗ Failed to clone BRK_CNC_CORE repository", "error");
       log("  Error: " + error.message, "error");
       log("", "error");
       log("  Manual setup instructions:", "info");
