@@ -126,7 +126,7 @@ class WebService {
   async handleConfig(req, res) {
     try {
       const body = await this.readRequestBody(req);
-      const { testMode, platesPath, workingFolder } = body;
+      const { testMode, platesPath, workingFolder, autoRun = false } = body;
 
       if (typeof testMode !== 'boolean') {
         this.sendError(res, 400, 'testMode (boolean) is required');
@@ -135,7 +135,7 @@ class WebService {
 
       // Update configuration
       config.app.testMode = testMode;
-      config.app.autoMode = true; // Activate if needed
+      config.app.autoMode = autoRun; // Only activate if explicitly requested
 
       if (workingFolder) {
         config.app.userDefinedWorkingFolder = workingFolder;
@@ -147,7 +147,7 @@ class WebService {
 
       logInfo('Configuration updated from Dashboard', {
         testMode,
-        autoMode: config.app.autoMode,
+        autoMode: autoRun,
         workingFolder,
         platesPath,
       });
