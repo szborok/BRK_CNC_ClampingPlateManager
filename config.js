@@ -19,6 +19,12 @@ const config = {
     requirePermanentPath: false, // Allow running without permanent path for API mode
   },
 
+  // Web service configuration
+  webService: {
+    port: 3003,
+    host: 'localhost'
+  },
+
   // Web service settings
   webService: {
     port: 3003, // ClampingPlateManager port (JSONScanner:3001, ToolManager:3002)

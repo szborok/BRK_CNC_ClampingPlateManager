@@ -35,7 +35,7 @@ class WebService {
         this.handleRequest(req, res);
       });
 
-      // Start listening
+      // Start listening with error handling
       this.server.listen(config.webService.port, () => {
         logInfo(`ClampingPlateManager API server listening on port ${config.webService.port}`);
         console.log(`🌐 API server running at http://localhost:${config.webService.port}`);
@@ -47,6 +47,19 @@ class WebService {
         console.log(`   POST /api/work-orders     - Create work order`);
         console.log(`   GET  /api/stats           - Get operational stats`);
         console.log(`   GET  /api/health          - Health check`);
+      });
+      
+      // Handle port binding errors
+      this.server.on('error', (err) => {
+        if (err.code === 'EADDRINUSE') {
+          logError(`Port ${config.webService.port} is already in use. Please stop the conflicting service.`);
+          console.error(`❌ Port ${config.webService.port} is already in use. Please stop the conflicting service.`);
+          process.exit(1);
+        } else {
+          logError(`Server error: ${err.message}`);
+          console.error(`❌ Server error: ${err.message}`);
+          process.exit(1);
+        }
       });
 
     } catch (error) {
