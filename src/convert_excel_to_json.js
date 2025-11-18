@@ -13,6 +13,7 @@ const path = require("path");
 const config = require("../config");
 const ExcelProcessor = require("../utils/ExcelProcessor");
 const ImageExtractor = require("../utils/ImageExtractor");
+const ModelFolderValidator = require("../utils/ModelFolderValidator");
 const { logInfo, logError, logWarn } = require("../utils/Logger");
 
 async function convertExcelToJson(inputExcelPath = null, modelsPath = null) {
@@ -54,21 +55,52 @@ async function convertExcelToJson(inputExcelPath = null, modelsPath = null) {
       extractedCount: Object.keys(imageMap).length,
     });
 
-    // 5. Scan for model files
+    // 5. Validate model folder structure before processing
     const modelScanPath = modelsPath || path.join(testSourceDataDir, "models");
+    const modelsSubPath = path.join(modelScanPath, "models");
+    
+    try {
+      await fs.access(modelsSubPath);
+      logInfo("Validating model folder structure", { path: modelsSubPath });
+      const validator = new ModelFolderValidator();
+      const validationResult = await validator.validateModelFolders(modelsSubPath);
+      
+      if (!validationResult.valid) {
+        const errorMessage = validator.formatIssuesForDisplay(validationResult.issues);
+        console.error("\n" + errorMessage);
+        logError("Model folder validation failed", {
+          invalidFolders: validationResult.invalidFolders,
+          issues: validationResult.issues,
+        });
+        throw new Error("Model folder validation failed - fix folder structure and try again");
+      }
+      
+      logInfo("Model folder validation passed", {
+        totalFolders: validationResult.totalFolders,
+        validFolders: validationResult.validFolders,
+      });
+    } catch (error) {
+      if (error.code === "ENOENT") {
+        logWarn("No models subfolder found, skipping validation", { path: modelsSubPath });
+      } else {
+        throw error;
+      }
+    }
+    
+    // 6. Scan for model files
     const modelFiles = await scanModelFiles(modelScanPath);
 
-    // 6. Match plates to models
+    // 7. Match plates to models
     const plateConfig = await matchPlatesWithModels(
       excelData,
       modelFiles,
       imageMap
     );
 
-    // 7. Generate JSON config
+    // 8. Generate JSON config
     const jsonConfig = generateJsonConfig(plateConfig);
 
-    // 8. Save with descriptive filename
+    // 9. Save with descriptive filename
     const timestamp = new Date()
       .toISOString()
       .replace(/[:.]/g, "-")

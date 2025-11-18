@@ -15,6 +15,7 @@ const path = require("path");
 const config = require("../config");
 const { logInfo, logError, logWarn } = require("../utils/Logger");
 const ExcelProcessor = require("../utils/ExcelProcessor");
+const ModelFolderValidator = require("../utils/ModelFolderValidator");
 
 class InitializationService {
   constructor() {
@@ -197,6 +198,34 @@ class InitializationService {
    */
   async processModelFiles(inputFolderPath) {
     try {
+      // First, validate model folder structure
+      const modelsPath = path.join(inputFolderPath, "models");
+      try {
+        await fs.access(modelsPath);
+        const validator = new ModelFolderValidator();
+        const validationResult = await validator.validateModelFolders(modelsPath);
+
+        if (!validationResult.valid) {
+          const errorMessage = validator.formatIssuesForDisplay(validationResult.issues);
+          logError("Model folder validation failed", {
+            invalidFolders: validationResult.invalidFolders,
+            issues: validationResult.issues,
+          });
+          throw new Error(errorMessage);
+        }
+
+        logInfo("Model folder validation passed", {
+          totalFolders: validationResult.totalFolders,
+          validFolders: validationResult.validFolders,
+        });
+      } catch (error) {
+        if (error.code === "ENOENT") {
+          logWarn("No models folder found, skipping validation");
+        } else {
+          throw error;
+        }
+      }
+
       this.modelFiles = await this.scanForModelFiles(inputFolderPath);
 
       // In test mode, also scan the test_source_data/models directory if it's different from input

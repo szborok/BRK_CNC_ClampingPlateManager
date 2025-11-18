@@ -114,3 +114,4 @@ data/test_processed_data/
 # Editor files
 *.sublime-project
 *.sublime-workspace
+*.icloud

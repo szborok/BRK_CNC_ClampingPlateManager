@@ -4,7 +4,7 @@
  * Processes Készülékek.xlsx files to extract plate information
  */
 
-const XLSX = require("xlsx");
+const ExcelJS = require("exceljs");
 const fs = require("fs").promises;
 const path = require("path");
 const { logInfo, logError, logWarn } = require("./Logger");
@@ -25,17 +25,13 @@ class ExcelProcessor {
     try {
       logInfo("Processing Excel file", { filePath: excelFilePath });
 
-      // Read Excel file with formatting preservation
-      const fileBuffer = await fs.readFile(excelFilePath);
-      this.workbook = XLSX.read(fileBuffer, {
-        type: "buffer",
-        cellStyles: true,
-        cellNF: true,
-        cellHTML: false,
-      });
+      // Read Excel file with ExcelJS
+      const workbook = new ExcelJS.Workbook();
+      await workbook.xlsx.readFile(excelFilePath);
+      this.workbook = workbook;
 
       // Process all worksheets
-      const sheetNames = this.workbook.SheetNames;
+      const sheetNames = workbook.worksheets.map(ws => ws.name);
       logInfo(`Found ${sheetNames.length} worksheets`, { sheetNames });
 
       for (const sheetName of sheetNames) {
@@ -59,16 +55,16 @@ class ExcelProcessor {
    */
   async processWorksheet(sheetName) {
     try {
-      const worksheet = this.workbook.Sheets[sheetName];
+      const worksheet = this.workbook.worksheets.find(ws => ws.name === sheetName);
       if (!worksheet) {
         logWarn("Worksheet not found", { sheetName });
         return;
       }
 
-      // Convert worksheet to JSON
-      const jsonData = XLSX.utils.sheet_to_json(worksheet, {
-        header: 1, // Use array of arrays format
-        defval: "", // Default value for empty cells
+      // Convert worksheet to array of arrays
+      const jsonData = [];
+      worksheet.eachRow((row) => {
+        jsonData.push(row.values.slice(1)); // Remove first empty element
       });
 
       if (jsonData.length === 0) {
