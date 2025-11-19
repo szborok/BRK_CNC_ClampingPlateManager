@@ -186,7 +186,17 @@ class WebService {
   async handlePlates(req, res) {
     if (req.method === 'GET') {
       const plates = await this.plateService.getAllPlates();
-      this.sendJson(res, plates);
+      
+      // Return in Dashboard-compatible format
+      const response = {
+        metadata: {
+          generatedDate: new Date().toISOString(),
+          totalPlates: plates.length
+        },
+        plates: plates
+      };
+      
+      this.sendJson(res, response);
     } else {
       this.sendError(res, 405, 'Method Not Allowed');
     }

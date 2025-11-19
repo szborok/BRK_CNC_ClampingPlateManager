@@ -222,6 +222,10 @@ config.getPlatesDataPath = function () {
   }
 
   if (!this.app.permanentStoragePath) {
+    // For API mode without permanent storage, use local data directory
+    if (!this.app.requirePermanentPath) {
+      return path.join(this.storage.local.dataDirectory, "plates.json");
+    }
     throw new Error(
       "Permanent storage path not set. Use setPermanentStoragePath() first."
     );
@@ -236,6 +240,10 @@ config.getConfigDataPath = function () {
   }
 
   if (!this.app.permanentStoragePath) {
+    // For API mode without permanent storage, use local data directory
+    if (!this.app.requirePermanentPath) {
+      return path.join(this.storage.local.dataDirectory, "config.json");
+    }
     throw new Error(
       "Permanent storage path not set. Use setPermanentStoragePath() first."
     );
