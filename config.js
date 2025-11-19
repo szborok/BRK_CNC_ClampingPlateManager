@@ -3,7 +3,7 @@ const path = require("path");
 
 const config = {
   app: {
-    testMode: false, // true = use test data paths, false = use production paths (set by Dashboard config)
+    testMode: true, // true = use test data paths, false = use production paths (set by Dashboard config)
     autoMode: false, // Same as JSONScanner's autorun (activated by Dashboard config)
     scanIntervalMs: 60000, // 60 seconds
     logLevel: "info",

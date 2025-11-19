@@ -88,7 +88,16 @@ async function convertExcelToJson(inputExcelPath = null, modelsPath = null) {
     }
     
     // 6. Scan for model files
-    const modelFiles = await scanModelFiles(modelScanPath);
+    const scanResult = await scanModelFiles(modelScanPath);
+    
+    // Check for validation issues
+    if (scanResult.validationIssues && scanResult.validationIssues.length > 0) {
+      console.error('\n🛑 Processing stopped due to validation errors.');
+      console.error('Fix the issues above and run the conversion again.\n');
+      process.exit(1);
+    }
+    
+    const modelFiles = scanResult.modelFiles;
 
     // 7. Match plates to models
     const plateConfig = await matchPlatesWithModels(
@@ -148,6 +157,7 @@ async function matchPlatesWithModels(excelData, modelFiles, imageMap = {}) {
       workHistory: plateData.workHistoryCombined || "", // Combined work history string
       workHistoryEntries: plateData.workHistory || [], // Array of individual work entries
       workProjects: plateData.workProjects || [],
+      shelf: plateData.shelfNumber || plateData.shelf || "", // PlateService validation expects 'shelf'
       shelfNumber: plateData.shelfNumber || "",
       boxSize: plateData.boxSize || "",
       isLocked: plateData.isLocked || false, // Preserve locked status from Excel
@@ -241,6 +251,7 @@ function findModelMatchesByWorkHistory(workProjects, modelFiles) {
 async function scanModelFiles(modelsDir) {
   // modelsDir is already the full path to the models directory
   const modelFiles = [];
+  const validationIssues = [];
 
   try {
     const folders = await fs.readdir(modelsDir);
@@ -252,26 +263,81 @@ async function scanModelFiles(modelsDir) {
       if (stat.isDirectory()) {
         const files = await fs.readdir(folderPath);
         const modelFormats = [".x_t", ".step", ".stp", ".iges", ".igs", ".dwg"];
+        const imageFormats = [".jpg", ".jpeg", ".png", ".bmp", ".gif"];
+
+        const models = [];
+        const images = [];
 
         for (const file of files) {
           const ext = path.extname(file).toLowerCase();
           if (modelFormats.includes(ext)) {
+            models.push(file);
             modelFiles.push({
               folder,
               fileName: file,
               relativePath: `${folder}/${file}`,
               fullPath: path.join(folderPath, file),
             });
+          } else if (imageFormats.includes(ext)) {
+            images.push(file);
           }
+        }
+
+        // Validate: each folder should have exactly 1 model and 1 image
+        if (models.length === 0) {
+          validationIssues.push({
+            type: 'MISSING_MODEL',
+            folder,
+            message: `No 3D model file found in folder "${folder}"`
+          });
+        } else if (models.length > 1) {
+          validationIssues.push({
+            type: 'MULTIPLE_MODELS',
+            folder,
+            models,
+            message: `Multiple model files (${models.length}) found in folder "${folder}": ${models.join(', ')}`
+          });
+        }
+
+        if (images.length === 0) {
+          validationIssues.push({
+            type: 'MISSING_IMAGE',
+            folder,
+            message: `No preview image found in folder "${folder}"`
+          });
+        } else if (images.length > 1) {
+          validationIssues.push({
+            type: 'MULTIPLE_IMAGES',
+            folder,
+            images,
+            message: `Multiple images (${images.length}) found in folder "${folder}": ${images.join(', ')}`
+          });
         }
       }
     }
 
-    logInfo("Scanned model files", { filesFound: modelFiles.length });
-    return modelFiles;
+    logInfo("Scanned model files", { filesFound: modelFiles.length, issues: validationIssues.length });
+    
+    if (validationIssues.length > 0) {
+      console.error('\n⚠️  VALIDATION ISSUES FOUND:\n');
+      for (const issue of validationIssues) {
+        console.error(`  ❌ [${issue.type}] ${issue.message}`);
+      }
+      console.error('\n📋 Summary:');
+      console.error(`  • Missing models: ${validationIssues.filter(i => i.type === 'MISSING_MODEL').length}`);
+      console.error(`  • Multiple models: ${validationIssues.filter(i => i.type === 'MULTIPLE_MODELS').length}`);
+      console.error(`  • Missing images: ${validationIssues.filter(i => i.type === 'MISSING_IMAGE').length}`);
+      console.error(`  • Multiple images: ${validationIssues.filter(i => i.type === 'MULTIPLE_IMAGES').length}`);
+      console.error('\n💡 Please fix these issues and reprocess.\n');
+      
+      // Return issues for caller to handle
+      return { modelFiles, validationIssues };
+    }
+    
+    return { modelFiles, validationIssues: [] };
   } catch (error) {
     logWarn("Failed to scan model files", { error: error.message });
-    return [];
+    return { modelFiles: [], validationIssues: [] };
   }
 }
 

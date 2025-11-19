@@ -46,6 +46,7 @@ class WebService {
         console.log(`   GET  /api/work-orders     - Get work orders`);
         console.log(`   POST /api/work-orders     - Create work order`);
         console.log(`   GET  /api/stats           - Get operational stats`);
+        console.log(`   GET  /api/previews/:file  - Get preview image`);
         console.log(`   GET  /api/health          - Health check`);
       });
       
@@ -105,6 +106,8 @@ class WebService {
         await this.handleWorkOrders(req, res);
       } else if (path === '/api/stats') {
         await this.handleStats(req, res);
+      } else if (path.startsWith('/api/previews/')) {
+        await this.handlePreviewImage(req, res);
       } else {
         this.sendError(res, 404, 'Not Found');
       }
@@ -251,6 +254,51 @@ class WebService {
     };
     
     this.sendJson(res, stats);
+  }
+
+  /**
+   * Handle preview image serving
+   */
+  async handlePreviewImage(req, res) {
+    const fs = require('fs');
+    const path = require('path');
+    
+    try {
+      const filename = req.url.split('/').pop();
+      const previewsDir = config.getPreviewsDir();
+      const imagePath = path.join(previewsDir, filename);
+      
+      // Check if file exists
+      if (!fs.existsSync(imagePath)) {
+        logWarn(`Preview image not found: ${filename}`);
+        this.sendError(res, 404, 'Image not found');
+        return;
+      }
+      
+      // Determine content type from extension
+      const ext = path.extname(filename).toLowerCase();
+      const contentTypes = {
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.gif': 'image/gif',
+        '.bmp': 'image/bmp'
+      };
+      
+      const contentType = contentTypes[ext] || 'application/octet-stream';
+      
+      // Read and serve the file
+      const imageBuffer = fs.readFileSync(imagePath);
+      res.setHeader('Content-Type', contentType);
+      res.setHeader('Cache-Control', 'public, max-age=86400'); // Cache for 24 hours
+      res.writeHead(200);
+      res.end(imageBuffer);
+      
+      logInfo(`Served preview image: ${filename}`);
+    } catch (error) {
+      logError('Failed to serve preview image', { error: error.message });
+      this.sendError(res, 500, 'Failed to serve image');
+    }
   }
 
   /**

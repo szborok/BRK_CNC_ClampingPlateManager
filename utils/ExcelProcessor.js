@@ -405,8 +405,7 @@ class ExcelProcessor {
    * @returns {Array} Array of grouped plate data
    */
   groupRowsByMergedPlates(dataRows, columnMap, sheetName) {
-    const plates = [];
-    let currentPlate = null;
+    const platesMap = new Map(); // Use Map to group by plate number
     let currentRowIndex = 2; // Start from row 2 (after header)
 
     logInfo("Starting grouping process", {
@@ -416,7 +415,7 @@ class ExcelProcessor {
     });
 
     // Get worksheet for formatting information
-    const worksheet = this.workbook.Sheets[sheetName];
+    const worksheet = this.workbook.worksheets.find(ws => ws.name === sheetName);
 
     for (let i = 0; i < dataRows.length; i++) {
       const row = dataRows[i];
@@ -438,99 +437,76 @@ class ExcelProcessor {
       const previewImage = String(row[columnMap.previewImage] || "").trim();
       const boxSize = String(row[columnMap.boxSize] || "").trim();
 
-      // Check if plate number cell has red background (indicates locked status)
-      let isLocked = false;
-      if (plateNumber && plateNumber !== "") {
-        // First try automatic detection
-        isLocked = this.hasRedBackground(
+      // Skip rows without plate number
+      if (!plateNumber || plateNumber === "") {
+        continue;
+      }
+
+      // Check if this plate already exists in our map
+      if (!platesMap.has(plateNumber)) {
+        // Check if plate number cell has red background (indicates locked status)
+        const isLocked = this.hasRedBackground(
           worksheet,
           currentRowIndex,
           columnMap.plateNumber
-        );
-
-        // If automatic detection fails, check manual list
-        if (!isLocked) {
-          isLocked = this.isManuallyLocked(plateNumber);
-        }
+        ) || this.isManuallyLocked(plateNumber);
 
         if (isLocked) {
           logInfo(`Plate ${plateNumber} is LOCKED (red background)`);
         }
-      }
 
-      // Debug first few rows - show more columns including the plate number column
-      if (i < 15) {
-        logInfo(`Row ${i + 3} debug`, {
-          // +3 because we start from row 3 (0-indexed)
-          plateNumber,
-          workHistory,
-          shelfNumber,
-          previewImage,
-          boxSize,
-          rowData: row.slice(0, 6), // First 6 columns
-        });
-      }
-
-      // If we have a plate number, start a new plate
-      if (plateNumber && plateNumber !== "") {
-        // Save previous plate if exists
-        if (currentPlate) {
-          plates.push(currentPlate);
-        }
-
-        // Start new plate with all the data from the first row
-        currentPlate = {
+        // Create new plate entry
+        platesMap.set(plateNumber, {
           plateNumber,
           workHistory: [],
           workProjects: [],
           shelfNumber: shelfNumber || "Unknown",
+          shelf: shelfNumber || "Unknown", // PlateService validation expects 'shelf'
           boxSize: boxSize || "Unknown",
           previewImage: previewImage,
-          isLocked: isLocked, // Store locked status from red background
+          isLocked: isLocked,
           source: {
             worksheet: sheetName,
-            rows: [currentRowIndex], // Track all rows for this plate
+            rows: [currentRowIndex],
           },
-        }; // Add first work entry if exists
-        if (workHistory && workHistory !== "") {
-          currentPlate.workHistory.push(workHistory);
+        });
+      }
+
+      // Get existing plate
+      const plate = platesMap.get(plateNumber);
+      
+      // Add row tracking if not already added
+      if (!plate.source.rows.includes(currentRowIndex)) {
+        plate.source.rows.push(currentRowIndex);
+      }
+
+      // Add work history if exists and not duplicate
+      if (workHistory && workHistory !== "") {
+        if (!plate.workHistory.includes(workHistory)) {
+          plate.workHistory.push(workHistory);
           const projects = this.parseWorkHistory(workHistory);
-          currentPlate.workProjects.push(...projects);
+          plate.workProjects.push(...projects);
         }
       }
-      // If no plate number but we have data, add to current plate
-      else if (currentPlate) {
-        currentPlate.source.rows.push(currentRowIndex);
 
-        // Add work history if exists
-        if (workHistory && workHistory !== "") {
-          currentPlate.workHistory.push(workHistory);
-          const projects = this.parseWorkHistory(workHistory);
-          currentPlate.workProjects.push(...projects);
-        }
-
-        // Update other fields if they're not set and we have data
-        if (
-          !currentPlate.shelfNumber ||
-          currentPlate.shelfNumber === "Unknown"
-        ) {
-          if (shelfNumber && shelfNumber !== "") {
-            currentPlate.shelfNumber = shelfNumber;
-          }
-        }
-
-        if (!currentPlate.previewImage && previewImage && previewImage !== "") {
-          currentPlate.previewImage = previewImage;
-        }
+      // Update fields with non-empty values (take first valid value)
+      if (shelfNumber && shelfNumber !== "" && (plate.shelfNumber === "Unknown" || !plate.shelfNumber)) {
+        plate.shelfNumber = shelfNumber;
+      }
+      
+      if (previewImage && previewImage !== "" && !plate.previewImage) {
+        plate.previewImage = previewImage;
+      }
+      
+      if (boxSize && boxSize !== "" && (plate.boxSize === "Unknown" || !plate.boxSize)) {
+        plate.boxSize = boxSize;
       }
     }
 
-    // Don't forget the last plate
-    if (currentPlate) {
-      plates.push(currentPlate);
-    }
+    // Convert Map to array
+    const plates = Array.from(platesMap.values());
 
-    // Convert work history arrays to combined strings
+    // Convert work history arrays to combined strings and finalize
     for (const plate of plates) {
       plate.workHistoryCombined = plate.workHistory.join("; ");
       plate.source.rowCount = plate.source.rows.length;
@@ -538,10 +514,10 @@ class ExcelProcessor {
       plate.source.lastRow = plate.source.rows[plate.source.rows.length - 1];
     }
 
-    logInfo(`Grouped ${dataRows.length} rows into ${plates.length} plates`, {
+    logInfo(`Grouped ${dataRows.length} rows into ${plates.length} unique plates`, {
       totalRows: dataRows.length,
-      plates: plates.length,
-      avgRowsPerPlate: Math.round((dataRows.length / plates.length) * 10) / 10,
+      uniquePlates: plates.length,
+      avgRowsPerPlate: plates.length > 0 ? Math.round((dataRows.length / plates.length) * 10) / 10 : 0,
     });
 
     return plates;
@@ -672,80 +648,31 @@ class ExcelProcessor {
    */
   hasRedBackground(worksheet, row, col) {
     try {
-      // Convert to Excel cell reference (A1, B2, etc.)
-      const cellRef = XLSX.utils.encode_cell({ r: row - 1, c: col });
-      const cell = worksheet[cellRef];
-
-      // Debug: Log cell information for plate number cells
-      if (cell && cell.v) {
-        logInfo(
-          `Checking cell ${cellRef} (plate ${cell.v}) for red background`,
-          {
-            cellRef,
-            plateNumber: cell.v,
-            hasStyle: !!cell.s,
-            hasFill: !!(cell.s && cell.s.fill),
-            cellData: cell.s || "No style data",
-          }
-        );
-      }
-
-      if (!cell || !cell.s) {
+      // ExcelJS API: get cell by row/column
+      const cell = worksheet.getCell(row, col + 1); // ExcelJS is 1-indexed for columns
+      
+      if (!cell || !cell.style || !cell.style.fill) {
         return false;
       }
 
-      const style = cell.s;
-
-      // Check multiple fill properties for red background
-      if (style.fill) {
-        const fill = style.fill;
-
-        // Check patternType for solid fills
-        if (fill.patternType === "solid" && fill.fgColor) {
-          const colorValue =
-            fill.fgColor.rgb || fill.fgColor.theme || fill.fgColor.indexed;
-          logInfo(`Found solid fill color for plate ${cell.v}`, {
-            colorValue,
-            plateNumber: cell.v,
-          });
-
+      const fill = cell.style.fill;
+      
+      // Check for pattern fill (solid color)
+      if (fill.type === 'pattern' && fill.pattern === 'solid') {
+        const fgColor = fill.fgColor;
+        
+        if (fgColor && fgColor.argb) {
+          const colorValue = fgColor.argb;
+          
           // Check for red color variations
           if (this.isRedColor(colorValue)) {
-            logInfo(`RED BACKGROUND DETECTED for plate ${cell.v}!`, {
-              plateNumber: cell.v,
+            logInfo(`RED BACKGROUND DETECTED for plate at row ${row}!`, {
+              row,
+              col,
               colorValue,
             });
             return true;
           }
-        }
-
-        // Check background color properties
-        if (fill.bgColor) {
-          const colorValue =
-            fill.bgColor.rgb || fill.bgColor.theme || fill.bgColor.indexed;
-          if (this.isRedColor(colorValue)) {
-            logInfo(`RED BACKGROUND DETECTED (bgColor) for plate ${cell.v}!`, {
-              plateNumber: cell.v,
-              colorValue,
-            });
-            return true;
-          }
-        }
-      }
-
-      // Check direct style properties
-      if (style.bgColor) {
-        const colorValue =
-          style.bgColor.rgb || style.bgColor.theme || style.bgColor.indexed;
-        if (this.isRedColor(colorValue)) {
-          logInfo(
-            `RED BACKGROUND DETECTED (style.bgColor) for plate ${cell.v}!`,
-            {
-              plateNumber: cell.v,
-              colorValue,
-            }
-          );
-          return true;
         }
       }
 
