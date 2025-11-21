@@ -14,7 +14,7 @@
 
 const path = require("path");
 const config = require("./config");
-const { logInfo, logError } = require("./utils/Logger");
+const { logInfo, logError, logWarn } = require("./utils/Logger");
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -128,52 +128,31 @@ async function runTestInitialization() {
   const fsp = require("fs").promises;
 
   console.log(
-    "🔧 Test Initialization - Setting up test_processed_data workspace..."
+    "🔧 Test Initialization - Setting up from test-data source..."
   );
 
-  // Define source paths
-  const sourceExcelPath = path.join(
-    __dirname,
-    "data",
-    "test_source_data",
-    "info",
-    "Készülékek.xlsx"
-  );
-  const sourceModelsPath = path.join(
-    __dirname,
-    "data",
-    "test_source_data",
-    "models"
-  );
+  // Use config paths for test mode (points to BRK_CNC_CORE/test-data)
+  const sourceDir = config.paths.test.testSourceDataDir;
+  const sourceExcelPath = path.join(sourceDir, "info", "Készülékek.xlsx");
+  const sourceModelsPath = config.paths.test.modelsDir;
 
-  // Define test_processed_data paths
-  const testProcessedDataBase = path.join(
-    __dirname,
-    "data",
-    "test_processed_data"
-  );
-  const testProcessedDataInfo = path.join(testProcessedDataBase, "info");
-  const testProcessedDataModels = path.join(testProcessedDataBase, "models");
+  // Use config working_data paths (BRK_CNC_CORE/test-data/working_data)
+  const workingDataBase = config.getPermanentDataDir();
+  const testProcessedDataInfo = path.join(workingDataBase, "info");
+  const testProcessedDataModels = path.join(workingDataBase, "models");
   const testExcelPath = path.join(testProcessedDataInfo, "Készülékek.xlsx");
 
   try {
-    // Clean test_processed_data workspace first
-    console.log("🧹 Cleaning test_processed_data workspace...");
-    if (fs.existsSync(testProcessedDataBase)) {
-      await fsp.rm(testProcessedDataBase, { recursive: true, force: true });
-      console.log("✅ Cleaned existing test_processed_data folder");
-    }
-
-    // Create fresh test_processed_data directory structure
+    // Create working_data directory structure
     await fsp.mkdir(testProcessedDataInfo, { recursive: true });
     await fsp.mkdir(testProcessedDataModels, { recursive: true });
 
-    // Copy Excel file to test_processed_data/info
-    console.log("📋 Copying Excel file to test_processed_data workspace...");
+    // Copy Excel file to working_data/info
+    console.log("📋 Copying Excel file to working_data...");
     await fsp.copyFile(sourceExcelPath, testExcelPath);
 
-    // Copy model folders to test_processed_data/models
-    console.log("📁 Copying model folders to test_processed_data workspace...");
+    // Copy model folders to working_data/models
+    console.log("📁 Copying model folders to working_data...");
     if (fs.existsSync(sourceModelsPath)) {
       const modelFolders = await fsp.readdir(sourceModelsPath);
       for (const folder of modelFolders) {
@@ -227,6 +206,29 @@ async function runTestInitialization() {
 
 async function runWebService() {
   console.log("🌐 Starting web service...");
+
+  // Auto-initialize if plates.json doesn't exist (first run)
+  const platesPath = config.getPlatesDataPath();
+  const fsp = require("fs").promises;
+  
+  try {
+    await fsp.access(platesPath);
+    console.log("✅ Plates data found, skipping initialization");
+  } catch (error) {
+    // plates.json doesn't exist - run initialization
+    if (config.app.testMode) {
+      console.log("🔄 First run detected - initializing from test source data...");
+      try {
+        await runTestInitialization();
+        console.log("✅ Auto-initialization completed");
+      } catch (initError) {
+        logWarn("Auto-initialization failed, starting with empty plates", { error: initError.message });
+      }
+    } else {
+      console.log("ℹ️  No plates data found - starting with empty inventory");
+      console.log("   Use --init-excel to import from Excel file");
+    }
+  }
 
   const WebService = require("./src/WebService");
   const service = new WebService();
