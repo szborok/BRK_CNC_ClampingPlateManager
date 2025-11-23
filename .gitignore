@@ -28,15 +28,6 @@ coverage/
 *.lcov
 .nyc_output/
 
-# Test data (use centralized CNC_TestData repository instead)
-data/test_data/
-test_data/
-**/test_data/
-
-# Working data and temp files
-working_data/
-BRK*CNC*Management*Dashboard/
-
 # Logs
 logs/
 *.log
@@ -93,23 +84,6 @@ desktop.ini
 # React/TypeScript specific
 *.tsbuildinfo
 .eslintcache
-
-# Testing
-coverage/
-.jest/
-test-results/
-playwright-report/
-test-results/
-
-# Temporary files
-*.tmp
-*.temp
-temp/
-tmp/
-
-# Test data (now in centralized CNC_TestData repository)
-data/test_source_data/
-data/test_processed_data/
 
 # Editor files
 *.sublime-project

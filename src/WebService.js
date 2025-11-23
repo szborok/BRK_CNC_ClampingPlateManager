@@ -142,7 +142,7 @@ class WebService {
   async handleConfig(req, res) {
     try {
       const body = await this.readRequestBody(req);
-      const { testMode, platesPath, workingFolder, autoRun = false } = body;
+      const { testMode, platesPath, workingFolder, autoRun = false, plateInfoFile } = body;
 
       if (typeof testMode !== 'boolean') {
         this.sendError(res, 400, 'testMode (boolean) is required');
@@ -168,13 +168,39 @@ class WebService {
         platesPath,
       });
 
+      // If autoRun is true AND we have plateInfoFile, trigger initialization
+      let initResult = null;
+      if (autoRun && plateInfoFile && platesPath) {
+        logInfo('Auto-run enabled - triggering initialization', { plateInfoFile, platesPath });
+        try {
+          const convertExcelToJson = require('./convert_excel_to_json');
+          initResult = await convertExcelToJson(plateInfoFile, platesPath);
+          
+          // Copy timestamped inventory to plates.json
+          const fs = require('fs').promises;
+          const path = require('path');
+          const platesJsonPath = config.getPlatesDataPath();
+          await fs.copyFile(initResult.outputPath, platesJsonPath);
+          logInfo('Copied inventory to plates.json', { from: initResult.outputPath, to: platesJsonPath });
+          
+          // Reload plates in service
+          await this.plateService.initialize();
+        } catch (initError) {
+          logError('Initialization failed', { error: initError.message });
+          this.sendError(res, 500, `Initialization failed: ${initError.message}`);
+          return;
+        }
+      }
+
       this.sendJson(res, {
         success: true,
-        message: 'Configuration applied successfully',
+        message: initResult ? `Configuration applied and ${initResult.metadata.totalPlates} plates initialized` : 'Configuration applied successfully',
         config: {
           testMode: config.app.testMode,
           autoMode: config.app.autoMode,
         },
+        initialized: !!initResult,
+        plateCount: initResult?.metadata?.totalPlates || 0,
         timestamp: new Date().toISOString(),
       });
     } catch (error) {

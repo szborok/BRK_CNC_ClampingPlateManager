@@ -118,6 +118,13 @@ async function runExcelInitialization() {
   console.log(`📦 Plates processed: ${result.platesProcessed}`);
   console.log(`🔗 Models linked: ${result.modelsLinked}`);
   console.log(`💾 Output file: ${result.outputPath}`);
+  
+  // Copy to plates.json so PlateService can find it
+  const fsp = require("fs").promises;
+  const platesPath = config.getPlatesDataPath();
+  await fsp.copyFile(result.outputPath, platesPath);
+  console.log(`📋 Copied to: ${platesPath}`);
+  
   console.log("\nNext steps:");
   console.log("- Run 'node main.js --serve' to start the web service");
   console.log(`- Visit http://localhost:${config.webService.port}/api/plates`);
@@ -198,6 +205,11 @@ async function runTestInitialization() {
     console.log(`📦 Plates processed: ${result.platesProcessed}`);
     console.log(`🔗 Models linked: ${result.modelsLinked}`);
     console.log(`💾 Output file: ${result.outputPath}`);
+    
+    // Copy to plates.json so PlateService can find it
+    const platesPath = config.getPlatesDataPath();
+    await fsp.copyFile(result.outputPath, platesPath);
+    console.log(`📋 Copied to: ${platesPath}`);
   } catch (error) {
     logError("Test initialization failed", { error: error.message });
     throw error;
@@ -207,27 +219,23 @@ async function runTestInitialization() {
 async function runWebService() {
   console.log("🌐 Starting web service...");
 
-  // Auto-initialize if plates.json doesn't exist (first run)
+  // Check if plates.json exists - if not, create empty inventory
   const platesPath = config.getPlatesDataPath();
   const fsp = require("fs").promises;
+  const fs = require("fs");
   
   try {
     await fsp.access(platesPath);
-    console.log("✅ Plates data found, skipping initialization");
+    console.log("✅ Plates data found");
   } catch (error) {
-    // plates.json doesn't exist - run initialization
-    if (config.app.testMode) {
-      console.log("🔄 First run detected - initializing from test source data...");
-      try {
-        await runTestInitialization();
-        console.log("✅ Auto-initialization completed");
-      } catch (initError) {
-        logWarn("Auto-initialization failed, starting with empty plates", { error: initError.message });
-      }
-    } else {
-      console.log("ℹ️  No plates data found - starting with empty inventory");
-      console.log("   Use --init-excel to import from Excel file");
-    }
+    // plates.json doesn't exist - create empty inventory
+    // Initialization only happens during Setup Wizard, not on every start
+    console.log("ℹ️  No plates data found - creating empty inventory");
+    console.log("   Use Dashboard or --init-excel to import from Excel file");
+    
+    const emptyInventory = { plates: [], lastModified: new Date().toISOString() };
+    await fsp.mkdir(path.dirname(platesPath), { recursive: true });
+    await fsp.writeFile(platesPath, JSON.stringify(emptyInventory, null, 2));
   }
 
   const WebService = require("./src/WebService");

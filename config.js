@@ -65,8 +65,8 @@ const config = {
 
   files: {
     jsonExtension: ".json",
-    fixedSuffix: "BRK_fixed",
-    resultSuffix: "BRK_result",
+    fixedSuffix: "fixed",
+    resultSuffix: "result",
   },
 
   paths: {
