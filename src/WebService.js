@@ -100,6 +100,8 @@ class WebService {
         await this.handleConfig(req, res);
       } else if (path === '/api/plates') {
         await this.handlePlates(req, res);
+      } else if (path.match(/^\/api\/plates\/[^\/]+\/work\/(start|finish|stop)$/)) {
+        await this.handlePlateWorkAction(req, res);
       } else if (path.startsWith('/api/plates/')) {
         await this.handlePlateById(req, res);
       } else if (path === '/api/work-orders') {
@@ -235,21 +237,84 @@ class WebService {
    * Handle individual plate endpoints
    */
   async handlePlateById(req, res) {
-    const plateId = req.url.split('/')[3];
-    
-    if (req.method === 'GET') {
-      const plate = await this.plateService.getPlateById(plateId);
-      if (plate) {
-        this.sendJson(res, plate);
+    try {
+      const plateId = req.url.split('/')[3];
+      
+      if (req.method === 'GET') {
+        const plate = await this.plateService.getPlateById(plateId);
+        if (plate) {
+          this.sendJson(res, plate);
+        } else {
+          this.sendError(res, 404, 'Plate not found');
+        }
+      } else if (req.method === 'POST' || req.method === 'PUT') {
+        const body = await this.readRequestBody(req);
+        const updatedPlate = await this.plateService.updatePlate(plateId, body);
+        this.sendJson(res, updatedPlate);
       } else {
-        this.sendError(res, 404, 'Plate not found');
+        this.sendError(res, 405, 'Method Not Allowed');
       }
-    } else if (req.method === 'POST') {
+    } catch (error) {
+      logError('Failed to handle plate request', { error: error.message, plateId: req.url.split('/')[3] });
+      this.sendError(res, 500, error.message);
+    }
+  }
+
+  /**
+   * Handle plate work action endpoints (start, finish, stop)
+   */
+  async handlePlateWorkAction(req, res) {
+    try {
+      const pathParts = req.url.split('/');
+      const plateId = pathParts[3];
+      const action = pathParts[5]; // start, finish, or stop
+      
+      if (req.method !== 'POST') {
+        this.sendError(res, 405, 'Method Not Allowed');
+        return;
+      }
+
       const body = await this.readRequestBody(req);
-      const updatedPlate = await this.plateService.updatePlate(plateId, body);
-      this.sendJson(res, updatedPlate);
-    } else {
-      this.sendError(res, 405, 'Method Not Allowed');
+      let result;
+
+      switch (action) {
+        case 'start':
+          if (!body.workName) {
+            this.sendError(res, 400, 'workName is required');
+            return;
+          }
+          result = await this.plateService.startWork(
+            plateId,
+            body.workName,
+            body.operator || 'system'
+          );
+          break;
+
+        case 'finish':
+          result = await this.plateService.finishWork(
+            plateId,
+            body.operator || 'system',
+            body.notes || ''
+          );
+          break;
+
+        case 'stop':
+          result = await this.plateService.finishWork(
+            plateId,
+            body.operator || 'system',
+            body.reason || 'Work stopped'
+          );
+          break;
+
+        default:
+          this.sendError(res, 400, 'Invalid action');
+          return;
+      }
+
+      this.sendJson(res, result);
+    } catch (error) {
+      logError('Failed to handle work action', { error: error.message });
+      this.sendError(res, 500, error.message);
     }
   }
 
