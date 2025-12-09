@@ -1,0 +1,5611 @@
+{
+  "metadata": {
+    "generatedDate": "2025-11-24T19:51:29.485Z",
+    "source": "Excel conversion",
+    "totalPlates": 38,
+    "platesWithModels": 37,
+    "platesWithWorkHistory": 38
+  },
+  "plates": [
+    {
+      "id": "PL-889484-ip7tau",
+      "plateNumber": "1",
+      "workHistory": "B: -4969_072_073; C: -4969_062_063; D: -4971_072; E: -4971_071; F: -4949-084_086 , 4950-084_086; G: -4816AS05_083-084-285; H: -5075NM01_060; I: -5156NS01-091-092-132-133",
+      "workHistoryEntries": [
+        "B: -4969_072_073",
+        "C: -4969_062_063",
+        "D: -4971_072",
+        "E: -4971_071",
+        "F: -4949-084_086 , 4950-084_086",
+        "G: -4816AS05_083-084-285",
+        "H: -5075NM01_060",
+        "I: -5156NS01-091-092-132-133"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "B",
+          "workOrder": "-4969_072_073",
+          "fullEntry": "B: -4969_072_073"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4969_062_063",
+          "fullEntry": "C: -4969_062_063"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-4971_072",
+          "fullEntry": "D: -4971_072"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "-4971_071",
+          "fullEntry": "E: -4971_071"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "-4949-084_086",
+          "fullEntry": "F: -4949-084_086"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "4950-084_086",
+          "fullEntry": "4950-084_086"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "-4816AS05_083-084-285",
+          "fullEntry": "G: -4816AS05_083-084-285"
+        },
+        {
+          "projectCode": "H",
+          "workOrder": "-5075NM01_060",
+          "fullEntry": "H: -5075NM01_060"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "-5156NS01-091-092-132-133",
+          "fullEntry": "I: -5156NS01-091-092-132-133"
+        }
+      ],
+      "shelf": "14",
+      "shelfNumber": "14",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": null,
+      "modelFiles": [],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_17_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "rowCount": 14,
+        "firstRow": 3,
+        "lastRow": 16
+      },
+      "modelStatus": "No model folder found for plate 1"
+    },
+    {
+      "id": "PL-889484-51t6ky",
+      "plateNumber": "2",
+      "workHistory": "A: -4950NS01_4949NS01_093-094-097; B: -4969NS01_064_065; C: -4976NM01_065_066; D: -4976NM01_062_063; E: -4971NS01_70; F: -4971NS01_069; G: 4976AM02-062-063",
+      "workHistoryEntries": [
+        "A: -4950NS01_4949NS01_093-094-097",
+        "B: -4969NS01_064_065",
+        "C: -4976NM01_065_066",
+        "D: -4976NM01_062_063",
+        "E: -4971NS01_70",
+        "F: -4971NS01_069",
+        "G: 4976AM02-062-063"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4950NS01_4949NS01_093-094-097",
+          "fullEntry": "A: -4950NS01_4949NS01_093-094-097"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4969NS01_064_065",
+          "fullEntry": "B: -4969NS01_064_065"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4976NM01_065_066",
+          "fullEntry": "C: -4976NM01_065_066"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-4976NM01_062_063",
+          "fullEntry": "D: -4976NM01_062_063"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "-4971NS01_70",
+          "fullEntry": "E: -4971NS01_70"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "-4971NS01_069",
+          "fullEntry": "F: -4971NS01_069"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "4976AM02-062-063",
+          "fullEntry": "G: 4976AM02-062-063"
+        }
+      ],
+      "shelf": "14",
+      "shelfNumber": "14",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "2/fakemodel_2.x_t",
+      "modelFiles": [
+        {
+          "fileName": "fakemodel_2.x_t",
+          "relativePath": "2/fakemodel_2.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_5_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "rowCount": 14,
+        "firstRow": 17,
+        "lastRow": 30
+      }
+    },
+    {
+      "id": "PL-889484-p3l20g",
+      "plateNumber": "3",
+      "workHistory": "A: -4891AS01_112; B: -4976NM01-060_061; C: -4885AS02_093_094; D: -5022NM02_062; E: -4476NE02_065; F: -5056NS01_061; G: -5056NS01_088; H: -4770AS10_106_107; I:  -5183NS01_081 KB; J:  -5223NS01_081 KB",
+      "workHistoryEntries": [
+        "A: -4891AS01_112",
+        "B: -4976NM01-060_061",
+        "C: -4885AS02_093_094",
+        "D: -5022NM02_062",
+        "E: -4476NE02_065",
+        "F: -5056NS01_061",
+        "G: -5056NS01_088",
+        "H: -4770AS10_106_107",
+        "I:  -5183NS01_081 KB",
+        "J:  -5223NS01_081 KB"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4891AS01_112",
+          "fullEntry": "A: -4891AS01_112"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4976NM01-060_061",
+          "fullEntry": "B: -4976NM01-060_061"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4885AS02_093_094",
+          "fullEntry": "C: -4885AS02_093_094"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-5022NM02_062",
+          "fullEntry": "D: -5022NM02_062"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "-4476NE02_065",
+          "fullEntry": "E: -4476NE02_065"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "-5056NS01_061",
+          "fullEntry": "F: -5056NS01_061"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "-5056NS01_088",
+          "fullEntry": "G: -5056NS01_088"
+        },
+        {
+          "projectCode": "H",
+          "workOrder": "-4770AS10_106_107",
+          "fullEntry": "H: -4770AS10_106_107"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "-5183NS01_081 KB",
+          "fullEntry": "I:  -5183NS01_081 KB"
+        },
+        {
+          "projectCode": "J",
+          "workOrder": "-5223NS01_081 KB",
+          "fullEntry": "J:  -5223NS01_081 KB"
+        }
+      ],
+      "shelf": "15",
+      "shelfNumber": "15",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "3/fakemodel_3.x_t",
+      "modelFiles": [
+        {
+          "fileName": "fakemodel_3.x_t",
+          "relativePath": "3/fakemodel_3.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_13_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "rowCount": 14,
+        "firstRow": 31,
+        "lastRow": 44
+      }
+    },
+    {
+      "id": "PL-889484-83yxwv",
+      "plateNumber": "4",
+      "workHistory": "A: -4949-50NS01_098_099; B: -4971NS01_073; C: -5013-14NS01_062; D_W5023NM01062; E: W5092NS01-061",
+      "workHistoryEntries": [
+        "A: -4949-50NS01_098_099",
+        "B: -4971NS01_073",
+        "C: -5013-14NS01_062",
+        "D_W5023NM01062",
+        "E: W5092NS01-061"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4949-50NS01_098_099",
+          "fullEntry": "A: -4949-50NS01_098_099"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4971NS01_073",
+          "fullEntry": "B: -4971NS01_073"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-5013-14NS01_062",
+          "fullEntry": "C: -5013-14NS01_062"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "D_W5023NM01062",
+          "fullEntry": "D_W5023NM01062"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5092NS01-061",
+          "fullEntry": "E: W5092NS01-061"
+        }
+      ],
+      "shelf": "15",
+      "shelfNumber": "15",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "4/E_W5092NS01_061.x_t",
+      "modelFiles": [
+        {
+          "fileName": "E_W5092NS01_061.x_t",
+          "relativePath": "4/E_W5092NS01_061.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_15_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "rowCount": 14,
+        "firstRow": 45,
+        "lastRow": 58
+      }
+    },
+    {
+      "id": "PL-889484-04edxt",
+      "plateNumber": "5",
+      "workHistory": "A: -4940-41NS01_062_063; B: -4979NS01_074; Át lett köszörülve, lapvastagság változott! LV:39,5 mm; C: W5090-NS01_062; D: W4962AS02_062; E: W4962AS03_062",
+      "workHistoryEntries": [
+        "A: -4940-41NS01_062_063",
+        "B: -4979NS01_074",
+        "Át lett köszörülve, lapvastagság változott! LV:39,5 mm",
+        "C: W5090-NS01_062",
+        "D: W4962AS02_062",
+        "E: W4962AS03_062"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4940-41NS01_062_063",
+          "fullEntry": "A: -4940-41NS01_062_063"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4979NS01_074",
+          "fullEntry": "B: -4979NS01_074"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "Át lett köszörülve",
+          "fullEntry": "Át lett köszörülve"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "lapvastagság változott! LV:39",
+          "fullEntry": "lapvastagság változott! LV:39"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "5 mm",
+          "fullEntry": "5 mm"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5090-NS01_062",
+          "fullEntry": "C: W5090-NS01_062"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W4962AS02_062",
+          "fullEntry": "D: W4962AS02_062"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W4962AS03_062",
+          "fullEntry": "E: W4962AS03_062"
+        }
+      ],
+      "shelf": "15",
+      "shelfNumber": "15",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "5/E_W4962AS03_062.x_t",
+      "modelFiles": [
+        {
+          "fileName": "E_W4962AS03_062.x_t",
+          "relativePath": "5/E_W4962AS03_062.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_20_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72
+        ],
+        "rowCount": 14,
+        "firstRow": 59,
+        "lastRow": 72
+      }
+    },
+    {
+      "id": "PL-889484-1k5txl",
+      "plateNumber": "6",
+      "workHistory": "A: -4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "workHistoryEntries": [
+        "A: -4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)",
+          "fullEntry": "A: -4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)"
+        }
+      ],
+      "shelf": "15",
+      "shelfNumber": "15",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "6/A_W4919NS01_067-072.x_t",
+      "modelFiles": [
+        {
+          "fileName": "A_W4919NS01_067-072.x_t",
+          "relativePath": "6/A_W4919NS01_067-072.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_1_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86
+        ],
+        "rowCount": 14,
+        "firstRow": 73,
+        "lastRow": 86
+      }
+    },
+    {
+      "id": "PL-889484-pgx18e",
+      "plateNumber": "7",
+      "workHistory": "A: -4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "workHistoryEntries": [
+        "A: -4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)",
+          "fullEntry": "A: -4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)"
+        }
+      ],
+      "shelf": "16",
+      "shelfNumber": "16",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "7/A_W4891NS01_69-74.x_t",
+      "modelFiles": [
+        {
+          "fileName": "A_W4891NS01_69-74.x_t",
+          "relativePath": "7/A_W4891NS01_69-74.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_2_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "rowCount": 14,
+        "firstRow": 87,
+        "lastRow": 100
+      }
+    },
+    {
+      "id": "PL-889484-mdzskj",
+      "plateNumber": "8",
+      "workHistory": "A: -4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "workHistoryEntries": [
+        "A: -4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)",
+          "fullEntry": "A: -4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)"
+        }
+      ],
+      "shelf": "16",
+      "shelfNumber": "16",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "8/A_W4915NS01_083_084.x_t",
+      "modelFiles": [
+        {
+          "fileName": "A_W4915NS01_083_084.x_t",
+          "relativePath": "8/A_W4915NS01_083_084.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_3_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114
+        ],
+        "rowCount": 14,
+        "firstRow": 101,
+        "lastRow": 114
+      }
+    },
+    {
+      "id": "PL-889484-clnuf6",
+      "plateNumber": "9",
+      "workHistory": "A: -4912NS01_069-071_083-084; B: -5013NS01063_5014NS01063; C: -4996NS01_081-086; D: -W5021NM01_062; Át lett köszörülve, lapvastagság változott! LV:39,7 mm",
+      "workHistoryEntries": [
+        "A: -4912NS01_069-071_083-084",
+        "B: -5013NS01063_5014NS01063",
+        "C: -4996NS01_081-086",
+        "D: -W5021NM01_062",
+        "Át lett köszörülve, lapvastagság változott! LV:39,7 mm"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4912NS01_069-071_083-084",
+          "fullEntry": "A: -4912NS01_069-071_083-084"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-5013NS01063_5014NS01063",
+          "fullEntry": "B: -5013NS01063_5014NS01063"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4996NS01_081-086",
+          "fullEntry": "C: -4996NS01_081-086"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-W5021NM01_062",
+          "fullEntry": "D: -W5021NM01_062"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "Át lett köszörülve",
+          "fullEntry": "Át lett köszörülve"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "lapvastagság változott! LV:39",
+          "fullEntry": "lapvastagság változott! LV:39"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "7 mm",
+          "fullEntry": "7 mm"
+        }
+      ],
+      "shelf": "16",
+      "shelfNumber": "16",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "9/D_W5021NM01062.x_t",
+      "modelFiles": [
+        {
+          "fileName": "D_W5021NM01062.x_t",
+          "relativePath": "9/D_W5021NM01062.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_7_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128
+        ],
+        "rowCount": 14,
+        "firstRow": 115,
+        "lastRow": 128
+      }
+    },
+    {
+      "id": "PL-889484-il7q28",
+      "plateNumber": "10",
+      "workHistory": "A: -4823NS01_005; B: -4917NS01_005; C: -4997NS01_207-210; D: W5173NS01_210-211-213-233-234",
+      "workHistoryEntries": [
+        "A: -4823NS01_005",
+        "B: -4917NS01_005",
+        "C: -4997NS01_207-210",
+        "D: W5173NS01_210-211-213-233-234"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4823NS01_005",
+          "fullEntry": "A: -4823NS01_005"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4917NS01_005",
+          "fullEntry": "B: -4917NS01_005"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4997NS01_207-210",
+          "fullEntry": "C: -4997NS01_207-210"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5173NS01_210-211-213-233-234",
+          "fullEntry": "D: W5173NS01_210-211-213-233-234"
+        }
+      ],
+      "shelf": "16",
+      "shelfNumber": "16",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "10/D_W5173NS01_210-211-213-233-234.x_t",
+      "modelFiles": [
+        {
+          "fileName": "D_W5173NS01_210-211-213-233-234.x_t",
+          "relativePath": "10/D_W5173NS01_210-211-213-233-234.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_6_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142
+        ],
+        "rowCount": 14,
+        "firstRow": 129,
+        "lastRow": 142
+      }
+    },
+    {
+      "id": "PL-889484-lcq1q1",
+      "plateNumber": "11",
+      "workHistory": "A: 4900NS01_06; B: 4951AM01_72; C: 4770AS10_076-077; D: 4769AS10_120-121; E: W5009NS01_115; F: W5009NS01_116; G: W4814AS02_074; H: W4769AS13_120-121; I: W4769AS13_170",
+      "workHistoryEntries": [
+        "A: 4900NS01_06",
+        "B: 4951AM01_72",
+        "C: 4770AS10_076-077",
+        "D: 4769AS10_120-121",
+        "E: W5009NS01_115",
+        "F: W5009NS01_116",
+        "G: W4814AS02_074",
+        "H: W4769AS13_120-121",
+        "I: W4769AS13_170"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "4900NS01_06",
+          "fullEntry": "A: 4900NS01_06"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "4951AM01_72",
+          "fullEntry": "B: 4951AM01_72"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "4770AS10_076-077",
+          "fullEntry": "C: 4770AS10_076-077"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "4769AS10_120-121",
+          "fullEntry": "D: 4769AS10_120-121"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5009NS01_115",
+          "fullEntry": "E: W5009NS01_115"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W5009NS01_116",
+          "fullEntry": "F: W5009NS01_116"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "W4814AS02_074",
+          "fullEntry": "G: W4814AS02_074"
+        },
+        {
+          "projectCode": "H",
+          "workOrder": "W4769AS13_120-121",
+          "fullEntry": "H: W4769AS13_120-121"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "W4769AS13_170",
+          "fullEntry": "I: W4769AS13_170"
+        }
+      ],
+      "shelf": "17",
+      "shelfNumber": "17",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "11/I_W4769AS13_170.x_t",
+      "modelFiles": [
+        {
+          "fileName": "I_W4769AS13_170.x_t",
+          "relativePath": "11/I_W4769AS13_170.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_38_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156
+        ],
+        "rowCount": 14,
+        "firstRow": 143,
+        "lastRow": 156
+      }
+    },
+    {
+      "id": "PL-889484-jd68ec",
+      "plateNumber": "12",
+      "workHistory": "A: -4950NS01_4949NS01_084-086-085; B: -4969-80-081; C: -4968NS01_162; D: -4968NS01_163",
+      "workHistoryEntries": [
+        "A: -4950NS01_4949NS01_084-086-085",
+        "B: -4969-80-081",
+        "C: -4968NS01_162",
+        "D: -4968NS01_163"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4950NS01_4949NS01_084-086-085",
+          "fullEntry": "A: -4950NS01_4949NS01_084-086-085"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4969-80-081",
+          "fullEntry": "B: -4969-80-081"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4968NS01_162",
+          "fullEntry": "C: -4968NS01_162"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-4968NS01_163",
+          "fullEntry": "D: -4968NS01_163"
+        }
+      ],
+      "shelf": "17",
+      "shelfNumber": "17",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "12/D_W4968NS01_163.x_t",
+      "modelFiles": [
+        {
+          "fileName": "D_W4968NS01_163.x_t",
+          "relativePath": "12/D_W4968NS01_163.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_10_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170
+        ],
+        "rowCount": 14,
+        "firstRow": 157,
+        "lastRow": 170
+      }
+    },
+    {
+      "id": "PL-889484-s6r3nr",
+      "plateNumber": "13",
+      "workHistory": "A: -4892NS01_74-75_79; B: -4892AS01_74; C: -4968NS01_083 és 183; D: -4968NS01_81-181; E: -4993OS02_063-064",
+      "workHistoryEntries": [
+        "A: -4892NS01_74-75_79",
+        "B: -4892AS01_74",
+        "C: -4968NS01_083 és 183",
+        "D: -4968NS01_81-181",
+        "E: -4993OS02_063-064"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4892NS01_74-75_79",
+          "fullEntry": "A: -4892NS01_74-75_79"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4892AS01_74",
+          "fullEntry": "B: -4892AS01_74"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4968NS01_083 és 183",
+          "fullEntry": "C: -4968NS01_083 és 183"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-4968NS01_81-181",
+          "fullEntry": "D: -4968NS01_81-181"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "-4993OS02_063-064",
+          "fullEntry": "E: -4993OS02_063-064"
+        }
+      ],
+      "shelf": "17",
+      "shelfNumber": "17",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "13/E_4993OS02_063-064.x_t",
+      "modelFiles": [
+        {
+          "fileName": "E_4993OS02_063-064.x_t",
+          "relativePath": "13/E_4993OS02_063-064.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_11_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184
+        ],
+        "rowCount": 14,
+        "firstRow": 171,
+        "lastRow": 184
+      }
+    },
+    {
+      "id": "PL-889484-25whc0",
+      "plateNumber": "14",
+      "workHistory": "A: 4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!); B: 4968NS01_084",
+      "workHistoryEntries": [
+        "A: 4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!)",
+        "B: 4968NS01_084"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!)",
+          "fullEntry": "A: 4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!)"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "4968NS01_084",
+          "fullEntry": "B: 4968NS01_084"
+        }
+      ],
+      "shelf": "17",
+      "shelfNumber": "17",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "14/B_4968NS01_084.x_t",
+      "modelFiles": [
+        {
+          "fileName": "B_4968NS01_084.x_t",
+          "relativePath": "14/B_4968NS01_084.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_9_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198
+        ],
+        "rowCount": 14,
+        "firstRow": 185,
+        "lastRow": 198
+      }
+    },
+    {
+      "id": "PL-889484-odegt0",
+      "plateNumber": "15",
+      "workHistory": "Jatagán Készülék",
+      "workHistoryEntries": [
+        "Jatagán Készülék"
+      ],
+      "workProjects": [
+        {
+          "projectCode": null,
+          "workOrder": "Jatagán Készülék",
+          "fullEntry": "Jatagán Készülék"
+        }
+      ],
+      "shelf": "19",
+      "shelfNumber": "19",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "15/JATAGAN_KESZULEK.x_t",
+      "modelFiles": [
+        {
+          "fileName": "JATAGAN_KESZULEK.x_t",
+          "relativePath": "15/JATAGAN_KESZULEK.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_8_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212
+        ],
+        "rowCount": 14,
+        "firstRow": 199,
+        "lastRow": 212
+      }
+    },
+    {
+      "id": "PL-889484-s9qbqa",
+      "plateNumber": "16",
+      "workHistory": "TRIMILL FCS lap; 4969-010 (nincs gravir)",
+      "workHistoryEntries": [
+        "TRIMILL FCS lap",
+        "4969-010 (nincs gravir)"
+      ],
+      "workProjects": [
+        {
+          "projectCode": null,
+          "workOrder": "TRIMILL FCS lap",
+          "fullEntry": "TRIMILL FCS lap"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "4969-010 (nincs gravir)",
+          "fullEntry": "4969-010 (nincs gravir)"
+        }
+      ],
+      "shelf": "Trimill",
+      "shelfNumber": "Trimill",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "16/fcs_lap230524.x_t",
+      "modelFiles": [
+        {
+          "fileName": "fcs_lap230524.x_t",
+          "relativePath": "16/fcs_lap230524.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_4_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226
+        ],
+        "rowCount": 14,
+        "firstRow": 213,
+        "lastRow": 226
+      }
+    },
+    {
+      "id": "PL-889484-m84hyl",
+      "plateNumber": "17",
+      "workHistory": "A: -5011NM01_003-006; B: -5012NM01_003-006; C: -4996NS01_082-086_nagyolt; D: 4996NS01_080; E : 4771AS10_105; F_W4814AS01070-071; G_W4816AS06-086",
+      "workHistoryEntries": [
+        "A: -5011NM01_003-006",
+        "B: -5012NM01_003-006",
+        "C: -4996NS01_082-086_nagyolt",
+        "D: 4996NS01_080",
+        "E : 4771AS10_105",
+        "F_W4814AS01070-071",
+        "G_W4816AS06-086"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-5011NM01_003-006",
+          "fullEntry": "A: -5011NM01_003-006"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-5012NM01_003-006",
+          "fullEntry": "B: -5012NM01_003-006"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4996NS01_082-086_nagyolt",
+          "fullEntry": "C: -4996NS01_082-086_nagyolt"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "4996NS01_080",
+          "fullEntry": "D: 4996NS01_080"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "E : 4771AS10_105",
+          "fullEntry": "E : 4771AS10_105"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "F_W4814AS01070-071",
+          "fullEntry": "F_W4814AS01070-071"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "G_W4816AS06-086",
+          "fullEntry": "G_W4816AS06-086"
+        }
+      ],
+      "shelf": "19",
+      "shelfNumber": "19",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "17/G_W4816AS06086.x_t",
+      "modelFiles": [
+        {
+          "fileName": "G_W4816AS06086.x_t",
+          "relativePath": "17/G_W4816AS06086.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_16_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240
+        ],
+        "rowCount": 14,
+        "firstRow": 227,
+        "lastRow": 240
+      }
+    },
+    {
+      "id": "PL-889484-vx47n0",
+      "plateNumber": "18",
+      "workHistory": "A:-4996NS01071-72-73-74; B: 5007NS01-218; C:-4968NS01_164; D:-4800NE05_060; E:-4800NE05_061; F:-5104NS01_06263; I:-W5171NS01063",
+      "workHistoryEntries": [
+        "A:-4996NS01071-72-73-74",
+        "B: 5007NS01-218",
+        "C:-4968NS01_164",
+        "D:-4800NE05_060",
+        "E:-4800NE05_061",
+        "F:-5104NS01_06263",
+        "I:-W5171NS01063"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4996NS01071-72-73-74",
+          "fullEntry": "A:-4996NS01071-72-73-74"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "5007NS01-218",
+          "fullEntry": "B: 5007NS01-218"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-4968NS01_164",
+          "fullEntry": "C:-4968NS01_164"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "-4800NE05_060",
+          "fullEntry": "D:-4800NE05_060"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "-4800NE05_061",
+          "fullEntry": "E:-4800NE05_061"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "-5104NS01_06263",
+          "fullEntry": "F:-5104NS01_06263"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "-W5171NS01063",
+          "fullEntry": "I:-W5171NS01063"
+        }
+      ],
+      "shelf": "20",
+      "shelfNumber": "20",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "18/I_W5171NS01063.x_t",
+      "modelFiles": [
+        {
+          "fileName": "I_W5171NS01063.x_t",
+          "relativePath": "18/I_W5171NS01063.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_18_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254
+        ],
+        "rowCount": 14,
+        "firstRow": 241,
+        "lastRow": 254
+      }
+    },
+    {
+      "id": "PL-889484-2u0ut9",
+      "plateNumber": "19",
+      "workHistory": "A: -4994NS01_064_065; B:-4994NS01_066_067; C: 5157NS01_061-062; D: 5243NS01_215",
+      "workHistoryEntries": [
+        "A: -4994NS01_064_065",
+        "B:-4994NS01_066_067",
+        "C: 5157NS01_061-062",
+        "D: 5243NS01_215"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-4994NS01_064_065",
+          "fullEntry": "A: -4994NS01_064_065"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-4994NS01_066_067",
+          "fullEntry": "B:-4994NS01_066_067"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "5157NS01_061-062",
+          "fullEntry": "C: 5157NS01_061-062"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "5243NS01_215",
+          "fullEntry": "D: 5243NS01_215"
+        }
+      ],
+      "shelf": "20",
+      "shelfNumber": "20",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "19/D_5243NS01_215.x_t",
+      "modelFiles": [
+        {
+          "fileName": "D_5243NS01_215.x_t",
+          "relativePath": "19/D_5243NS01_215.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_35_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268
+        ],
+        "rowCount": 14,
+        "firstRow": 255,
+        "lastRow": 268
+      }
+    },
+    {
+      "id": "PL-889484-87vwny",
+      "plateNumber": "20",
+      "workHistory": "A: W5005NS01224-225_B; B: W5018NS01_204-205-206-207_B; C: W5072NE01704_C; D:W4993OS05_073_074; E: W4823AS01_004  / AS02; F: W5237NS01_069 KB; G_W5270NS01_062 KB",
+      "workHistoryEntries": [
+        "A: W5005NS01224-225_B",
+        "B: W5018NS01_204-205-206-207_B",
+        "C: W5072NE01704_C",
+        "D:W4993OS05_073_074",
+        "E: W4823AS01_004  / AS02",
+        "F: W5237NS01_069 KB",
+        "G_W5270NS01_062 KB"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5005NS01224-225_B",
+          "fullEntry": "A: W5005NS01224-225_B"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5018NS01_204-205-206-207_B",
+          "fullEntry": "B: W5018NS01_204-205-206-207_B"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5072NE01704_C",
+          "fullEntry": "C: W5072NE01704_C"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W4993OS05_073_074",
+          "fullEntry": "D:W4993OS05_073_074"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W4823AS01_004  / AS02",
+          "fullEntry": "E: W4823AS01_004  / AS02"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W5237NS01_069 KB",
+          "fullEntry": "F: W5237NS01_069 KB"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "G_W5270NS01_062 KB",
+          "fullEntry": "G_W5270NS01_062 KB"
+        }
+      ],
+      "shelf": "20",
+      "shelfNumber": "20",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "20/G_W5270NS01_062.x_t",
+      "modelFiles": [
+        {
+          "fileName": "G_W5270NS01_062.x_t",
+          "relativePath": "20/G_W5270NS01_062.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_12_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279,
+          280,
+          281,
+          282
+        ],
+        "rowCount": 14,
+        "firstRow": 269,
+        "lastRow": 282
+      }
+    },
+    {
+      "id": "PL-889484-q3v559",
+      "plateNumber": "21",
+      "workHistory": "A: -W4915NS01_064_065; B: -W4768AS10_122-125; C: -W4814AS01_067; D:_W5009NS108-109; E:_W5009NS01_110-111; F_W5103NS01_062; G: W5121NS01_062; H: W5159NS01_011; I_W5170NS01_060; J: -W5167NS01_062; K:-W5172NS01_061; L: W5237NS01_302 BSZ",
+      "workHistoryEntries": [
+        "A: -W4915NS01_064_065",
+        "B: -W4768AS10_122-125",
+        "C: -W4814AS01_067",
+        "D:_W5009NS108-109",
+        "E:_W5009NS01_110-111",
+        "F_W5103NS01_062",
+        "G: W5121NS01_062",
+        "H: W5159NS01_011",
+        "I_W5170NS01_060",
+        "J: -W5167NS01_062",
+        "K:-W5172NS01_061",
+        "L: W5237NS01_302 BSZ"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "-W4915NS01_064_065",
+          "fullEntry": "A: -W4915NS01_064_065"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "-W4768AS10_122-125",
+          "fullEntry": "B: -W4768AS10_122-125"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "-W4814AS01_067",
+          "fullEntry": "C: -W4814AS01_067"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "_W5009NS108-109",
+          "fullEntry": "D:_W5009NS108-109"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "_W5009NS01_110-111",
+          "fullEntry": "E:_W5009NS01_110-111"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "F_W5103NS01_062",
+          "fullEntry": "F_W5103NS01_062"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "W5121NS01_062",
+          "fullEntry": "G: W5121NS01_062"
+        },
+        {
+          "projectCode": "H",
+          "workOrder": "W5159NS01_011",
+          "fullEntry": "H: W5159NS01_011"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "I_W5170NS01_060",
+          "fullEntry": "I_W5170NS01_060"
+        },
+        {
+          "projectCode": "J",
+          "workOrder": "-W5167NS01_062",
+          "fullEntry": "J: -W5167NS01_062"
+        },
+        {
+          "projectCode": "K",
+          "workOrder": "-W5172NS01_061",
+          "fullEntry": "K:-W5172NS01_061"
+        },
+        {
+          "projectCode": "L",
+          "workOrder": "W5237NS01_302 BSZ",
+          "fullEntry": "L: W5237NS01_302 BSZ"
+        }
+      ],
+      "shelf": "20",
+      "shelfNumber": "20",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "21/L_W5237NS01_302.x_t",
+      "modelFiles": [
+        {
+          "fileName": "L_W5237NS01_302.x_t",
+          "relativePath": "21/L_W5237NS01_302.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_30_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          283,
+          284,
+          285,
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296
+        ],
+        "rowCount": 14,
+        "firstRow": 283,
+        "lastRow": 296
+      }
+    },
+    {
+      "id": "PL-889484-edjshv",
+      "plateNumber": "22",
+      "workHistory": "A: W5063NS01_061   SZL; B: W5002NS01_064   KB; C: W5002NS01_062   KB; D: W5002NS01_063   KB; E: W5092NS01_068   KB; F: W5156NS01-100-101-103-104 BSZ; G: W5173NS01-100-101-103-104 BSZ; H_W5236NS01_060; I: W5205NS01_064-065",
+      "workHistoryEntries": [
+        "A: W5063NS01_061   SZL",
+        "B: W5002NS01_064   KB",
+        "C: W5002NS01_062   KB",
+        "D: W5002NS01_063   KB",
+        "E: W5092NS01_068   KB",
+        "F: W5156NS01-100-101-103-104 BSZ",
+        "G: W5173NS01-100-101-103-104 BSZ",
+        "H_W5236NS01_060",
+        "I: W5205NS01_064-065"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5063NS01_061   SZL",
+          "fullEntry": "A: W5063NS01_061   SZL"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5002NS01_064   KB",
+          "fullEntry": "B: W5002NS01_064   KB"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5002NS01_062   KB",
+          "fullEntry": "C: W5002NS01_062   KB"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5002NS01_063   KB",
+          "fullEntry": "D: W5002NS01_063   KB"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5092NS01_068   KB",
+          "fullEntry": "E: W5092NS01_068   KB"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W5156NS01-100-101-103-104 BSZ",
+          "fullEntry": "F: W5156NS01-100-101-103-104 BSZ"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "W5173NS01-100-101-103-104 BSZ",
+          "fullEntry": "G: W5173NS01-100-101-103-104 BSZ"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "H_W5236NS01_060",
+          "fullEntry": "H_W5236NS01_060"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "W5205NS01_064-065",
+          "fullEntry": "I: W5205NS01_064-065"
+        }
+      ],
+      "shelf": "21",
+      "shelfNumber": "21",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "22/I_W5205NS01064_065.x_t",
+      "modelFiles": [
+        {
+          "fileName": "I_W5205NS01064_065.x_t",
+          "relativePath": "22/I_W5205NS01064_065.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_33_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310
+        ],
+        "rowCount": 14,
+        "firstRow": 297,
+        "lastRow": 310
+      }
+    },
+    {
+      "id": "PL-889484-p0p69i",
+      "plateNumber": "23",
+      "workHistory": "A: W5055NS01_062-065; B: W5007NS01_082; C: W5090-91NS01_063; D: W5093NS01_068   KB; E: W4816OS06_086; F:W5205NS01_060_061",
+      "workHistoryEntries": [
+        "A: W5055NS01_062-065",
+        "B: W5007NS01_082",
+        "C: W5090-91NS01_063",
+        "D: W5093NS01_068   KB",
+        "E: W4816OS06_086",
+        "F:W5205NS01_060_061"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5055NS01_062-065",
+          "fullEntry": "A: W5055NS01_062-065"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5007NS01_082",
+          "fullEntry": "B: W5007NS01_082"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5090-91NS01_063",
+          "fullEntry": "C: W5090-91NS01_063"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5093NS01_068   KB",
+          "fullEntry": "D: W5093NS01_068   KB"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W4816OS06_086",
+          "fullEntry": "E: W4816OS06_086"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W5205NS01_060_061",
+          "fullEntry": "F:W5205NS01_060_061"
+        }
+      ],
+      "shelf": "21",
+      "shelfNumber": "21",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "23/F_W5205NS01_060_061.x_t",
+      "modelFiles": [
+        {
+          "fileName": "F_W5205NS01_060_061.x_t",
+          "relativePath": "23/F_W5205NS01_060_061.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_29_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324
+        ],
+        "rowCount": 14,
+        "firstRow": 311,
+        "lastRow": 324
+      }
+    },
+    {
+      "id": "PL-889484-wf9m9k",
+      "plateNumber": "24",
+      "workHistory": "A: W5055NS01_061; B: W5081NS01_068_070; C: W5090NS01_063; D: W5005NS01_087; E: W5009NS01_061; F: W5002NS01079; G: W5163NS01066; H: W5175NS01_080_081; I: W5197NS01_064_065; J:W5179NS01_093-065",
+      "workHistoryEntries": [
+        "A: W5055NS01_061",
+        "B: W5081NS01_068_070",
+        "C: W5090NS01_063",
+        "D: W5005NS01_087",
+        "E: W5009NS01_061",
+        "F: W5002NS01079",
+        "G: W5163NS01066",
+        "H: W5175NS01_080_081",
+        "I: W5197NS01_064_065",
+        "J:W5179NS01_093-065"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5055NS01_061",
+          "fullEntry": "A: W5055NS01_061"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5081NS01_068_070",
+          "fullEntry": "B: W5081NS01_068_070"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5090NS01_063",
+          "fullEntry": "C: W5090NS01_063"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5005NS01_087",
+          "fullEntry": "D: W5005NS01_087"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5009NS01_061",
+          "fullEntry": "E: W5009NS01_061"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W5002NS01079",
+          "fullEntry": "F: W5002NS01079"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "W5163NS01066",
+          "fullEntry": "G: W5163NS01066"
+        },
+        {
+          "projectCode": "H",
+          "workOrder": "W5175NS01_080_081",
+          "fullEntry": "H: W5175NS01_080_081"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "W5197NS01_064_065",
+          "fullEntry": "I: W5197NS01_064_065"
+        },
+        {
+          "projectCode": "J",
+          "workOrder": "W5179NS01_093-065",
+          "fullEntry": "J:W5179NS01_093-065"
+        }
+      ],
+      "shelf": "21",
+      "shelfNumber": "21",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "24/J_W5179NS01-063-065.x_t",
+      "modelFiles": [
+        {
+          "fileName": "J_W5179NS01-063-065.x_t",
+          "relativePath": "24/J_W5179NS01-063-065.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_22_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          325,
+          326,
+          327,
+          328,
+          329,
+          330,
+          331,
+          332,
+          333,
+          334,
+          335,
+          336,
+          337,
+          338
+        ],
+        "rowCount": 14,
+        "firstRow": 325,
+        "lastRow": 338
+      }
+    },
+    {
+      "id": "PL-889484-3uews7",
+      "plateNumber": "25",
+      "workHistory": "A: W5055NS01_060_070",
+      "workHistoryEntries": [
+        "A: W5055NS01_060_070"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5055NS01_060_070",
+          "fullEntry": "A: W5055NS01_060_070"
+        }
+      ],
+      "shelf": "21",
+      "shelfNumber": "21",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "25/A_W5055NS01_060.x_t",
+      "modelFiles": [
+        {
+          "fileName": "A_W5055NS01_060.x_t",
+          "relativePath": "25/A_W5055NS01_060.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_14_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352
+        ],
+        "rowCount": 14,
+        "firstRow": 339,
+        "lastRow": 352
+      }
+    },
+    {
+      "id": "PL-889484-n87962",
+      "plateNumber": "26",
+      "workHistory": "A: W5081NS01_064-065; B: W5009-102-105; C: W5189NS01_235; D: W5217Z01_307",
+      "workHistoryEntries": [
+        "A: W5081NS01_064-065",
+        "B: W5009-102-105",
+        "C: W5189NS01_235",
+        "D: W5217Z01_307"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5081NS01_064-065",
+          "fullEntry": "A: W5081NS01_064-065"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5009-102-105",
+          "fullEntry": "B: W5009-102-105"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5189NS01_235",
+          "fullEntry": "C: W5189NS01_235"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5217Z01_307",
+          "fullEntry": "D: W5217Z01_307"
+        }
+      ],
+      "shelf": "21",
+      "shelfNumber": "21",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "26/D_W5217Z01_307.x_t",
+      "modelFiles": [
+        {
+          "fileName": "D_W5217Z01_307.x_t",
+          "relativePath": "26/D_W5217Z01_307.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_32_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366
+        ],
+        "rowCount": 14,
+        "firstRow": 353,
+        "lastRow": 366
+      }
+    },
+    {
+      "id": "PL-889484-aj303w",
+      "plateNumber": "27",
+      "workHistory": "A: W5005NS01_085-086; B: W5005NS01_064-065; C: W5023AM01_062; D: W5236NS01_061; E: W5236NS01_062",
+      "workHistoryEntries": [
+        "A: W5005NS01_085-086",
+        "B: W5005NS01_064-065",
+        "C: W5023AM01_062",
+        "D: W5236NS01_061",
+        "E: W5236NS01_062"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5005NS01_085-086",
+          "fullEntry": "A: W5005NS01_085-086"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5005NS01_064-065",
+          "fullEntry": "B: W5005NS01_064-065"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5023AM01_062",
+          "fullEntry": "C: W5023AM01_062"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5236NS01_061",
+          "fullEntry": "D: W5236NS01_061"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5236NS01_062",
+          "fullEntry": "E: W5236NS01_062"
+        }
+      ],
+      "shelf": "22",
+      "shelfNumber": "22",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "27/E_W5236NS01_062.x_t",
+      "modelFiles": [
+        {
+          "fileName": "E_W5236NS01_062.x_t",
+          "relativePath": "27/E_W5236NS01_062.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_31_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          367,
+          368,
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375,
+          376,
+          377,
+          378,
+          379,
+          380
+        ],
+        "rowCount": 14,
+        "firstRow": 367,
+        "lastRow": 380
+      }
+    },
+    {
+      "id": "PL-889484-6jbpj6",
+      "plateNumber": "28",
+      "workHistory": "A: W5009NS01_69-70-71-83-84; B: W5009-076; C: W4250RS04_069; D: W5243NS01_060-061",
+      "workHistoryEntries": [
+        "A: W5009NS01_69-70-71-83-84",
+        "B: W5009-076",
+        "C: W4250RS04_069",
+        "D: W5243NS01_060-061"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5009NS01_69-70-71-83-84",
+          "fullEntry": "A: W5009NS01_69-70-71-83-84"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5009-076",
+          "fullEntry": "B: W5009-076"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W4250RS04_069",
+          "fullEntry": "C: W4250RS04_069"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5243NS01_060-061",
+          "fullEntry": "D: W5243NS01_060-061"
+        }
+      ],
+      "shelf": "22",
+      "shelfNumber": "22",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "28/D_W5243NS01_060-061.x_t",
+      "modelFiles": [
+        {
+          "fileName": "D_W5243NS01_060-061.x_t",
+          "relativePath": "28/D_W5243NS01_060-061.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_34_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          381,
+          382,
+          383,
+          384,
+          385,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394
+        ],
+        "rowCount": 14,
+        "firstRow": 381,
+        "lastRow": 394
+      }
+    },
+    {
+      "id": "PL-889484-eafrrp",
+      "plateNumber": "29",
+      "workHistory": "A: W5018NS01-076; B: W5009NS01-077; C: W5156NS01-224; D: W5175NS01_074_075; E: W5199NS01300_B",
+      "workHistoryEntries": [
+        "A: W5018NS01-076",
+        "B: W5009NS01-077",
+        "C: W5156NS01-224",
+        "D: W5175NS01_074_075",
+        "E: W5199NS01300_B"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5018NS01-076",
+          "fullEntry": "A: W5018NS01-076"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5009NS01-077",
+          "fullEntry": "B: W5009NS01-077"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5156NS01-224",
+          "fullEntry": "C: W5156NS01-224"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5175NS01_074_075",
+          "fullEntry": "D: W5175NS01_074_075"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5199NS01300_B",
+          "fullEntry": "E: W5199NS01300_B"
+        }
+      ],
+      "shelf": "25",
+      "shelfNumber": "25",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "29/E_W5199NS01_300_PARASOLID.x_t",
+      "modelFiles": [
+        {
+          "fileName": "E_W5199NS01_300_PARASOLID.x_t",
+          "relativePath": "29/E_W5199NS01_300_PARASOLID.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_23_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408
+        ],
+        "rowCount": 14,
+        "firstRow": 395,
+        "lastRow": 408
+      }
+    },
+    {
+      "id": "PL-889484-9crtvl",
+      "plateNumber": "30",
+      "workHistory": "A: W5069NS01-061; B: W5163NS01-063",
+      "workHistoryEntries": [
+        "A: W5069NS01-061",
+        "B: W5163NS01-063"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5069NS01-061",
+          "fullEntry": "A: W5069NS01-061"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5163NS01-063",
+          "fullEntry": "B: W5163NS01-063"
+        }
+      ],
+      "shelf": "25",
+      "shelfNumber": "25",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "30/B_W5163NS01-063.x_t",
+      "modelFiles": [
+        {
+          "fileName": "B_W5163NS01-063.x_t",
+          "relativePath": "30/B_W5163NS01-063.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_19_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421,
+          422
+        ],
+        "rowCount": 14,
+        "firstRow": 409,
+        "lastRow": 422
+      }
+    },
+    {
+      "id": "PL-889484-z5fui5",
+      "plateNumber": "31",
+      "workHistory": "A: W5175NS01_062-063; B: W5175NS01_315; C: W5174NS01_062-063; D: W5174NS01_315; E: W5199NS01_300-301-302; F: W5206NS01_315; G: W5206NS01_430-434_440-444",
+      "workHistoryEntries": [
+        "A: W5175NS01_062-063",
+        "B: W5175NS01_315",
+        "C: W5174NS01_062-063",
+        "D: W5174NS01_315",
+        "E: W5199NS01_300-301-302",
+        "F: W5206NS01_315",
+        "G: W5206NS01_430-434_440-444"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5175NS01_062-063",
+          "fullEntry": "A: W5175NS01_062-063"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5175NS01_315",
+          "fullEntry": "B: W5175NS01_315"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5174NS01_062-063",
+          "fullEntry": "C: W5174NS01_062-063"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W5174NS01_315",
+          "fullEntry": "D: W5174NS01_315"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W5199NS01_300-301-302",
+          "fullEntry": "E: W5199NS01_300-301-302"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W5206NS01_315",
+          "fullEntry": "F: W5206NS01_315"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "W5206NS01_430-434_440-444",
+          "fullEntry": "G: W5206NS01_430-434_440-444"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "31/G_W5206NS01_430-434_440-444.x_t",
+      "modelFiles": [
+        {
+          "fileName": "G_W5206NS01_430-434_440-444.x_t",
+          "relativePath": "31/G_W5206NS01_430-434_440-444.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_26_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          423,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436
+        ],
+        "rowCount": 14,
+        "firstRow": 423,
+        "lastRow": 436
+      }
+    },
+    {
+      "id": "PL-889484-xckad5",
+      "plateNumber": "32",
+      "workHistory": "A: W5175NS01_010-011 KB",
+      "workHistoryEntries": [
+        "A: W5175NS01_010-011 KB"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5175NS01_010-011 KB",
+          "fullEntry": "A: W5175NS01_010-011 KB"
+        }
+      ],
+      "shelf": "TRIMILL",
+      "shelfNumber": "TRIMILL",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "32/KSZLK32.x_t",
+      "modelFiles": [
+        {
+          "fileName": "KSZLK32.x_t",
+          "relativePath": "32/KSZLK32.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_21_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450
+        ],
+        "rowCount": 14,
+        "firstRow": 437,
+        "lastRow": 450
+      }
+    },
+    {
+      "id": "PL-889484-7serpm",
+      "plateNumber": "33",
+      "workHistory": "A: W5202AS01_060_062; B: W5207NS01_063; C: W5199NS01_070; D: W4769AS11_161_162; E: W4769AS11_181_182; F: W4768AS11_127_128; G: W4768AS11_131_132; H: W5154OS05_064; I: W5266NS01_061",
+      "workHistoryEntries": [
+        "A: W5202AS01_060_062",
+        "B: W5207NS01_063",
+        "C: W5199NS01_070",
+        "D: W4769AS11_161_162",
+        "E: W4769AS11_181_182",
+        "F: W4768AS11_127_128",
+        "G: W4768AS11_131_132",
+        "H: W5154OS05_064",
+        "I: W5266NS01_061"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5202AS01_060_062",
+          "fullEntry": "A: W5202AS01_060_062"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5207NS01_063",
+          "fullEntry": "B: W5207NS01_063"
+        },
+        {
+          "projectCode": "C",
+          "workOrder": "W5199NS01_070",
+          "fullEntry": "C: W5199NS01_070"
+        },
+        {
+          "projectCode": "D",
+          "workOrder": "W4769AS11_161_162",
+          "fullEntry": "D: W4769AS11_161_162"
+        },
+        {
+          "projectCode": "E",
+          "workOrder": "W4769AS11_181_182",
+          "fullEntry": "E: W4769AS11_181_182"
+        },
+        {
+          "projectCode": "F",
+          "workOrder": "W4768AS11_127_128",
+          "fullEntry": "F: W4768AS11_127_128"
+        },
+        {
+          "projectCode": "G",
+          "workOrder": "W4768AS11_131_132",
+          "fullEntry": "G: W4768AS11_131_132"
+        },
+        {
+          "projectCode": "H",
+          "workOrder": "W5154OS05_064",
+          "fullEntry": "H: W5154OS05_064"
+        },
+        {
+          "projectCode": "I",
+          "workOrder": "W5266NS01_061",
+          "fullEntry": "I: W5266NS01_061"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "33/I_W5266NS01_061.x_t",
+      "modelFiles": [
+        {
+          "fileName": "I_W5266NS01_061.x_t",
+          "relativePath": "33/I_W5266NS01_061.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_36_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464
+        ],
+        "rowCount": 14,
+        "firstRow": 451,
+        "lastRow": 464
+      }
+    },
+    {
+      "id": "PL-889484-hbidxg",
+      "plateNumber": "34",
+      "workHistory": "A: W5175NS01-064-065; B_W5177NE01_302",
+      "workHistoryEntries": [
+        "A: W5175NS01-064-065",
+        "B_W5177NE01_302"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5175NS01-064-065",
+          "fullEntry": "A: W5175NS01-064-065"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "B_W5177NE01_302",
+          "fullEntry": "B_W5177NE01_302"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "34/B_W5177NE01_302.x_t",
+      "modelFiles": [
+        {
+          "fileName": "B_W5177NE01_302.x_t",
+          "relativePath": "34/B_W5177NE01_302.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_24_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478
+        ],
+        "rowCount": 14,
+        "firstRow": 465,
+        "lastRow": 478
+      }
+    },
+    {
+      "id": "PL-889484-sormbp",
+      "plateNumber": "35",
+      "workHistory": "A: W5175NS01-064-065; B_W5177NE01_302; C_W5205NS01_062; D_W5242NS01_062",
+      "workHistoryEntries": [
+        "A: W5175NS01-064-065",
+        "B_W5177NE01_302",
+        "C_W5205NS01_062",
+        "D_W5242NS01_062"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5175NS01-064-065",
+          "fullEntry": "A: W5175NS01-064-065"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "B_W5177NE01_302",
+          "fullEntry": "B_W5177NE01_302"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "C_W5205NS01_062",
+          "fullEntry": "C_W5205NS01_062"
+        },
+        {
+          "projectCode": null,
+          "workOrder": "D_W5242NS01_062",
+          "fullEntry": "D_W5242NS01_062"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "35/35_keszuleklap.x_t",
+      "modelFiles": [
+        {
+          "fileName": "35_keszuleklap.x_t",
+          "relativePath": "35/35_keszuleklap.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_25_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492
+        ],
+        "rowCount": 14,
+        "firstRow": 479,
+        "lastRow": 492
+      }
+    },
+    {
+      "id": "PL-889484-bkzppi",
+      "plateNumber": "36",
+      "workHistory": "A: W5229AS01_060_061; B: W5215NS01_400-401",
+      "workHistoryEntries": [
+        "A: W5229AS01_060_061",
+        "B: W5215NS01_400-401"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5229AS01_060_061",
+          "fullEntry": "A: W5229AS01_060_061"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5215NS01_400-401",
+          "fullEntry": "B: W5215NS01_400-401"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "36/B_W5215NS01_400-401.x_t",
+      "modelFiles": [
+        {
+          "fileName": "B_W5215NS01_400-401.x_t",
+          "relativePath": "36/B_W5215NS01_400-401.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_27_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506
+        ],
+        "rowCount": 14,
+        "firstRow": 493,
+        "lastRow": 506
+      }
+    },
+    {
+      "id": "PL-889484-r4c67q",
+      "plateNumber": "37",
+      "workHistory": "A: W5215NS01_064",
+      "workHistoryEntries": [
+        "A: W5215NS01_064"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5215NS01_064",
+          "fullEntry": "A: W5215NS01_064"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": true,
+      "currentModelFile": "37/A-W5215NS01_064.x_t",
+      "modelFiles": [
+        {
+          "fileName": "A-W5215NS01_064.x_t",
+          "relativePath": "37/A-W5215NS01_064.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "locked",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_28_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          507,
+          508,
+          509,
+          510,
+          511,
+          512,
+          513,
+          514,
+          515,
+          516,
+          517,
+          518,
+          519,
+          520
+        ],
+        "rowCount": 14,
+        "firstRow": 507,
+        "lastRow": 520
+      }
+    },
+    {
+      "id": "PL-889484-el0s8b",
+      "plateNumber": "38",
+      "workHistory": "A: W5249NS01_234-237; B: W5250NS01_234-235",
+      "workHistoryEntries": [
+        "A: W5249NS01_234-237",
+        "B: W5250NS01_234-235"
+      ],
+      "workProjects": [
+        {
+          "projectCode": "A",
+          "workOrder": "W5249NS01_234-237",
+          "fullEntry": "A: W5249NS01_234-237"
+        },
+        {
+          "projectCode": "B",
+          "workOrder": "W5250NS01_234-235",
+          "fullEntry": "B: W5250NS01_234-235"
+        }
+      ],
+      "shelf": "Unknown",
+      "shelfNumber": "Unknown",
+      "boxSize": "Unknown",
+      "isLocked": false,
+      "currentModelFile": "38/B_W5250NS01_234-235.x_t",
+      "modelFiles": [
+        {
+          "fileName": "B_W5250NS01_234-235.x_t",
+          "relativePath": "38/B_W5250NS01_234-235.x_t",
+          "isPrimary": true
+        }
+      ],
+      "health": "used",
+      "occupancy": "free",
+      "notes": "",
+      "specifications": {},
+      "previewImage": "plate_37_preview.png",
+      "excelSource": {
+        "worksheet": "Munka1",
+        "rows": [
+          521,
+          522,
+          523,
+          524,
+          525,
+          526,
+          527,
+          528,
+          529,
+          530,
+          531,
+          532,
+          533,
+          534
+        ],
+        "rowCount": 14,
+        "firstRow": 521,
+        "lastRow": 534
+      }
+    }
+  ],
+  "modelIndex": {
+    "2/fakemodel_2.x_t": {
+      "fileName": "fakemodel_2.x_t",
+      "relativePath": "2/fakemodel_2.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14",
+          "isPrimary": true
+        }
+      ]
+    },
+    "3/fakemodel_3.x_t": {
+      "fileName": "fakemodel_3.x_t",
+      "relativePath": "3/fakemodel_3.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15",
+          "isPrimary": true
+        }
+      ]
+    },
+    "4/E_W5092NS01_061.x_t": {
+      "fileName": "E_W5092NS01_061.x_t",
+      "relativePath": "4/E_W5092NS01_061.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-83yxwv",
+          "plateNumber": "4",
+          "shelfNumber": "15",
+          "isPrimary": true
+        }
+      ]
+    },
+    "5/E_W4962AS03_062.x_t": {
+      "fileName": "E_W4962AS03_062.x_t",
+      "relativePath": "5/E_W4962AS03_062.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15",
+          "isPrimary": true
+        }
+      ]
+    },
+    "6/A_W4919NS01_067-072.x_t": {
+      "fileName": "A_W4919NS01_067-072.x_t",
+      "relativePath": "6/A_W4919NS01_067-072.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-1k5txl",
+          "plateNumber": "6",
+          "shelfNumber": "15",
+          "isPrimary": true
+        }
+      ]
+    },
+    "7/A_W4891NS01_69-74.x_t": {
+      "fileName": "A_W4891NS01_69-74.x_t",
+      "relativePath": "7/A_W4891NS01_69-74.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-pgx18e",
+          "plateNumber": "7",
+          "shelfNumber": "16",
+          "isPrimary": true
+        }
+      ]
+    },
+    "8/A_W4915NS01_083_084.x_t": {
+      "fileName": "A_W4915NS01_083_084.x_t",
+      "relativePath": "8/A_W4915NS01_083_084.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-mdzskj",
+          "plateNumber": "8",
+          "shelfNumber": "16",
+          "isPrimary": true
+        }
+      ]
+    },
+    "9/D_W5021NM01062.x_t": {
+      "fileName": "D_W5021NM01062.x_t",
+      "relativePath": "9/D_W5021NM01062.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16",
+          "isPrimary": true
+        }
+      ]
+    },
+    "10/D_W5173NS01_210-211-213-233-234.x_t": {
+      "fileName": "D_W5173NS01_210-211-213-233-234.x_t",
+      "relativePath": "10/D_W5173NS01_210-211-213-233-234.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-il7q28",
+          "plateNumber": "10",
+          "shelfNumber": "16",
+          "isPrimary": true
+        }
+      ]
+    },
+    "11/I_W4769AS13_170.x_t": {
+      "fileName": "I_W4769AS13_170.x_t",
+      "relativePath": "11/I_W4769AS13_170.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17",
+          "isPrimary": true
+        }
+      ]
+    },
+    "12/D_W4968NS01_163.x_t": {
+      "fileName": "D_W4968NS01_163.x_t",
+      "relativePath": "12/D_W4968NS01_163.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-jd68ec",
+          "plateNumber": "12",
+          "shelfNumber": "17",
+          "isPrimary": true
+        }
+      ]
+    },
+    "13/E_4993OS02_063-064.x_t": {
+      "fileName": "E_4993OS02_063-064.x_t",
+      "relativePath": "13/E_4993OS02_063-064.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s6r3nr",
+          "plateNumber": "13",
+          "shelfNumber": "17",
+          "isPrimary": true
+        }
+      ]
+    },
+    "14/B_4968NS01_084.x_t": {
+      "fileName": "B_4968NS01_084.x_t",
+      "relativePath": "14/B_4968NS01_084.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-25whc0",
+          "plateNumber": "14",
+          "shelfNumber": "17",
+          "isPrimary": true
+        }
+      ]
+    },
+    "15/JATAGAN_KESZULEK.x_t": {
+      "fileName": "JATAGAN_KESZULEK.x_t",
+      "relativePath": "15/JATAGAN_KESZULEK.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-odegt0",
+          "plateNumber": "15",
+          "shelfNumber": "19",
+          "isPrimary": true
+        }
+      ]
+    },
+    "16/fcs_lap230524.x_t": {
+      "fileName": "fcs_lap230524.x_t",
+      "relativePath": "16/fcs_lap230524.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s9qbqa",
+          "plateNumber": "16",
+          "shelfNumber": "Trimill",
+          "isPrimary": true
+        }
+      ]
+    },
+    "17/G_W4816AS06086.x_t": {
+      "fileName": "G_W4816AS06086.x_t",
+      "relativePath": "17/G_W4816AS06086.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19",
+          "isPrimary": true
+        }
+      ]
+    },
+    "18/I_W5171NS01063.x_t": {
+      "fileName": "I_W5171NS01063.x_t",
+      "relativePath": "18/I_W5171NS01063.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20",
+          "isPrimary": true
+        }
+      ]
+    },
+    "19/D_5243NS01_215.x_t": {
+      "fileName": "D_5243NS01_215.x_t",
+      "relativePath": "19/D_5243NS01_215.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-2u0ut9",
+          "plateNumber": "19",
+          "shelfNumber": "20",
+          "isPrimary": true
+        }
+      ]
+    },
+    "20/G_W5270NS01_062.x_t": {
+      "fileName": "G_W5270NS01_062.x_t",
+      "relativePath": "20/G_W5270NS01_062.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20",
+          "isPrimary": true
+        }
+      ]
+    },
+    "21/L_W5237NS01_302.x_t": {
+      "fileName": "L_W5237NS01_302.x_t",
+      "relativePath": "21/L_W5237NS01_302.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20",
+          "isPrimary": true
+        }
+      ]
+    },
+    "22/I_W5205NS01064_065.x_t": {
+      "fileName": "I_W5205NS01064_065.x_t",
+      "relativePath": "22/I_W5205NS01064_065.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21",
+          "isPrimary": true
+        }
+      ]
+    },
+    "23/F_W5205NS01_060_061.x_t": {
+      "fileName": "F_W5205NS01_060_061.x_t",
+      "relativePath": "23/F_W5205NS01_060_061.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21",
+          "isPrimary": true
+        }
+      ]
+    },
+    "24/J_W5179NS01-063-065.x_t": {
+      "fileName": "J_W5179NS01-063-065.x_t",
+      "relativePath": "24/J_W5179NS01-063-065.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21",
+          "isPrimary": true
+        }
+      ]
+    },
+    "25/A_W5055NS01_060.x_t": {
+      "fileName": "A_W5055NS01_060.x_t",
+      "relativePath": "25/A_W5055NS01_060.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-3uews7",
+          "plateNumber": "25",
+          "shelfNumber": "21",
+          "isPrimary": true
+        }
+      ]
+    },
+    "26/D_W5217Z01_307.x_t": {
+      "fileName": "D_W5217Z01_307.x_t",
+      "relativePath": "26/D_W5217Z01_307.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-n87962",
+          "plateNumber": "26",
+          "shelfNumber": "21",
+          "isPrimary": true
+        }
+      ]
+    },
+    "27/E_W5236NS01_062.x_t": {
+      "fileName": "E_W5236NS01_062.x_t",
+      "relativePath": "27/E_W5236NS01_062.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-aj303w",
+          "plateNumber": "27",
+          "shelfNumber": "22",
+          "isPrimary": true
+        }
+      ]
+    },
+    "28/D_W5243NS01_060-061.x_t": {
+      "fileName": "D_W5243NS01_060-061.x_t",
+      "relativePath": "28/D_W5243NS01_060-061.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-6jbpj6",
+          "plateNumber": "28",
+          "shelfNumber": "22",
+          "isPrimary": true
+        }
+      ]
+    },
+    "29/E_W5199NS01_300_PARASOLID.x_t": {
+      "fileName": "E_W5199NS01_300_PARASOLID.x_t",
+      "relativePath": "29/E_W5199NS01_300_PARASOLID.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-eafrrp",
+          "plateNumber": "29",
+          "shelfNumber": "25",
+          "isPrimary": true
+        }
+      ]
+    },
+    "30/B_W5163NS01-063.x_t": {
+      "fileName": "B_W5163NS01-063.x_t",
+      "relativePath": "30/B_W5163NS01-063.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-9crtvl",
+          "plateNumber": "30",
+          "shelfNumber": "25",
+          "isPrimary": true
+        }
+      ]
+    },
+    "31/G_W5206NS01_430-434_440-444.x_t": {
+      "fileName": "G_W5206NS01_430-434_440-444.x_t",
+      "relativePath": "31/G_W5206NS01_430-434_440-444.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    },
+    "32/KSZLK32.x_t": {
+      "fileName": "KSZLK32.x_t",
+      "relativePath": "32/KSZLK32.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-xckad5",
+          "plateNumber": "32",
+          "shelfNumber": "TRIMILL",
+          "isPrimary": true
+        }
+      ]
+    },
+    "33/I_W5266NS01_061.x_t": {
+      "fileName": "I_W5266NS01_061.x_t",
+      "relativePath": "33/I_W5266NS01_061.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    },
+    "34/B_W5177NE01_302.x_t": {
+      "fileName": "B_W5177NE01_302.x_t",
+      "relativePath": "34/B_W5177NE01_302.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-hbidxg",
+          "plateNumber": "34",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    },
+    "35/35_keszuleklap.x_t": {
+      "fileName": "35_keszuleklap.x_t",
+      "relativePath": "35/35_keszuleklap.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-sormbp",
+          "plateNumber": "35",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    },
+    "36/B_W5215NS01_400-401.x_t": {
+      "fileName": "B_W5215NS01_400-401.x_t",
+      "relativePath": "36/B_W5215NS01_400-401.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-bkzppi",
+          "plateNumber": "36",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    },
+    "37/A-W5215NS01_064.x_t": {
+      "fileName": "A-W5215NS01_064.x_t",
+      "relativePath": "37/A-W5215NS01_064.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-r4c67q",
+          "plateNumber": "37",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    },
+    "38/B_W5250NS01_234-235.x_t": {
+      "fileName": "B_W5250NS01_234-235.x_t",
+      "relativePath": "38/B_W5250NS01_234-235.x_t",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-el0s8b",
+          "plateNumber": "38",
+          "shelfNumber": "Unknown",
+          "isPrimary": true
+        }
+      ]
+    }
+  },
+  "workHistoryIndex": {
+    "B: -4969_072_073": {
+      "projectCode": "B",
+      "workOrder": "-4969_072_073",
+      "fullEntry": "B: -4969_072_073",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "C: -4969_062_063": {
+      "projectCode": "C",
+      "workOrder": "-4969_062_063",
+      "fullEntry": "C: -4969_062_063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "D: -4971_072": {
+      "projectCode": "D",
+      "workOrder": "-4971_072",
+      "fullEntry": "D: -4971_072",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "E: -4971_071": {
+      "projectCode": "E",
+      "workOrder": "-4971_071",
+      "fullEntry": "E: -4971_071",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "F: -4949-084_086": {
+      "projectCode": "F",
+      "workOrder": "-4949-084_086",
+      "fullEntry": "F: -4949-084_086",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "4950-084_086": {
+      "projectCode": null,
+      "workOrder": "4950-084_086",
+      "fullEntry": "4950-084_086",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "G: -4816AS05_083-084-285": {
+      "projectCode": "G",
+      "workOrder": "-4816AS05_083-084-285",
+      "fullEntry": "G: -4816AS05_083-084-285",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "H: -5075NM01_060": {
+      "projectCode": "H",
+      "workOrder": "-5075NM01_060",
+      "fullEntry": "H: -5075NM01_060",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "I: -5156NS01-091-092-132-133": {
+      "projectCode": "I",
+      "workOrder": "-5156NS01-091-092-132-133",
+      "fullEntry": "I: -5156NS01-091-092-132-133",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-ip7tau",
+          "plateNumber": "1",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "A: -4950NS01_4949NS01_093-094-097": {
+      "projectCode": "A",
+      "workOrder": "-4950NS01_4949NS01_093-094-097",
+      "fullEntry": "A: -4950NS01_4949NS01_093-094-097",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "B: -4969NS01_064_065": {
+      "projectCode": "B",
+      "workOrder": "-4969NS01_064_065",
+      "fullEntry": "B: -4969NS01_064_065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "C: -4976NM01_065_066": {
+      "projectCode": "C",
+      "workOrder": "-4976NM01_065_066",
+      "fullEntry": "C: -4976NM01_065_066",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "D: -4976NM01_062_063": {
+      "projectCode": "D",
+      "workOrder": "-4976NM01_062_063",
+      "fullEntry": "D: -4976NM01_062_063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "E: -4971NS01_70": {
+      "projectCode": "E",
+      "workOrder": "-4971NS01_70",
+      "fullEntry": "E: -4971NS01_70",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "F: -4971NS01_069": {
+      "projectCode": "F",
+      "workOrder": "-4971NS01_069",
+      "fullEntry": "F: -4971NS01_069",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "G: 4976AM02-062-063": {
+      "projectCode": "G",
+      "workOrder": "4976AM02-062-063",
+      "fullEntry": "G: 4976AM02-062-063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-51t6ky",
+          "plateNumber": "2",
+          "shelfNumber": "14"
+        }
+      ]
+    },
+    "A: -4891AS01_112": {
+      "projectCode": "A",
+      "workOrder": "-4891AS01_112",
+      "fullEntry": "A: -4891AS01_112",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "B: -4976NM01-060_061": {
+      "projectCode": "B",
+      "workOrder": "-4976NM01-060_061",
+      "fullEntry": "B: -4976NM01-060_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "C: -4885AS02_093_094": {
+      "projectCode": "C",
+      "workOrder": "-4885AS02_093_094",
+      "fullEntry": "C: -4885AS02_093_094",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "D: -5022NM02_062": {
+      "projectCode": "D",
+      "workOrder": "-5022NM02_062",
+      "fullEntry": "D: -5022NM02_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "E: -4476NE02_065": {
+      "projectCode": "E",
+      "workOrder": "-4476NE02_065",
+      "fullEntry": "E: -4476NE02_065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "F: -5056NS01_061": {
+      "projectCode": "F",
+      "workOrder": "-5056NS01_061",
+      "fullEntry": "F: -5056NS01_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "G: -5056NS01_088": {
+      "projectCode": "G",
+      "workOrder": "-5056NS01_088",
+      "fullEntry": "G: -5056NS01_088",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "H: -4770AS10_106_107": {
+      "projectCode": "H",
+      "workOrder": "-4770AS10_106_107",
+      "fullEntry": "H: -4770AS10_106_107",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "I:  -5183NS01_081 KB": {
+      "projectCode": "I",
+      "workOrder": "-5183NS01_081 KB",
+      "fullEntry": "I:  -5183NS01_081 KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "J:  -5223NS01_081 KB": {
+      "projectCode": "J",
+      "workOrder": "-5223NS01_081 KB",
+      "fullEntry": "J:  -5223NS01_081 KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p3l20g",
+          "plateNumber": "3",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "A: -4949-50NS01_098_099": {
+      "projectCode": "A",
+      "workOrder": "-4949-50NS01_098_099",
+      "fullEntry": "A: -4949-50NS01_098_099",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-83yxwv",
+          "plateNumber": "4",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "B: -4971NS01_073": {
+      "projectCode": "B",
+      "workOrder": "-4971NS01_073",
+      "fullEntry": "B: -4971NS01_073",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-83yxwv",
+          "plateNumber": "4",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "C: -5013-14NS01_062": {
+      "projectCode": "C",
+      "workOrder": "-5013-14NS01_062",
+      "fullEntry": "C: -5013-14NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-83yxwv",
+          "plateNumber": "4",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "D_W5023NM01062": {
+      "projectCode": null,
+      "workOrder": "D_W5023NM01062",
+      "fullEntry": "D_W5023NM01062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-83yxwv",
+          "plateNumber": "4",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "E: W5092NS01-061": {
+      "projectCode": "E",
+      "workOrder": "W5092NS01-061",
+      "fullEntry": "E: W5092NS01-061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-83yxwv",
+          "plateNumber": "4",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "A: -4940-41NS01_062_063": {
+      "projectCode": "A",
+      "workOrder": "-4940-41NS01_062_063",
+      "fullEntry": "A: -4940-41NS01_062_063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "B: -4979NS01_074": {
+      "projectCode": "B",
+      "workOrder": "-4979NS01_074",
+      "fullEntry": "B: -4979NS01_074",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "Át lett köszörülve": {
+      "projectCode": null,
+      "workOrder": "Át lett köszörülve",
+      "fullEntry": "Át lett köszörülve",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        },
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "lapvastagság változott! LV:39": {
+      "projectCode": null,
+      "workOrder": "lapvastagság változott! LV:39",
+      "fullEntry": "lapvastagság változott! LV:39",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        },
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "5 mm": {
+      "projectCode": null,
+      "workOrder": "5 mm",
+      "fullEntry": "5 mm",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "C: W5090-NS01_062": {
+      "projectCode": "C",
+      "workOrder": "W5090-NS01_062",
+      "fullEntry": "C: W5090-NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "D: W4962AS02_062": {
+      "projectCode": "D",
+      "workOrder": "W4962AS02_062",
+      "fullEntry": "D: W4962AS02_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "E: W4962AS03_062": {
+      "projectCode": "E",
+      "workOrder": "W4962AS03_062",
+      "fullEntry": "E: W4962AS03_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-04edxt",
+          "plateNumber": "5",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "A: -4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)": {
+      "projectCode": "A",
+      "workOrder": "-4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "fullEntry": "A: -4919NS01_067-072 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-1k5txl",
+          "plateNumber": "6",
+          "shelfNumber": "15"
+        }
+      ]
+    },
+    "A: -4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)": {
+      "projectCode": "A",
+      "workOrder": "-4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "fullEntry": "A: -4891NS01_069-074 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-pgx18e",
+          "plateNumber": "7",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "A: -4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)": {
+      "projectCode": "A",
+      "workOrder": "-4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "fullEntry": "A: -4915NS01_083_084 (Nem teljes! Krisztiánnal bescanneltetni!)",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-mdzskj",
+          "plateNumber": "8",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "A: -4912NS01_069-071_083-084": {
+      "projectCode": "A",
+      "workOrder": "-4912NS01_069-071_083-084",
+      "fullEntry": "A: -4912NS01_069-071_083-084",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "B: -5013NS01063_5014NS01063": {
+      "projectCode": "B",
+      "workOrder": "-5013NS01063_5014NS01063",
+      "fullEntry": "B: -5013NS01063_5014NS01063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "C: -4996NS01_081-086": {
+      "projectCode": "C",
+      "workOrder": "-4996NS01_081-086",
+      "fullEntry": "C: -4996NS01_081-086",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "D: -W5021NM01_062": {
+      "projectCode": "D",
+      "workOrder": "-W5021NM01_062",
+      "fullEntry": "D: -W5021NM01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "7 mm": {
+      "projectCode": null,
+      "workOrder": "7 mm",
+      "fullEntry": "7 mm",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-clnuf6",
+          "plateNumber": "9",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "A: -4823NS01_005": {
+      "projectCode": "A",
+      "workOrder": "-4823NS01_005",
+      "fullEntry": "A: -4823NS01_005",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-il7q28",
+          "plateNumber": "10",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "B: -4917NS01_005": {
+      "projectCode": "B",
+      "workOrder": "-4917NS01_005",
+      "fullEntry": "B: -4917NS01_005",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-il7q28",
+          "plateNumber": "10",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "C: -4997NS01_207-210": {
+      "projectCode": "C",
+      "workOrder": "-4997NS01_207-210",
+      "fullEntry": "C: -4997NS01_207-210",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-il7q28",
+          "plateNumber": "10",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "D: W5173NS01_210-211-213-233-234": {
+      "projectCode": "D",
+      "workOrder": "W5173NS01_210-211-213-233-234",
+      "fullEntry": "D: W5173NS01_210-211-213-233-234",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-il7q28",
+          "plateNumber": "10",
+          "shelfNumber": "16"
+        }
+      ]
+    },
+    "A: 4900NS01_06": {
+      "projectCode": "A",
+      "workOrder": "4900NS01_06",
+      "fullEntry": "A: 4900NS01_06",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "B: 4951AM01_72": {
+      "projectCode": "B",
+      "workOrder": "4951AM01_72",
+      "fullEntry": "B: 4951AM01_72",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "C: 4770AS10_076-077": {
+      "projectCode": "C",
+      "workOrder": "4770AS10_076-077",
+      "fullEntry": "C: 4770AS10_076-077",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "D: 4769AS10_120-121": {
+      "projectCode": "D",
+      "workOrder": "4769AS10_120-121",
+      "fullEntry": "D: 4769AS10_120-121",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "E: W5009NS01_115": {
+      "projectCode": "E",
+      "workOrder": "W5009NS01_115",
+      "fullEntry": "E: W5009NS01_115",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "F: W5009NS01_116": {
+      "projectCode": "F",
+      "workOrder": "W5009NS01_116",
+      "fullEntry": "F: W5009NS01_116",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "G: W4814AS02_074": {
+      "projectCode": "G",
+      "workOrder": "W4814AS02_074",
+      "fullEntry": "G: W4814AS02_074",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "H: W4769AS13_120-121": {
+      "projectCode": "H",
+      "workOrder": "W4769AS13_120-121",
+      "fullEntry": "H: W4769AS13_120-121",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "I: W4769AS13_170": {
+      "projectCode": "I",
+      "workOrder": "W4769AS13_170",
+      "fullEntry": "I: W4769AS13_170",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-lcq1q1",
+          "plateNumber": "11",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "A: -4950NS01_4949NS01_084-086-085": {
+      "projectCode": "A",
+      "workOrder": "-4950NS01_4949NS01_084-086-085",
+      "fullEntry": "A: -4950NS01_4949NS01_084-086-085",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-jd68ec",
+          "plateNumber": "12",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "B: -4969-80-081": {
+      "projectCode": "B",
+      "workOrder": "-4969-80-081",
+      "fullEntry": "B: -4969-80-081",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-jd68ec",
+          "plateNumber": "12",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "C: -4968NS01_162": {
+      "projectCode": "C",
+      "workOrder": "-4968NS01_162",
+      "fullEntry": "C: -4968NS01_162",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-jd68ec",
+          "plateNumber": "12",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "D: -4968NS01_163": {
+      "projectCode": "D",
+      "workOrder": "-4968NS01_163",
+      "fullEntry": "D: -4968NS01_163",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-jd68ec",
+          "plateNumber": "12",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "A: -4892NS01_74-75_79": {
+      "projectCode": "A",
+      "workOrder": "-4892NS01_74-75_79",
+      "fullEntry": "A: -4892NS01_74-75_79",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s6r3nr",
+          "plateNumber": "13",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "B: -4892AS01_74": {
+      "projectCode": "B",
+      "workOrder": "-4892AS01_74",
+      "fullEntry": "B: -4892AS01_74",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s6r3nr",
+          "plateNumber": "13",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "C: -4968NS01_083 és 183": {
+      "projectCode": "C",
+      "workOrder": "-4968NS01_083 és 183",
+      "fullEntry": "C: -4968NS01_083 és 183",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s6r3nr",
+          "plateNumber": "13",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "D: -4968NS01_81-181": {
+      "projectCode": "D",
+      "workOrder": "-4968NS01_81-181",
+      "fullEntry": "D: -4968NS01_81-181",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s6r3nr",
+          "plateNumber": "13",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "E: -4993OS02_063-064": {
+      "projectCode": "E",
+      "workOrder": "-4993OS02_063-064",
+      "fullEntry": "E: -4993OS02_063-064",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s6r3nr",
+          "plateNumber": "13",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "A: 4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!)": {
+      "projectCode": "A",
+      "workOrder": "4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!)",
+      "fullEntry": "A: 4915NS01_087(Nem teljes! Krisztiánnal bescanneltetni!)",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-25whc0",
+          "plateNumber": "14",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "B: 4968NS01_084": {
+      "projectCode": "B",
+      "workOrder": "4968NS01_084",
+      "fullEntry": "B: 4968NS01_084",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-25whc0",
+          "plateNumber": "14",
+          "shelfNumber": "17"
+        }
+      ]
+    },
+    "Jatagán Készülék": {
+      "projectCode": null,
+      "workOrder": "Jatagán Készülék",
+      "fullEntry": "Jatagán Készülék",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-odegt0",
+          "plateNumber": "15",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "TRIMILL FCS lap": {
+      "projectCode": null,
+      "workOrder": "TRIMILL FCS lap",
+      "fullEntry": "TRIMILL FCS lap",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s9qbqa",
+          "plateNumber": "16",
+          "shelfNumber": "Trimill"
+        }
+      ]
+    },
+    "4969-010 (nincs gravir)": {
+      "projectCode": null,
+      "workOrder": "4969-010 (nincs gravir)",
+      "fullEntry": "4969-010 (nincs gravir)",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-s9qbqa",
+          "plateNumber": "16",
+          "shelfNumber": "Trimill"
+        }
+      ]
+    },
+    "A: -5011NM01_003-006": {
+      "projectCode": "A",
+      "workOrder": "-5011NM01_003-006",
+      "fullEntry": "A: -5011NM01_003-006",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "B: -5012NM01_003-006": {
+      "projectCode": "B",
+      "workOrder": "-5012NM01_003-006",
+      "fullEntry": "B: -5012NM01_003-006",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "C: -4996NS01_082-086_nagyolt": {
+      "projectCode": "C",
+      "workOrder": "-4996NS01_082-086_nagyolt",
+      "fullEntry": "C: -4996NS01_082-086_nagyolt",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "D: 4996NS01_080": {
+      "projectCode": "D",
+      "workOrder": "4996NS01_080",
+      "fullEntry": "D: 4996NS01_080",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "E : 4771AS10_105": {
+      "projectCode": null,
+      "workOrder": "E : 4771AS10_105",
+      "fullEntry": "E : 4771AS10_105",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "F_W4814AS01070-071": {
+      "projectCode": null,
+      "workOrder": "F_W4814AS01070-071",
+      "fullEntry": "F_W4814AS01070-071",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "G_W4816AS06-086": {
+      "projectCode": null,
+      "workOrder": "G_W4816AS06-086",
+      "fullEntry": "G_W4816AS06-086",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-m84hyl",
+          "plateNumber": "17",
+          "shelfNumber": "19"
+        }
+      ]
+    },
+    "A:-4996NS01071-72-73-74": {
+      "projectCode": "A",
+      "workOrder": "-4996NS01071-72-73-74",
+      "fullEntry": "A:-4996NS01071-72-73-74",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "B: 5007NS01-218": {
+      "projectCode": "B",
+      "workOrder": "5007NS01-218",
+      "fullEntry": "B: 5007NS01-218",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "C:-4968NS01_164": {
+      "projectCode": "C",
+      "workOrder": "-4968NS01_164",
+      "fullEntry": "C:-4968NS01_164",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "D:-4800NE05_060": {
+      "projectCode": "D",
+      "workOrder": "-4800NE05_060",
+      "fullEntry": "D:-4800NE05_060",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "E:-4800NE05_061": {
+      "projectCode": "E",
+      "workOrder": "-4800NE05_061",
+      "fullEntry": "E:-4800NE05_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "F:-5104NS01_06263": {
+      "projectCode": "F",
+      "workOrder": "-5104NS01_06263",
+      "fullEntry": "F:-5104NS01_06263",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "I:-W5171NS01063": {
+      "projectCode": "I",
+      "workOrder": "-W5171NS01063",
+      "fullEntry": "I:-W5171NS01063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-vx47n0",
+          "plateNumber": "18",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "A: -4994NS01_064_065": {
+      "projectCode": "A",
+      "workOrder": "-4994NS01_064_065",
+      "fullEntry": "A: -4994NS01_064_065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-2u0ut9",
+          "plateNumber": "19",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "B:-4994NS01_066_067": {
+      "projectCode": "B",
+      "workOrder": "-4994NS01_066_067",
+      "fullEntry": "B:-4994NS01_066_067",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-2u0ut9",
+          "plateNumber": "19",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "C: 5157NS01_061-062": {
+      "projectCode": "C",
+      "workOrder": "5157NS01_061-062",
+      "fullEntry": "C: 5157NS01_061-062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-2u0ut9",
+          "plateNumber": "19",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "D: 5243NS01_215": {
+      "projectCode": "D",
+      "workOrder": "5243NS01_215",
+      "fullEntry": "D: 5243NS01_215",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-2u0ut9",
+          "plateNumber": "19",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "A: W5005NS01224-225_B": {
+      "projectCode": "A",
+      "workOrder": "W5005NS01224-225_B",
+      "fullEntry": "A: W5005NS01224-225_B",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "B: W5018NS01_204-205-206-207_B": {
+      "projectCode": "B",
+      "workOrder": "W5018NS01_204-205-206-207_B",
+      "fullEntry": "B: W5018NS01_204-205-206-207_B",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "C: W5072NE01704_C": {
+      "projectCode": "C",
+      "workOrder": "W5072NE01704_C",
+      "fullEntry": "C: W5072NE01704_C",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "D:W4993OS05_073_074": {
+      "projectCode": "D",
+      "workOrder": "W4993OS05_073_074",
+      "fullEntry": "D:W4993OS05_073_074",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "E: W4823AS01_004  / AS02": {
+      "projectCode": "E",
+      "workOrder": "W4823AS01_004  / AS02",
+      "fullEntry": "E: W4823AS01_004  / AS02",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "F: W5237NS01_069 KB": {
+      "projectCode": "F",
+      "workOrder": "W5237NS01_069 KB",
+      "fullEntry": "F: W5237NS01_069 KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "G_W5270NS01_062 KB": {
+      "projectCode": null,
+      "workOrder": "G_W5270NS01_062 KB",
+      "fullEntry": "G_W5270NS01_062 KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-87vwny",
+          "plateNumber": "20",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "A: -W4915NS01_064_065": {
+      "projectCode": "A",
+      "workOrder": "-W4915NS01_064_065",
+      "fullEntry": "A: -W4915NS01_064_065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "B: -W4768AS10_122-125": {
+      "projectCode": "B",
+      "workOrder": "-W4768AS10_122-125",
+      "fullEntry": "B: -W4768AS10_122-125",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "C: -W4814AS01_067": {
+      "projectCode": "C",
+      "workOrder": "-W4814AS01_067",
+      "fullEntry": "C: -W4814AS01_067",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "D:_W5009NS108-109": {
+      "projectCode": "D",
+      "workOrder": "_W5009NS108-109",
+      "fullEntry": "D:_W5009NS108-109",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "E:_W5009NS01_110-111": {
+      "projectCode": "E",
+      "workOrder": "_W5009NS01_110-111",
+      "fullEntry": "E:_W5009NS01_110-111",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "F_W5103NS01_062": {
+      "projectCode": null,
+      "workOrder": "F_W5103NS01_062",
+      "fullEntry": "F_W5103NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "G: W5121NS01_062": {
+      "projectCode": "G",
+      "workOrder": "W5121NS01_062",
+      "fullEntry": "G: W5121NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "H: W5159NS01_011": {
+      "projectCode": "H",
+      "workOrder": "W5159NS01_011",
+      "fullEntry": "H: W5159NS01_011",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "I_W5170NS01_060": {
+      "projectCode": null,
+      "workOrder": "I_W5170NS01_060",
+      "fullEntry": "I_W5170NS01_060",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "J: -W5167NS01_062": {
+      "projectCode": "J",
+      "workOrder": "-W5167NS01_062",
+      "fullEntry": "J: -W5167NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "K:-W5172NS01_061": {
+      "projectCode": "K",
+      "workOrder": "-W5172NS01_061",
+      "fullEntry": "K:-W5172NS01_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "L: W5237NS01_302 BSZ": {
+      "projectCode": "L",
+      "workOrder": "W5237NS01_302 BSZ",
+      "fullEntry": "L: W5237NS01_302 BSZ",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-q3v559",
+          "plateNumber": "21",
+          "shelfNumber": "20"
+        }
+      ]
+    },
+    "A: W5063NS01_061   SZL": {
+      "projectCode": "A",
+      "workOrder": "W5063NS01_061   SZL",
+      "fullEntry": "A: W5063NS01_061   SZL",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "B: W5002NS01_064   KB": {
+      "projectCode": "B",
+      "workOrder": "W5002NS01_064   KB",
+      "fullEntry": "B: W5002NS01_064   KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "C: W5002NS01_062   KB": {
+      "projectCode": "C",
+      "workOrder": "W5002NS01_062   KB",
+      "fullEntry": "C: W5002NS01_062   KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "D: W5002NS01_063   KB": {
+      "projectCode": "D",
+      "workOrder": "W5002NS01_063   KB",
+      "fullEntry": "D: W5002NS01_063   KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "E: W5092NS01_068   KB": {
+      "projectCode": "E",
+      "workOrder": "W5092NS01_068   KB",
+      "fullEntry": "E: W5092NS01_068   KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "F: W5156NS01-100-101-103-104 BSZ": {
+      "projectCode": "F",
+      "workOrder": "W5156NS01-100-101-103-104 BSZ",
+      "fullEntry": "F: W5156NS01-100-101-103-104 BSZ",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "G: W5173NS01-100-101-103-104 BSZ": {
+      "projectCode": "G",
+      "workOrder": "W5173NS01-100-101-103-104 BSZ",
+      "fullEntry": "G: W5173NS01-100-101-103-104 BSZ",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "H_W5236NS01_060": {
+      "projectCode": null,
+      "workOrder": "H_W5236NS01_060",
+      "fullEntry": "H_W5236NS01_060",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "I: W5205NS01_064-065": {
+      "projectCode": "I",
+      "workOrder": "W5205NS01_064-065",
+      "fullEntry": "I: W5205NS01_064-065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-edjshv",
+          "plateNumber": "22",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "A: W5055NS01_062-065": {
+      "projectCode": "A",
+      "workOrder": "W5055NS01_062-065",
+      "fullEntry": "A: W5055NS01_062-065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "B: W5007NS01_082": {
+      "projectCode": "B",
+      "workOrder": "W5007NS01_082",
+      "fullEntry": "B: W5007NS01_082",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "C: W5090-91NS01_063": {
+      "projectCode": "C",
+      "workOrder": "W5090-91NS01_063",
+      "fullEntry": "C: W5090-91NS01_063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "D: W5093NS01_068   KB": {
+      "projectCode": "D",
+      "workOrder": "W5093NS01_068   KB",
+      "fullEntry": "D: W5093NS01_068   KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "E: W4816OS06_086": {
+      "projectCode": "E",
+      "workOrder": "W4816OS06_086",
+      "fullEntry": "E: W4816OS06_086",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "F:W5205NS01_060_061": {
+      "projectCode": "F",
+      "workOrder": "W5205NS01_060_061",
+      "fullEntry": "F:W5205NS01_060_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-p0p69i",
+          "plateNumber": "23",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "A: W5055NS01_061": {
+      "projectCode": "A",
+      "workOrder": "W5055NS01_061",
+      "fullEntry": "A: W5055NS01_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "B: W5081NS01_068_070": {
+      "projectCode": "B",
+      "workOrder": "W5081NS01_068_070",
+      "fullEntry": "B: W5081NS01_068_070",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "C: W5090NS01_063": {
+      "projectCode": "C",
+      "workOrder": "W5090NS01_063",
+      "fullEntry": "C: W5090NS01_063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "D: W5005NS01_087": {
+      "projectCode": "D",
+      "workOrder": "W5005NS01_087",
+      "fullEntry": "D: W5005NS01_087",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "E: W5009NS01_061": {
+      "projectCode": "E",
+      "workOrder": "W5009NS01_061",
+      "fullEntry": "E: W5009NS01_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "F: W5002NS01079": {
+      "projectCode": "F",
+      "workOrder": "W5002NS01079",
+      "fullEntry": "F: W5002NS01079",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "G: W5163NS01066": {
+      "projectCode": "G",
+      "workOrder": "W5163NS01066",
+      "fullEntry": "G: W5163NS01066",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "H: W5175NS01_080_081": {
+      "projectCode": "H",
+      "workOrder": "W5175NS01_080_081",
+      "fullEntry": "H: W5175NS01_080_081",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "I: W5197NS01_064_065": {
+      "projectCode": "I",
+      "workOrder": "W5197NS01_064_065",
+      "fullEntry": "I: W5197NS01_064_065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "J:W5179NS01_093-065": {
+      "projectCode": "J",
+      "workOrder": "W5179NS01_093-065",
+      "fullEntry": "J:W5179NS01_093-065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-wf9m9k",
+          "plateNumber": "24",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "A: W5055NS01_060_070": {
+      "projectCode": "A",
+      "workOrder": "W5055NS01_060_070",
+      "fullEntry": "A: W5055NS01_060_070",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-3uews7",
+          "plateNumber": "25",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "A: W5081NS01_064-065": {
+      "projectCode": "A",
+      "workOrder": "W5081NS01_064-065",
+      "fullEntry": "A: W5081NS01_064-065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-n87962",
+          "plateNumber": "26",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "B: W5009-102-105": {
+      "projectCode": "B",
+      "workOrder": "W5009-102-105",
+      "fullEntry": "B: W5009-102-105",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-n87962",
+          "plateNumber": "26",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "C: W5189NS01_235": {
+      "projectCode": "C",
+      "workOrder": "W5189NS01_235",
+      "fullEntry": "C: W5189NS01_235",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-n87962",
+          "plateNumber": "26",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "D: W5217Z01_307": {
+      "projectCode": "D",
+      "workOrder": "W5217Z01_307",
+      "fullEntry": "D: W5217Z01_307",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-n87962",
+          "plateNumber": "26",
+          "shelfNumber": "21"
+        }
+      ]
+    },
+    "A: W5005NS01_085-086": {
+      "projectCode": "A",
+      "workOrder": "W5005NS01_085-086",
+      "fullEntry": "A: W5005NS01_085-086",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-aj303w",
+          "plateNumber": "27",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "B: W5005NS01_064-065": {
+      "projectCode": "B",
+      "workOrder": "W5005NS01_064-065",
+      "fullEntry": "B: W5005NS01_064-065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-aj303w",
+          "plateNumber": "27",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "C: W5023AM01_062": {
+      "projectCode": "C",
+      "workOrder": "W5023AM01_062",
+      "fullEntry": "C: W5023AM01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-aj303w",
+          "plateNumber": "27",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "D: W5236NS01_061": {
+      "projectCode": "D",
+      "workOrder": "W5236NS01_061",
+      "fullEntry": "D: W5236NS01_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-aj303w",
+          "plateNumber": "27",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "E: W5236NS01_062": {
+      "projectCode": "E",
+      "workOrder": "W5236NS01_062",
+      "fullEntry": "E: W5236NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-aj303w",
+          "plateNumber": "27",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "A: W5009NS01_69-70-71-83-84": {
+      "projectCode": "A",
+      "workOrder": "W5009NS01_69-70-71-83-84",
+      "fullEntry": "A: W5009NS01_69-70-71-83-84",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-6jbpj6",
+          "plateNumber": "28",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "B: W5009-076": {
+      "projectCode": "B",
+      "workOrder": "W5009-076",
+      "fullEntry": "B: W5009-076",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-6jbpj6",
+          "plateNumber": "28",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "C: W4250RS04_069": {
+      "projectCode": "C",
+      "workOrder": "W4250RS04_069",
+      "fullEntry": "C: W4250RS04_069",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-6jbpj6",
+          "plateNumber": "28",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "D: W5243NS01_060-061": {
+      "projectCode": "D",
+      "workOrder": "W5243NS01_060-061",
+      "fullEntry": "D: W5243NS01_060-061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-6jbpj6",
+          "plateNumber": "28",
+          "shelfNumber": "22"
+        }
+      ]
+    },
+    "A: W5018NS01-076": {
+      "projectCode": "A",
+      "workOrder": "W5018NS01-076",
+      "fullEntry": "A: W5018NS01-076",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-eafrrp",
+          "plateNumber": "29",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "B: W5009NS01-077": {
+      "projectCode": "B",
+      "workOrder": "W5009NS01-077",
+      "fullEntry": "B: W5009NS01-077",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-eafrrp",
+          "plateNumber": "29",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "C: W5156NS01-224": {
+      "projectCode": "C",
+      "workOrder": "W5156NS01-224",
+      "fullEntry": "C: W5156NS01-224",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-eafrrp",
+          "plateNumber": "29",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "D: W5175NS01_074_075": {
+      "projectCode": "D",
+      "workOrder": "W5175NS01_074_075",
+      "fullEntry": "D: W5175NS01_074_075",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-eafrrp",
+          "plateNumber": "29",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "E: W5199NS01300_B": {
+      "projectCode": "E",
+      "workOrder": "W5199NS01300_B",
+      "fullEntry": "E: W5199NS01300_B",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-eafrrp",
+          "plateNumber": "29",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "A: W5069NS01-061": {
+      "projectCode": "A",
+      "workOrder": "W5069NS01-061",
+      "fullEntry": "A: W5069NS01-061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-9crtvl",
+          "plateNumber": "30",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "B: W5163NS01-063": {
+      "projectCode": "B",
+      "workOrder": "W5163NS01-063",
+      "fullEntry": "B: W5163NS01-063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-9crtvl",
+          "plateNumber": "30",
+          "shelfNumber": "25"
+        }
+      ]
+    },
+    "A: W5175NS01_062-063": {
+      "projectCode": "A",
+      "workOrder": "W5175NS01_062-063",
+      "fullEntry": "A: W5175NS01_062-063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "B: W5175NS01_315": {
+      "projectCode": "B",
+      "workOrder": "W5175NS01_315",
+      "fullEntry": "B: W5175NS01_315",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "C: W5174NS01_062-063": {
+      "projectCode": "C",
+      "workOrder": "W5174NS01_062-063",
+      "fullEntry": "C: W5174NS01_062-063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "D: W5174NS01_315": {
+      "projectCode": "D",
+      "workOrder": "W5174NS01_315",
+      "fullEntry": "D: W5174NS01_315",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "E: W5199NS01_300-301-302": {
+      "projectCode": "E",
+      "workOrder": "W5199NS01_300-301-302",
+      "fullEntry": "E: W5199NS01_300-301-302",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "F: W5206NS01_315": {
+      "projectCode": "F",
+      "workOrder": "W5206NS01_315",
+      "fullEntry": "F: W5206NS01_315",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "G: W5206NS01_430-434_440-444": {
+      "projectCode": "G",
+      "workOrder": "W5206NS01_430-434_440-444",
+      "fullEntry": "G: W5206NS01_430-434_440-444",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-z5fui5",
+          "plateNumber": "31",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "A: W5175NS01_010-011 KB": {
+      "projectCode": "A",
+      "workOrder": "W5175NS01_010-011 KB",
+      "fullEntry": "A: W5175NS01_010-011 KB",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-xckad5",
+          "plateNumber": "32",
+          "shelfNumber": "TRIMILL"
+        }
+      ]
+    },
+    "A: W5202AS01_060_062": {
+      "projectCode": "A",
+      "workOrder": "W5202AS01_060_062",
+      "fullEntry": "A: W5202AS01_060_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "B: W5207NS01_063": {
+      "projectCode": "B",
+      "workOrder": "W5207NS01_063",
+      "fullEntry": "B: W5207NS01_063",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "C: W5199NS01_070": {
+      "projectCode": "C",
+      "workOrder": "W5199NS01_070",
+      "fullEntry": "C: W5199NS01_070",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "D: W4769AS11_161_162": {
+      "projectCode": "D",
+      "workOrder": "W4769AS11_161_162",
+      "fullEntry": "D: W4769AS11_161_162",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "E: W4769AS11_181_182": {
+      "projectCode": "E",
+      "workOrder": "W4769AS11_181_182",
+      "fullEntry": "E: W4769AS11_181_182",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "F: W4768AS11_127_128": {
+      "projectCode": "F",
+      "workOrder": "W4768AS11_127_128",
+      "fullEntry": "F: W4768AS11_127_128",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "G: W4768AS11_131_132": {
+      "projectCode": "G",
+      "workOrder": "W4768AS11_131_132",
+      "fullEntry": "G: W4768AS11_131_132",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "H: W5154OS05_064": {
+      "projectCode": "H",
+      "workOrder": "W5154OS05_064",
+      "fullEntry": "H: W5154OS05_064",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "I: W5266NS01_061": {
+      "projectCode": "I",
+      "workOrder": "W5266NS01_061",
+      "fullEntry": "I: W5266NS01_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-7serpm",
+          "plateNumber": "33",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "A: W5175NS01-064-065": {
+      "projectCode": "A",
+      "workOrder": "W5175NS01-064-065",
+      "fullEntry": "A: W5175NS01-064-065",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-hbidxg",
+          "plateNumber": "34",
+          "shelfNumber": "Unknown"
+        },
+        {
+          "plateId": "PL-889484-sormbp",
+          "plateNumber": "35",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "B_W5177NE01_302": {
+      "projectCode": null,
+      "workOrder": "B_W5177NE01_302",
+      "fullEntry": "B_W5177NE01_302",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-hbidxg",
+          "plateNumber": "34",
+          "shelfNumber": "Unknown"
+        },
+        {
+          "plateId": "PL-889484-sormbp",
+          "plateNumber": "35",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "C_W5205NS01_062": {
+      "projectCode": null,
+      "workOrder": "C_W5205NS01_062",
+      "fullEntry": "C_W5205NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-sormbp",
+          "plateNumber": "35",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "D_W5242NS01_062": {
+      "projectCode": null,
+      "workOrder": "D_W5242NS01_062",
+      "fullEntry": "D_W5242NS01_062",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-sormbp",
+          "plateNumber": "35",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "A: W5229AS01_060_061": {
+      "projectCode": "A",
+      "workOrder": "W5229AS01_060_061",
+      "fullEntry": "A: W5229AS01_060_061",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-bkzppi",
+          "plateNumber": "36",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "B: W5215NS01_400-401": {
+      "projectCode": "B",
+      "workOrder": "W5215NS01_400-401",
+      "fullEntry": "B: W5215NS01_400-401",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-bkzppi",
+          "plateNumber": "36",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "A: W5215NS01_064": {
+      "projectCode": "A",
+      "workOrder": "W5215NS01_064",
+      "fullEntry": "A: W5215NS01_064",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-r4c67q",
+          "plateNumber": "37",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "A: W5249NS01_234-237": {
+      "projectCode": "A",
+      "workOrder": "W5249NS01_234-237",
+      "fullEntry": "A: W5249NS01_234-237",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-el0s8b",
+          "plateNumber": "38",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    },
+    "B: W5250NS01_234-235": {
+      "projectCode": "B",
+      "workOrder": "W5250NS01_234-235",
+      "fullEntry": "B: W5250NS01_234-235",
+      "usedByPlates": [
+        {
+          "plateId": "PL-889484-el0s8b",
+          "plateNumber": "38",
+          "shelfNumber": "Unknown"
+        }
+      ]
+    }
+  }
+}

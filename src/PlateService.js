@@ -19,15 +19,22 @@ class PlateService {
    */
   async initialize() {
     logInfo('Initializing PlateService');
+    console.log('🔧 [PlateService] Initializing...');
     
     try {
       // Load existing plates data
       await this.loadPlates();
       
       logInfo(`Loaded ${this.plates.size} plates from storage`);
+      console.log(`✅ [PlateService] Loaded ${this.plates.size} plates from storage`);
+      
+      if (this.plates.size === 0) {
+        console.warn('⚠️  [PlateService] No plates loaded! Check if plates.json has data.');
+      }
       
     } catch (error) {
       logError('Failed to initialize PlateService', { error: error.message });
+      console.error('❌ [PlateService] Failed to initialize:', error.message);
       throw error;
     }
   }
@@ -37,17 +44,27 @@ class PlateService {
    */
   async loadPlates() {
     try {
+      console.log('🔍 [PlateService] Loading plates from DataManager...');
       const platesData = await this.dataManager.loadPlates();
+      console.log(`🔍 [PlateService] DataManager returned:`, {
+        hasData: !!platesData,
+        isArray: Array.isArray(platesData),
+        length: Array.isArray(platesData) ? platesData.length : 'N/A'
+      });
       
       if (platesData && Array.isArray(platesData)) {
         this.plates.clear();
         platesData.forEach(plate => {
           this.plates.set(plate.id, this.validatePlate(plate));
         });
+        console.log(`✅ [PlateService] Stored ${this.plates.size} plates in memory`);
+      } else {
+        console.warn('⚠️  [PlateService] No valid plates data from DataManager');
       }
       
     } catch (error) {
       logWarn('Could not load plates data, starting with empty set', { error: error.message });
+      console.error('❌ [PlateService] Error loading plates:', error.message);
       this.plates.clear();
     }
   }
@@ -186,7 +203,8 @@ class PlateService {
       }
 
       // Validate work order format
-      if (!config.plates.workOrderPattern.test(workOrderName)) {
+      const workOrderPattern = config.plates?.workOrderPattern || /^[A-Z0-9-_]+$/i;
+      if (!workOrderPattern.test(workOrderName)) {
         throw new Error(`Invalid work order format: ${workOrderName}`);
       }
 
@@ -309,11 +327,15 @@ class PlateService {
       throw new Error('Plate shelf location is required');
     }
 
-    if (!config.plates.healthStates.includes(plate.health)) {
+    // Validate health state with safe fallback
+    const validHealthStates = config.plates?.healthStates || ['new', 'used', 'locked', 'damaged'];
+    if (!validHealthStates.includes(plate.health)) {
       throw new Error(`Invalid health state: ${plate.health}`);
     }
 
-    if (!config.plates.occupancyStates.includes(plate.occupancy)) {
+    // Validate occupancy state with safe fallback
+    const validOccupancyStates = config.plates?.occupancyStates || ['free', 'in-use', 'reserved'];
+    if (!validOccupancyStates.includes(plate.occupancy)) {
       throw new Error(`Invalid occupancy state: ${plate.occupancy}`);
     }
 
@@ -323,8 +345,9 @@ class PlateService {
     }
 
     // Limit history entries
-    if (plate.history.length > config.plates.maxHistoryEntries) {
-      plate.history = plate.history.slice(-config.plates.maxHistoryEntries);
+    const maxHistoryEntries = config.plates?.maxHistoryEntries || 50;
+    if (plate.history.length > maxHistoryEntries) {
+      plate.history = plate.history.slice(-maxHistoryEntries);
     }
 
     return plate;
@@ -345,7 +368,8 @@ class PlateService {
     plate.history.push(entry);
 
     // Limit history size
-    if (plate.history.length > config.plates.maxHistoryEntries) {
+    const maxHistoryEntries = config.plates?.maxHistoryEntries || 50;
+    if (plate.history.length > maxHistoryEntries) {
       plate.history.shift(); // Remove oldest entry
     }
   }

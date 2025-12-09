@@ -1,311 +1,58 @@
-// config.js
-const path = require("path");
+/**
+ * ClampingPlateManager Configuration
+ * Loads from central BRK_CNC_CORE/config
+ */
 
-const config = {
-  app: {
-    testMode: true, // true = use test data paths, false = use production paths (set by Dashboard config)
-    autoMode: false, // Same as JSONScanner's autorun (activated by Dashboard config)
-    scanIntervalMs: 60000, // 60 seconds
-    logLevel: "info",
-    enableDetailedLogging: true,
+const { getServiceConfig } = require('../BRK_CNC_CORE/config');
 
-    // Read-only processing settings (like JSONScanner/ToolManager)
-    usePersistentTempFolder: true, // Use organized temp structure for processing
-    tempBaseName: "BRK CNC Management Dashboard", // Organized temp folder name
-    userDefinedWorkingFolder: null, // User can override temp location
+// Load service-specific config from central system
+const config = getServiceConfig('clampingPlateManager');
 
-    // Permanent storage settings - USER MUST SPECIFY
-    permanentStoragePath: path.join(__dirname, "data"), // Default to local data directory for API mode
-    requirePermanentPath: false, // Allow running without permanent path for API mode
-  },
+// Backward compatibility: ClampingPlateManager uses webService instead of webApp
+config.webService = config.webApp;
 
-  // Web service configuration
-  webService: {
-    port: 3003,
-    host: 'localhost'
-  },
-
-  // Web service settings
-  webService: {
-    port: 3003, // ClampingPlateManager port (JSONScanner:3001, ToolManager:3002)
-    enableAuth: false, // Disable auth for backend service
-    enableCors: true,
-    allowedOrigins: ["http://localhost:3000", "http://localhost:5173"], // CNCManagementDashboard
-  },
-
-  storage: {
-    type: "local", // Force local storage only - no MongoDB
-    local: {
-      dataDirectory: path.join(__dirname, "data"),
-      backupDirectory: path.join(__dirname, "data", "backups"),
-      maxBackups: 10,
-    },
-    retentionPolicy: {
-      backupDays: null, // No auto cleanup for plate data
-      cleanupOldData: false, // Don't auto-delete plate history
-    },
-  },
-
-  mongodb: {
-    uri: process.env.MONGODB_URI || "mongodb://localhost:27017",
-    database: process.env.MONGODB_DATABASE || "cnc_plates", // ClampingPlateManager database
-    options: {
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 5000,
-      connectTimeoutMS: 10000,
-      socketTimeoutMS: 45000,
-    },
-  },
-
-  processing: {
-    preventReprocessing: true,
-    generateReports: true,
-    trackHistory: true, // Enable comprehensive history tracking
-  },
-
-  files: {
-    jsonExtension: ".json",
-    fixedSuffix: "fixed",
-    resultSuffix: "result",
-  },
-
-  paths: {
-    test: {
-      // Test/demo mode - use centralized BRK_CNC_CORE test-data
-      permanentDataDir: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "working_data",
-        "BRK CNC Management Dashboard",
-        "ClampingPlateManager"
-      ),
-      platesData: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "working_data",
-        "BRK CNC Management Dashboard",
-        "ClampingPlateManager",
-        "plates.json"
-      ),
-      configData: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "working_data",
-        "BRK CNC Management Dashboard",
-        "ClampingPlateManager",
-        "config.json"
-      ),
-      modelsDir: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "source_data",
-        "clamping_plates",
-        "models"
-      ),
-      previewsDir: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "working_data",
-        "BRK CNC Management Dashboard",
-        "ClampingPlateManager",
-        "previews"
-      ),
-      templatesDir: path.join(__dirname, "data", "templates"),
-      testSourceDataDir: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "source_data",
-        "clamping_plates"
-      ),
-      backupDir: path.join(
-        __dirname,
-        "..",
-        "BRK_CNC_CORE",
-        "test-data",
-        "working_data",
-        "BRK CNC Management Dashboard",
-        "ClampingPlateManager",
-        "backups"
-      ),
-    },
-    production: {
-      // Production mode - USER MUST SPECIFY permanent location
-      // These will be dynamically set based on user's permanentStoragePath
-      permanentDataDir: null, // Will be set to user's chosen path
-      platesData: null, // Will be: {userPath}/plates.json
-      configData: null, // Will be: {userPath}/config.json
-      modelsDir: null, // Will be: {userPath}/models
-      previewsDir: null, // Will be: {userPath}/previews
-      backupDir: null, // Will be: {userPath}/backups
-      templatesDir: null, // Will be: {userPath}/templates
-    },
-  },
-
-  // Plate management settings
-  plates: {
-    healthStates: ["new", "used", "locked"],
-    occupancyStates: ["free", "in-use"],
-    workOrderPattern: /^W\d{4}[A-Z]{2}\d{2}\d{3}[A-Z]?$/, // W5270NS01001A format
-    maxHistoryEntries: 100, // Limit history per plate
-  },
-
-  // Initialization settings
-  initialization: {
-    supportedModelFormats: [".x_t", ".step", ".stp", ".iges", ".igs", ".dwg"],
-    supportedImageFormats: [".jpg", ".jpeg", ".png", ".bmp", ".tiff"],
-    infoFileName: "Készülékek.xlsx", // Expected info file name
-    autoGenerateIds: true,
-    idPrefix: "PL-",
-    organizeFoldersByShelf: true, // Organize model files by shelf location
-    createPreviewImages: false, // Future feature for image generation
-  },
-};
-
-// Helper functions
-config.setPermanentStoragePath = function (userPath) {
-  if (!userPath) {
-    throw new Error("Permanent storage path is required");
-  }
-
-  this.app.permanentStoragePath = userPath;
-
-  // Update production paths if not in test mode
-  if (!this.app.testMode) {
-    this.paths.production.permanentDataDir = userPath;
-    this.paths.production.platesData = path.join(userPath, "plates.json");
-    this.paths.production.configData = path.join(userPath, "config.json");
-    this.paths.production.modelsDir = path.join(userPath, "models");
-    this.paths.production.previewsDir = path.join(userPath, "previews");
-    this.paths.production.backupDir = path.join(userPath, "backups");
-    this.paths.production.templatesDir = path.join(userPath, "templates");
-  }
-};
-
-// Initialize permanent storage path if one is set in config
-if (config.app.permanentStoragePath) {
-  config.setPermanentStoragePath(config.app.permanentStoragePath);
-}
-
-config.getPermanentDataDir = function () {
-  if (this.app.testMode) {
-    return this.paths.test.permanentDataDir;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    // For API mode without permanent storage, use local data directory
-    if (!this.app.requirePermanentPath) {
-      return this.storage.local.dataDirectory;
-    }
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.permanentDataDir;
-};
-
-config.getPlatesDataPath = function () {
-  if (this.app.testMode) {
-    return this.paths.test.platesData;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    // For API mode without permanent storage, use local data directory
-    if (!this.app.requirePermanentPath) {
-      return path.join(this.storage.local.dataDirectory, "plates.json");
-    }
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.platesData;
-};
-
-config.getConfigDataPath = function () {
-  if (this.app.testMode) {
-    return this.paths.test.configData;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    // For API mode without permanent storage, use local data directory
-    if (!this.app.requirePermanentPath) {
-      return path.join(this.storage.local.dataDirectory, "config.json");
-    }
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.configData;
-};
-
-config.getModelsDir = function () {
-  if (this.app.testMode) {
-    return this.paths.test.modelsDir;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.modelsDir;
-};
-
-config.getPreviewsDir = function () {
-  if (this.app.testMode) {
-    return this.paths.test.previewsDir;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.previewsDir;
-};
-
-config.getTemplatesDir = function () {
-  if (this.app.testMode) {
-    return this.paths.test.templatesDir;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.templatesDir;
-};
-
-config.getBackupDir = function () {
-  if (this.app.testMode) {
-    return this.paths.test.backupDir;
-  }
-
-  if (!this.app.permanentStoragePath) {
-    throw new Error(
-      "Permanent storage path not set. Use setPermanentStoragePath() first."
-    );
-  }
-
-  return this.paths.production.backupDir;
-};
-
+// Export for backward compatibility
 module.exports = config;
+
+// Helper methods
+config.getDataPath = function() {
+  return this.storage.local.dataDirectory;
+};
+
+config.getWorkingPath = function() {
+  return this.paths.workingData;
+};
+
+config.getPlatesDataPath = function() {
+  const path = require('path');
+  return path.join(this.storage.local.dataDirectory, 'plates.json');
+};
+
+config.getPermanentDataDir = function() {
+  return this.storage.local.dataDirectory;
+};
+
+config.getConfigDataPath = function() {
+  const path = require('path');
+  return path.join(this.storage.local.dataDirectory, 'config.json');
+};
+
+config.getModelsDir = function() {
+  const path = require('path');
+  return path.join(this.storage.local.dataDirectory, 'models');
+};
+
+config.getPreviewsDir = function() {
+  const path = require('path');
+  return path.join(this.storage.local.dataDirectory, 'previews');
+};
+
+config.getTemplatesDir = function() {
+  const path = require('path');
+  return path.join(this.storage.local.dataDirectory, 'templates');
+};
+
+config.getBackupDir = function() {
+  const path = require('path');
+  return path.join(this.storage.local.dataDirectory, 'backups');
+};

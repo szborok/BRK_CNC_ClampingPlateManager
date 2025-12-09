@@ -73,8 +73,9 @@ class WorkOrderService {
   async createWorkOrder(workOrderData) {
     try {
       // Validate work order format
-      if (!config.plates.workOrderPattern.test(workOrderData.id)) {
-        throw new Error(`Invalid work order format: ${workOrderData.id}`);
+      const workOrderPattern = config.plates?.workOrderPattern || /^[A-Z0-9-_]+$/i;
+      if (!workOrderPattern.test(workOrderData.id)) {
+        throw new Error(`Invalid work order ID format: ${workOrderData.id}`);
       }
 
       const workOrder = {
